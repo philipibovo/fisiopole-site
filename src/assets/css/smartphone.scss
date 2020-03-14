@@ -1,0 +1,53 @@
+#logo {
+  position: fixed;
+  top: 20px;
+  left: 5%;
+  cursor: pointer;
+  z-index: 9;
+}
+
+#logo > img {
+  height: 150px;
+}
+
+#social {
+  position: fixed;
+  top: 20px;
+  right: 5%;
+  text-align: center;
+  z-index: 9;
+}
+
+#social a {
+  color: rgba(255, 255 ,255, 0.7);
+  font-size: 1.7em;
+}
+
+#made-by {
+  position: fixed;
+  width: 100%;
+  height: 30px;
+  bottom: 0px;
+  left: 0px;
+  background: #333;
+  text-align: center;
+  z-index: 9;
+}
+
+#made-by a {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+#made-by > div > a > img {
+  opacity: 0.6;
+  padding-top: 5px;
+  height: 25px;
+}
+
+#main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

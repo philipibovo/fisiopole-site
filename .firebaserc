@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "fisiopole-site"
+  },
+  "targets": {
+    "fisiopole-site": {
+      "hosting": {
+        "site": [
+          "fisiopole-site"
+        ]
+      }
+    }
+  }
+}
