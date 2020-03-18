@@ -1,11 +1,20 @@
 <div id="logo" [class]="scripts.logoTheme" routerLink="/">
-  <img alt="Fisio Pole" src="./assets/img/logo/logo.svg" />
+  <img
+    *ngIf="scripts.logoTheme === 'dark'"
+    alt="Fisio Pole"
+    src="./assets/img/logo/logo.svg"
+  />
+  <img
+    *ngIf="scripts.logoTheme === 'light'"
+    alt="Fisio Pole"
+    src="./assets/img/logo/logo-negative.svg"
+  />
 </div>
 
 <div id="menu" [class]="scripts.menuTheme">
   <ul>
     <li routerLink="estudio">
-      O Estudio
+      O Estúdio
     </li>
     <li routerLink="modalidades">
       Modalidades
@@ -22,32 +31,72 @@
   </ul>
 </div>
 
-<div id="social" [class]="scripts.socialTheme" fxLayout="column" fxLayoutAlign="start stretch" fxLayoutGap="5px">
+<div
+  id="social"
+  [class]="scripts.socialTheme"
+  fxLayout="column"
+  fxLayoutAlign="start stretch"
+  fxLayoutGap="5px"
+>
   <div fxFlexOrder="1">
-    <a class="hint--left" aria-label="Instagram" href="https://www.instagram.com/fisio_pole" target="_blank">
+    <a
+      class="hint--left"
+      aria-label="Instagram"
+      href="https://www.instagram.com/fisio_pole"
+      target="_blank"
+    >
       <i class="fab fa-instagram"></i>
     </a>
   </div>
   <div fxFlexOrder="2">
-    <a class="hint--left" aria-label="Facebook" href="https://pt-br.facebook.com/fisiopoleart/" target="_blank">
+    <a
+      class="hint--left"
+      aria-label="Facebook"
+      href="https://pt-br.facebook.com/fisiopoleart/"
+      target="_blank"
+    >
       <i class="fab fa-facebook"></i>
     </a>
   </div>
   <div fxFlexOrder="3">
-    <a class="hint--left" aria-label="Whatsapp" href="https://api.whatsapp.com/send?1=pt_BR&phone=5513997416202"
-      target="_blank">
+    <a
+      class="hint--left"
+      aria-label="Whatsapp"
+      href="https://api.whatsapp.com/send?1=pt_BR&phone=5513997416202"
+      target="_blank"
+    >
       <i class="fab fa-whatsapp"></i>
     </a>
   </div>
 </div>
 
-<div id="made-by" [class]="scripts.madebyTheme" fxLayout.xs="row" fxLayoutAlign.xs="center center" fxFill.xs
-  fxLayout.sm="row" fxLayoutAlign.sm="center center" fxFill.sm>
+<div
+  id="made-by"
+  [class]="scripts.madebyTheme"
+  fxLayout.xs="row"
+  fxLayoutAlign.xs="center center"
+  fxFill.xs
+  fxLayout.sm="row"
+  fxLayoutAlign.sm="center center"
+  fxFill.sm
+>
   <div>
-    <a class="hint--left" aria-label="Desenvolvido por Philipi Bovo - philipi.bovo.me" href="https://philipi.bovo.me"
-      target="_blank">
-      <img fxHide.xs fxHide.sm alt="Philipi Bovo" src="./assets/img/logo/philipi-bovo.png" />
-      <img fxHide.lg fxHide.xl alt="Philipi Bovo" src="./assets/img/logo/philipi-bovo-negative.png" />
+    <a
+      class="hint--left"
+      aria-label="Desenvolvido por Philipi Bovo - philipi.bovo.me"
+      href="https://philipi.bovo.me"
+      target="_blank"
+    >
+      <img
+        *ngIf="scripts.madebyTheme === 'dark'"
+        alt="Philipi Bovo"
+        src="./assets/img/logo/philipi-bovo.png"
+      />
+      <img
+        *ngIf="scripts.madebyTheme === 'light'"
+        alt="Philipi Bovo"
+        src="./assets/img/logo/philipi-bovo-negative.png"
+      />
     </a>
   </div>
   <div fxHide.lg fxHide.xl>

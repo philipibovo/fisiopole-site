@@ -61,7 +61,6 @@
   z-index: 9;
 }
 
-
 #social.light a {
   color: rgba(255, 255, 255, 0.5);
 }
@@ -74,6 +73,7 @@
   position: fixed;
   bottom: 5px;
   right: 10px;
+  opacity: 0.6;
   z-index: 9;
 }
 
@@ -82,9 +82,20 @@
 }
 
 #main {
-  position: fixed;
-  top: 0;
-  left: 0;
+  position: relative;
   width: 100%;
   height: 100%;
+}
+
+#main > * {
+  display: block;
+}
+
+router-outlet {
+  display: none;
+}
+
+.content {
+  width: 100%;
+  height: 100vh;
 }

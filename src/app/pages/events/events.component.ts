@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-events',
@@ -6,10 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./events.component.scss']
 })
 export class EventsComponent implements OnInit {
-
-  constructor() { }
+  constructor(private _title: Title) {}
 
   ngOnInit(): void {
+    this._title.setTitle('Eventos - Fisio Pole');
   }
-
 }

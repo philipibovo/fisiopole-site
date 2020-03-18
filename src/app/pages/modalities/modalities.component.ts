@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-modalities',
@@ -6,10 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./modalities.component.scss']
 })
 export class ModalitiesComponent implements OnInit {
-
-  constructor() { }
+  constructor(private _title: Title) {}
 
   ngOnInit(): void {
+    this._title.setTitle('Modalidades - Fisio Pole');
   }
-
 }

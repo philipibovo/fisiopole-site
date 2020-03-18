@@ -31,7 +31,7 @@ registerLocaleData(localePt, 'pt-BR');
     ModalitiesComponent,
     TeamComponent,
     EventsComponent,
-    ContactComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -39,10 +39,7 @@ registerLocaleData(localePt, 'pt-BR');
     AppRoutingModule,
     FlexLayoutModule
   ],
-  providers: [
-    { provide: LOCALE_ID, useValue: 'pt-BR' },
-    ScriptsGeneral
-  ],
+  providers: [{ provide: LOCALE_ID, useValue: 'pt-BR' }, ScriptsGeneral],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
