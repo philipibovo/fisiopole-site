@@ -1,4 +1,6 @@
-/*@import url("../../../assets/css/home/general.scss");*/
-@import url("../../../assets/css/home/smartphone.scss") screen and (min-width:0px) and (max-width:599px);
-@import url("../../../assets/css/home/tablet.scss") screen and (min-width:600px) and (max-width:959px);
-@import url("../../../assets/css/home/desktop.scss") screen and (min-width:960px);
+@import url('../../../assets/css/home/smartphone.scss') screen and
+  (min-width: 0px) and (max-width: 599px);
+@import url('../../../assets/css/home/tablet.scss') screen and
+  (min-width: 600px) and (max-width: 959px);
+@import url('../../../assets/css/home/desktop.scss') screen and
+  (min-width: 960px);

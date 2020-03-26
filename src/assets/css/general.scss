@@ -40,20 +40,3 @@ a:visited {
   font-size: 1.5em;
   text-decoration: underline;
 }
-
-.transition-fade {
-  opacity: 1;
-  transition: 500ms;
-  transform: translateX(0);
-  transform-origin: left;
-}
-
-html.is-animating .transition-fade {
-  opacity: 1;
-  transform: translateX(100%);
-}
-
-html.is-leaving .transition-fade {
-  opacity: 0;
-  transform: translateX(0);
-}

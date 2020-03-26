@@ -2,32 +2,162 @@
   position: fixed;
   top: 20px;
   left: 5%;
-  cursor: pointer;
-  z-index: 9;
+  z-index: 7;
 }
 
 #logo > img {
   height: 150px;
+  z-index: 7;
 }
 
-#social {
+#icon-menu {
   position: fixed;
   top: 20px;
-  right: 5%;
-  text-align: center;
+  right: 20px;
+  font-size: 2em;
   z-index: 9;
 }
 
-#social a {
-  color: rgba(255, 255, 255, 0.7);
+#icon-menu.light {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+#icon-menu.dark {
+  color: rgba(51, 51, 51, 0.6);
+}
+
+#menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 29px);
+  background: #440055;
+  color: rgba(255, 255, 255, 0.6);
+  display: block;
+  transform-origin: top right;
+  transition: 300ms ease-in-out;
+  transform: rotate(90deg);
+  z-index: 8;
+}
+
+#menu.active {
+  transition-delay: 150ms;
+  transform: rotate(0deg);
+}
+
+#menu > #menu-logo {
+  text-align: center;
+}
+
+#menu > #menu-logo > img {
+  height: 130px;
+}
+
+#menu > div > ul {
+  list-style: none;
+  text-align: center;
+}
+
+#menu > div > ul > li {
+  font-size: 2em;
+  padding: 15px 0;
+}
+
+#menu.landscape > div > ul > li {
+  font-size: 1.2em;
+  padding: 10px 0;
+}
+
+#menu-shadow-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 29px);
+  background: #7f009e;
+  display: block;
+  transform-origin: top right;
+  transition: 300ms ease-in-out;
+  transform: rotate(90deg);
+  z-index: 8;
+}
+
+#menu-shadow-1.active {
+  transition-delay: 75ms;
+  transform: rotate(0deg);
+}
+
+#menu-shadow-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 29px);
+  background: #d65bf5;
+  display: block;
+  transform-origin: top right;
+  transition: 300ms ease-in-out;
+  transform: rotate(90deg);
+  z-index: 8;
+}
+
+#menu-shadow-2.active {
+  transition-delay: 0ms;
+  transform: rotate(0deg);
+}
+
+#social.portrait {
+  position: fixed;
+  width: 100%;
+  bottom: 29px;
+  text-align: center;
+  padding: 10px 0 5px 0;
+  z-index: 7;
+}
+
+#social.portrait.light {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+#social.portrait.dark {
+  background: rgba(51, 51, 51, 0.6);
+}
+
+#social.portrait a {
   font-size: 1.7em;
+}
+
+#social.portrait.light a {
+  color: rgba(51, 51, 51, 0.8);
+}
+
+#social.portrait.dark a {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#social.landscape {
+  position: fixed;
+  top: 60px;
+  right: 20px;
+  text-align: center;
+  font-size: 1.8em;
+  z-index: 7;
+}
+
+#social.landscape.light a {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#social.landscape.dark a {
+  color: rgba(51, 51, 51, 0.8);
 }
 
 #made-by {
   position: fixed;
   width: 100%;
   height: 30px;
-  bottom: 0px;
+  bottom: -1px;
   left: 0px;
   background: #333;
   text-align: center;

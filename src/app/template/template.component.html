@@ -1,4 +1,9 @@
-<div id="logo" [class]="scripts.logoTheme" routerLink="/">
+<div
+  id="logo"
+  [class]="scripts.logoTheme"
+  (window:resize)="onResized()"
+  routerLink="/"
+>
   <img
     *ngIf="scripts.logoTheme === 'dark'"
     alt="Fisio Pole"
@@ -11,24 +16,52 @@
   />
 </div>
 
-<div id="menu" [class]="scripts.menuTheme">
-  <ul>
-    <li routerLink="estudio">
-      O Estúdio
-    </li>
-    <li routerLink="modalidades">
-      Modalidades
-    </li>
-    <li routerLink="equipe">
-      Equipe
-    </li>
-    <li routerLink="eventos">
-      Eventos
-    </li>
-    <li routerLink="contato">
-      Contato
-    </li>
-  </ul>
+<div
+  id="icon-menu"
+  [class]="scripts.iconMenuTheme"
+  fxLayout.xs="row"
+  fxLayoutAlign.xs="center center"
+  fxLayoutAlign.sm="center center"
+  fxHide.md
+  fxHide.lg
+  fxHide.xl
+  (click)="toggleMenu()"
+>
+  <i class="fas fa-bars"></i>
+</div>
+
+<div id="menu-shadow-2" fxHide.md fxHide.lg fxHide.xl></div>
+<div id="menu-shadow-1" fxHide.md fxHide.lg fxHide.xl></div>
+
+<div
+  id="menu"
+  [class]="scripts.menuTheme"
+  [fxLayout.xs]="menuFxLayoutXS"
+  [fxLayoutAlign.xs]="menuFxLayoutAlignXS"
+  fxLayoutGap.xs="15px"
+>
+  <div id="menu-logo" fxHide.sm fxHide.md fxHide.lg fxHide.xl>
+    <img alt="Fisio Pole" src="./assets/img/logo/logo-negative.svg" />
+  </div>
+  <div>
+    <ul>
+      <li routerLink="estudio" (click)="toggleMenu()">
+        O Estúdio
+      </li>
+      <li routerLink="modalidades" (click)="toggleMenu()">
+        Modalidades
+      </li>
+      <li routerLink="equipe" (click)="toggleMenu()">
+        Equipe
+      </li>
+      <li routerLink="eventos" (click)="toggleMenu()">
+        Eventos
+      </li>
+      <li routerLink="contato" (click)="toggleMenu()">
+        Contato
+      </li>
+    </ul>
+  </div>
 </div>
 
 <div
@@ -37,6 +70,11 @@
   fxLayout="column"
   fxLayoutAlign="start stretch"
   fxLayoutGap="5px"
+  [fxLayout.xs]="socialFxLayoutXS"
+  [fxLayoutAlign.xs]="socialFxLayoutAlignXS"
+  fxLayoutGap.xs="10px"
+  fxLayoutAlign.sm="space-evenly center"
+  fxLayoutGap.sm="0px"
 >
   <div fxFlexOrder="1">
     <a
@@ -99,7 +137,7 @@
       />
     </a>
   </div>
-  <div fxHide.lg fxHide.xl>
+  <div fxHide.md fxHide.lg fxHide.xl>
     <a href="https://philipi.bovo.me" target="_blank">
       &nbsp;- Desenvolvido por Philipi Bovo
     </a>

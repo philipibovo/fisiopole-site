@@ -17,11 +17,11 @@
   z-index: 9;
 }
 
-#menu > ul {
+#menu > div > ul {
   list-style: none;
 }
 
-#menu > ul > li {
+#menu > div > ul > li {
   padding: 3px 10px;
   cursor: pointer;
   font-weight: 300;
@@ -29,22 +29,22 @@
   transition: all 150ms;
 }
 
-#menu > ul > li:hover {
+#menu > div > ul > li:hover {
   font-weight: 600;
   transition: all 150ms;
 }
 
-#menu.dark > ul > li {
+#menu.dark > div > ul > li {
   color: #440055;
   transition: all 150ms;
 }
 
-#menu.light > ul > li {
+#menu.light > div > ul > li {
   color: #aa00d4;
   transition: all 150ms;
 }
 
-#menu > ul > li.active {
+#menu > div > ul > li.active {
   background: #aa00d4;
   color: #22002b;
   font-weight: 600;
@@ -85,14 +85,6 @@
   position: relative;
   width: 100%;
   height: 100%;
-}
-
-#main > * {
-  display: block;
-}
-
-router-outlet {
-  display: none;
 }
 
 .content {
