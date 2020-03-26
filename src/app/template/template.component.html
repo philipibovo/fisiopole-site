@@ -15,6 +15,7 @@
     src="./assets/img/logo/logo-negative.svg"
   />
 </div>
+<!-- end #logo -->
 
 <div
   id="icon-menu"
@@ -25,10 +26,11 @@
   fxHide.md
   fxHide.lg
   fxHide.xl
-  (click)="toggleMenu()"
+  (click)="actionMenu($event)"
 >
   <i class="fas fa-bars"></i>
 </div>
+<!-- end #icon-menu -->
 
 <div id="menu-shadow-2" fxHide.md fxHide.lg fxHide.xl></div>
 <div id="menu-shadow-1" fxHide.md fxHide.lg fxHide.xl></div>
@@ -39,30 +41,37 @@
   [fxLayout.xs]="menuFxLayoutXS"
   [fxLayoutAlign.xs]="menuFxLayoutAlignXS"
   fxLayoutGap.xs="15px"
+  fxLayout.sm="column"
+  fxLayoutAlign.sm="space-evenly center"
 >
-  <div id="menu-logo" fxHide.sm fxHide.md fxHide.lg fxHide.xl>
+  <div id="menu-logo" fxHide.md fxHide.lg fxHide.xl>
     <img alt="Fisio Pole" src="./assets/img/logo/logo-negative.svg" />
   </div>
   <div>
     <ul>
-      <li routerLink="estudio" (click)="toggleMenu()">
+      <li class="menu-item" routerLink="estudio" (click)="actionMenu($event)">
         O Estúdio
       </li>
-      <li routerLink="modalidades" (click)="toggleMenu()">
+      <li
+        class="menu-item"
+        routerLink="modalidades"
+        (click)="actionMenu($event)"
+      >
         Modalidades
       </li>
-      <li routerLink="equipe" (click)="toggleMenu()">
+      <li class="menu-item" routerLink="equipe" (click)="actionMenu($event)">
         Equipe
       </li>
-      <li routerLink="eventos" (click)="toggleMenu()">
+      <li class="menu-item" routerLink="eventos" (click)="actionMenu($event)">
         Eventos
       </li>
-      <li routerLink="contato" (click)="toggleMenu()">
+      <li class="menu-item" routerLink="contato" (click)="actionMenu($event)">
         Contato
       </li>
     </ul>
   </div>
 </div>
+<!-- end #menu -->
 
 <div
   id="social"
@@ -73,8 +82,9 @@
   [fxLayout.xs]="socialFxLayoutXS"
   [fxLayoutAlign.xs]="socialFxLayoutAlignXS"
   fxLayoutGap.xs="10px"
-  fxLayoutAlign.sm="space-evenly center"
-  fxLayoutGap.sm="0px"
+  fxLayout.sm="column"
+  fxLayoutAlign.sm="start center"
+  fxLayoutGap.sm="10px"
 >
   <div fxFlexOrder="1">
     <a
@@ -107,6 +117,7 @@
     </a>
   </div>
 </div>
+<!-- end #social -->
 
 <div
   id="made-by"
@@ -143,3 +154,4 @@
     </a>
   </div>
 </div>
+<!-- end #made-by -->

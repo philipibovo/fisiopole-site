@@ -38,6 +38,29 @@ export class HomeComponent implements OnInit {
       return;
     }
 
+    if (this.scripts.isTablet()) {
+      this.scripts.logoTheme = 'dark';
+      this.scripts.menuTheme = 'dark';
+      this.scripts.madebyTheme = 'light';
+
+      if (!this.scripts.isLandscape()) {
+        //content
+        document.getElementById('content').classList.remove('landscape');
+        document.getElementById('content').classList.add('portrait');
+
+        this.scripts.iconMenuTheme = 'light';
+        this.scripts.socialTheme = 'light';
+      } else {
+        //content
+        document.getElementById('content').classList.add('landscape');
+        document.getElementById('content').classList.remove('portrait');
+
+        this.scripts.socialTheme = 'dark';
+      }
+
+      return;
+    }
+
     //Desktop
     this.scripts.logoTheme = 'dark';
     this.scripts.menuTheme = 'dark';

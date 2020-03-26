@@ -1,4 +1,4 @@
-.content {
+#content {
   width: 100%;
   height: 100%;
   background-image: url('../../../assets/img/bg-main-smartphone.jpg');
@@ -8,7 +8,7 @@
   background-size: cover;
 }
 
-.content > #text {
+#content > #text {
   font-size: 1.2em;
   line-height: 1.4em;
   background: rgba(255, 255, 255, 0.7);
@@ -17,7 +17,7 @@
   margin-bottom: 0;
 }
 
-.content > #text.landscape {
+#content > #text.landscape {
   border-radius: 5px 5px 0 0;
   margin-bottom: 29px;
   padding-bottom: 5px;

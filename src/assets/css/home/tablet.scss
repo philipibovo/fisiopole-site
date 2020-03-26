@@ -1,9 +1,34 @@
-.content {
+#content {
   width: 100%;
   height: 100%;
-  background-image: url('../../../assets/img/bg-main-smartphone.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: top;
   background-size: cover;
+}
+
+#content.portrait {
+  background-image: url('../../../assets/img/bg-main-smartphone.jpg');
+}
+
+#content.landscape {
+  background-image: url('../../../assets/img/bg-main-desktop.jpg');
+}
+
+#content > #text {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+#content.portrait > #text {
+  font-size: 1.8em;
+  line-height: 2em;
+}
+
+#content.landscape > #text {
+  font-size: 1em;
+  line-height: 1.2em;
 }
