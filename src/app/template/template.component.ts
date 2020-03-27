@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 //Scripts
 import { ScriptsGeneral } from '../scripts/scripts-general';
@@ -11,38 +12,46 @@ import { ScriptsGeneral } from '../scripts/scripts-general';
 export class TemplateComponent implements OnInit {
   public menuFxLayoutXS = 'column';
   public menuFxLayoutAlignXS = 'space-evenly center';
+  public menuFxLayoutSM = 'column';
+  public menuFxLayoutAlignSM = 'space-evenly center';
   public socialFxLayoutXS = 'row';
   public socialFxLayoutAlignXS = 'space-evenly center';
+  public socialFxLayoutSM = 'column';
+  public socialFxLayoutAlignSM = 'start center';
 
-  constructor(public scripts: ScriptsGeneral) {}
+  constructor(private _router: Router, public scripts: ScriptsGeneral) {}
 
   ngOnInit(): void {
     this.onResized();
   }
 
   onResized() {
-    if (this.scripts.isSmartphone() && this.scripts.isLandscape()) {
-      //menu
-      this.menuFxLayoutXS = 'row';
-      this.menuFxLayoutAlignXS = 'space-evenly center';
-      document.getElementById('menu').classList.add('landscape');
+    if (this.scripts.isSmartphone()) {
+      if (this.scripts.isLandscape()) {
+        //menu
+        this.menuFxLayoutXS = 'row';
+        this.menuFxLayoutAlignXS = 'space-evenly center';
+        document.getElementById('menu').classList.add('landscape');
 
-      //socila
-      this.socialFxLayoutXS = 'column';
-      this.socialFxLayoutAlignXS = 'start center';
-      document.getElementById('social').classList.add('landscape');
-      document.getElementById('social').classList.remove('portrait');
-    } else {
-      //menu
-      this.menuFxLayoutXS = 'column';
-      this.menuFxLayoutAlignXS = 'space-evenly center';
-      document.getElementById('menu').classList.remove('landscape');
+        //social
+        this.socialFxLayoutXS = 'column';
+        this.socialFxLayoutAlignXS = 'start center';
+        document.getElementById('social').classList.add('landscape');
+        document.getElementById('social').classList.remove('portrait');
+      } else {
+        //menu
+        this.menuFxLayoutXS = 'column';
+        this.menuFxLayoutAlignXS = 'space-evenly center';
+        document.getElementById('menu').classList.remove('landscape');
 
-      //social
-      this.socialFxLayoutXS = 'row';
-      this.socialFxLayoutAlignXS = 'space-evenly center';
-      document.getElementById('social').classList.add('portrait');
-      document.getElementById('social').classList.remove('landscape');
+        //social
+        this.socialFxLayoutXS = 'row';
+        this.socialFxLayoutAlignXS = 'space-evenly center';
+        document.getElementById('social').classList.add('portrait');
+        document.getElementById('social').classList.remove('landscape');
+      }
+
+      return;
     }
 
     if (this.scripts.isTablet()) {
@@ -52,12 +61,16 @@ export class TemplateComponent implements OnInit {
         document.getElementById('logo').classList.remove('portrait');
 
         //menu
+        this.menuFxLayoutSM = 'row';
+        this.menuFxLayoutAlignSM = 'space-evenly center';
         document.getElementById('menu').classList.add('landscape');
         document.getElementById('menu').classList.remove('portrait');
         document.getElementById('icon-menu').classList.add('landscape');
         document.getElementById('icon-menu').classList.remove('portrait');
 
         //social
+        this.socialFxLayoutSM = 'row';
+        this.socialFxLayoutAlignSM = 'start start';
         document.getElementById('social').classList.add('landscape');
         document.getElementById('social').classList.remove('portrait');
 
@@ -70,12 +83,16 @@ export class TemplateComponent implements OnInit {
         document.getElementById('logo').classList.remove('landscape');
 
         //menu
+        this.menuFxLayoutSM = 'column';
+        this.menuFxLayoutAlignSM = 'space-evenly center';
         document.getElementById('menu').classList.add('portrait');
         document.getElementById('menu').classList.remove('landscape');
         document.getElementById('icon-menu').classList.add('portrait');
         document.getElementById('icon-menu').classList.remove('landscape');
 
         //Social
+        this.socialFxLayoutSM = 'column';
+        this.socialFxLayoutAlignSM = 'start center';
         document.getElementById('social').classList.add('portrait');
         document.getElementById('social').classList.remove('landscape');
 
@@ -83,35 +100,8 @@ export class TemplateComponent implements OnInit {
         document.getElementById('made-by').classList.add('portrait');
         document.getElementById('made-by').classList.remove('landscape');
       }
-    }
-  }
 
-  actionMenu(e) {
-    if (
-      this.scripts.isSmartphone() ||
-      (this.scripts.isTablet() && !this.scripts.isLandscape())
-    ) {
-      document.getElementById('menu-shadow-2').classList.toggle('active');
-      document.getElementById('menu-shadow-1').classList.toggle('active');
-      document.getElementById('menu').classList.toggle('active');
-      setTimeout(function() {
-        document.getElementById('icon-menu').classList.toggle('active');
-        document
-          .getElementById('icon-menu')
-          .firstElementChild.classList.toggle('fa-bars');
-
-        document
-          .getElementById('icon-menu')
-          .firstElementChild.classList.toggle('fa-times');
-      }, 150);
-    } else {
-      const items = document.getElementsByClassName('menu-item');
-
-      for (let i = 0; i < items.length; i++) {
-        items[i].classList.remove('active');
-      }
-
-      e.target.classList.add('active');
+      return;
     }
   }
 }

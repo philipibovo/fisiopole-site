@@ -1,14 +1,22 @@
-#content {
+.content {
   width: 100%;
   height: 100%;
-  background-image: url('../../../assets/img/bg-main-smartphone.jpg');
+  background-image: url('../../../assets/img/bg-main-desktop.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: top;
   background-size: cover;
 }
 
-#content > #text {
+.content.portrait {
+  background-image: url('../../../assets/img/bg-main-smartphone.jpg');
+}
+
+.content.landscape {
+  background-image: url('../../../assets/img/bg-main-desktop.jpg');
+}
+
+.content > #text {
   font-size: 1.2em;
   line-height: 1.4em;
   background: rgba(255, 255, 255, 0.7);
@@ -17,7 +25,7 @@
   margin-bottom: 0;
 }
 
-#content > #text.landscape {
+.content.landscape > #text {
   border-radius: 5px 5px 0 0;
   margin-bottom: 29px;
   padding-bottom: 5px;

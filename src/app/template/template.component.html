@@ -2,7 +2,7 @@
   id="logo"
   [class]="scripts.logoTheme"
   (window:resize)="onResized()"
-  routerLink="/"
+  (click)="scripts.actionMenu('logo')"
 >
   <img
     *ngIf="scripts.logoTheme === 'dark'"
@@ -26,7 +26,7 @@
   fxHide.md
   fxHide.lg
   fxHide.xl
-  (click)="actionMenu($event)"
+  (click)="scripts.actionMenu('')"
 >
   <i class="fas fa-bars"></i>
 </div>
@@ -41,31 +41,53 @@
   [fxLayout.xs]="menuFxLayoutXS"
   [fxLayoutAlign.xs]="menuFxLayoutAlignXS"
   fxLayoutGap.xs="15px"
-  fxLayout.sm="column"
-  fxLayoutAlign.sm="space-evenly center"
+  [fxLayout.sm]="menuFxLayoutSM"
+  [fxLayoutAlign.sm]="menuFxLayoutAlignSM"
 >
-  <div id="menu-logo" fxHide.md fxHide.lg fxHide.xl>
+  <div
+    id="menu-logo"
+    (click)="scripts.actionMenu('')"
+    fxHide.md
+    fxHide.lg
+    fxHide.xl
+  >
     <img alt="Fisio Pole" src="./assets/img/logo/logo-negative.svg" />
   </div>
   <div>
     <ul>
-      <li class="menu-item" routerLink="estudio" (click)="actionMenu($event)">
+      <li
+        id="menu-item-estudio"
+        class="menu-item"
+        (click)="scripts.actionMenu('estudio')"
+      >
         O Estúdio
       </li>
       <li
+        id="menu-item-modalidades"
         class="menu-item"
-        routerLink="modalidades"
-        (click)="actionMenu($event)"
+        (click)="scripts.actionMenu('modalidades')"
       >
         Modalidades
       </li>
-      <li class="menu-item" routerLink="equipe" (click)="actionMenu($event)">
+      <li
+        id="menu-item-equipe"
+        class="menu-item"
+        (click)="scripts.actionMenu('equipe')"
+      >
         Equipe
       </li>
-      <li class="menu-item" routerLink="eventos" (click)="actionMenu($event)">
+      <li
+        id="menu-item-eventos"
+        class="menu-item"
+        (click)="scripts.actionMenu('eventos')"
+      >
         Eventos
       </li>
-      <li class="menu-item" routerLink="contato" (click)="actionMenu($event)">
+      <li
+        id="menu-item-contato"
+        class="menu-item"
+        (click)="scripts.actionMenu('contato')"
+      >
         Contato
       </li>
     </ul>
@@ -82,9 +104,9 @@
   [fxLayout.xs]="socialFxLayoutXS"
   [fxLayoutAlign.xs]="socialFxLayoutAlignXS"
   fxLayoutGap.xs="10px"
-  fxLayout.sm="column"
-  fxLayoutAlign.sm="start center"
-  fxLayoutGap.sm="10px"
+  [fxLayout.sm]="socialFxLayoutSM"
+  [fxLayoutAlign.sm]="socialFxLayoutAlignSM"
+  fxLayoutGap.sm="15px"
 >
   <div fxFlexOrder="1">
     <a
@@ -155,3 +177,9 @@
   </div>
 </div>
 <!-- end #made-by -->
+
+<div
+  id="transition-page"
+  [class]="scripts.transitionPageTheme"
+  [class.show]="scripts.transitionPage"
+></div>
