@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 
 //Scripts
+import { Global } from '../../scripts/global';
 import { ScriptsGeneral } from '../../scripts/scripts-general';
 
 @Component({
@@ -10,12 +11,16 @@ import { ScriptsGeneral } from '../../scripts/scripts-general';
   styleUrls: ['./events.component.scss']
 })
 export class EventsComponent implements OnInit {
-  constructor(private _title: Title, public scripts: ScriptsGeneral) {}
+  constructor(
+    private _title: Title,
+    public global: Global,
+    public scripts: ScriptsGeneral
+  ) {}
 
   ngOnInit(): void {
     this._title.setTitle('Eventos - Fisio Pole');
 
-    if (this.scripts.transitionPage) {
+    if (this.global.transitionPage) {
       this.scripts.startTransitionPageIn();
     }
   }

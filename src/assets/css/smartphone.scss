@@ -5,9 +5,16 @@
   z-index: 7;
 }
 
-#logo > img {
-  height: 150px;
-  z-index: 7;
+#logo.light {
+  opacity: 0.8;
+}
+
+#logo.portrait > img {
+  height: 70px;
+}
+
+#logo.landscape > img {
+  height: 120px;
 }
 
 #icon-menu {

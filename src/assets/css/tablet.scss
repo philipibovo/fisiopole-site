@@ -5,12 +5,16 @@
   z-index: 8;
 }
 
+#logo.light {
+  opacity: 0.8;
+}
+
 #logo.portrait > img {
-  height: 300px;
+  height: 100px;
 }
 
 #logo.landscape > img {
-  height: 150px;
+  height: 70px;
 }
 
 #icon-menu {
@@ -122,36 +126,35 @@
   transform: rotate(0deg);
 }
 
-#social.portrait {
+#social {
   position: fixed;
-  top: 80px;
-  right: 20px;
   z-index: 7;
 }
 
-#social.portrait a {
-  font-size: 2.6em;
-}
-
-#social.portrait.dark a,
-#social.landscape.dark a {
-  color: rgba(51, 51, 51, 0.8);
-}
-
-#social.portrait.light a,
-#social.landscape.light a {
-  color: rgba(255, 255, 255, 0.6);
+#social.portrait {
+  top: 20px;
+  right: 85px;
 }
 
 #social.landscape {
-  position: fixed;
   top: 20px;
-  right: 55px;
-  z-index: 7;
+  right: 65px;
+}
+
+#social.portrait a {
+  font-size: 2.65em;
 }
 
 #social.landscape a {
   font-size: 1.5em;
+}
+
+#social.dark a {
+  color: rgba(51, 51, 51, 0.8);
+}
+
+#social.light a {
+  color: rgba(255, 255, 255, 0.6);
 }
 
 #made-by {

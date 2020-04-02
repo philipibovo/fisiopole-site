@@ -1,6 +1,8 @@
 <div
-  class="content"
   id="content"
+  class="content"
+  [class.portrait]="global.isPortrait"
+  [class.landscape]="global.isLandscape"
   fxLayout.xs="row"
   [fxLayoutAlign.xs]="textFxLayoutAlignXS"
   fxLayout.sm="row"

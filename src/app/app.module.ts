@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 //Script
+import { Global } from './scripts/global';
 import { ScriptsGeneral } from './scripts/scripts-general';
 
 //Pages
@@ -41,7 +42,11 @@ registerLocaleData(localePt, 'pt-BR');
     AppRoutingModule,
     FlexLayoutModule
   ],
-  providers: [{ provide: LOCALE_ID, useValue: 'pt-BR' }, ScriptsGeneral],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'pt-BR' },
+    Global,
+    ScriptsGeneral
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

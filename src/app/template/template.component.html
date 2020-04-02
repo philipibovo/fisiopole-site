@@ -1,16 +1,18 @@
 <div
   id="logo"
-  [class]="scripts.logoTheme"
-  (window:resize)="onResized()"
+  [class]="global.logoTheme"
+  [class.portrait]="global.isPortrait"
+  [class.landscape]="global.isLandscape"
   (click)="scripts.actionMenu('logo')"
+  (window:resize)="onResizedTemplate()"
 >
   <img
-    *ngIf="scripts.logoTheme === 'dark'"
+    *ngIf="global.logoTheme === 'dark'"
     alt="Fisio Pole"
     src="./assets/img/logo/logo.svg"
   />
   <img
-    *ngIf="scripts.logoTheme === 'light'"
+    *ngIf="global.logoTheme === 'light'"
     alt="Fisio Pole"
     src="./assets/img/logo/logo-negative.svg"
   />
@@ -19,14 +21,16 @@
 
 <div
   id="icon-menu"
-  [class]="scripts.iconMenuTheme"
+  [class]="global.iconMenuTheme"
+  [class.portrait]="global.isPortrait"
+  [class.landscape]="global.isLandscape"
   fxLayout.xs="row"
   fxLayoutAlign.xs="center center"
   fxLayoutAlign.sm="center center"
   fxHide.md
   fxHide.lg
   fxHide.xl
-  (click)="scripts.actionMenu('')"
+  (click)="scripts.actionMenu('iconMenu')"
 >
   <i class="fas fa-bars"></i>
 </div>
@@ -37,7 +41,9 @@
 
 <div
   id="menu"
-  [class]="scripts.menuTheme"
+  [class]="global.menuTheme"
+  [class.portrait]="global.isPortrait"
+  [class.landscape]="global.isLandscape"
   [fxLayout.xs]="menuFxLayoutXS"
   [fxLayoutAlign.xs]="menuFxLayoutAlignXS"
   fxLayoutGap.xs="15px"
@@ -97,16 +103,18 @@
 
 <div
   id="social"
-  [class]="scripts.socialTheme"
+  [class]="global.socialTheme"
+  [class.portrait]="global.isPortrait"
+  [class.landscape]="global.isLandscape"
   fxLayout="column"
   fxLayoutAlign="start stretch"
   fxLayoutGap="5px"
   [fxLayout.xs]="socialFxLayoutXS"
   [fxLayoutAlign.xs]="socialFxLayoutAlignXS"
   fxLayoutGap.xs="10px"
-  [fxLayout.sm]="socialFxLayoutSM"
-  [fxLayoutAlign.sm]="socialFxLayoutAlignSM"
-  fxLayoutGap.sm="15px"
+  fxLayout.sm="row"
+  fxLayoutAlign.sm="start start"
+  fxLayoutGap.sm="25px"
 >
   <div fxFlexOrder="1">
     <a
@@ -143,7 +151,9 @@
 
 <div
   id="made-by"
-  [class]="scripts.madebyTheme"
+  [class]="global.madebyTheme"
+  [class.portrait]="global.isPortrait"
+  [class.landscape]="global.isLandscape"
   fxLayout.xs="row"
   fxLayoutAlign.xs="center center"
   fxFill.xs
@@ -159,12 +169,12 @@
       target="_blank"
     >
       <img
-        *ngIf="scripts.madebyTheme === 'dark'"
+        *ngIf="global.madebyTheme === 'dark'"
         alt="Philipi Bovo"
         src="./assets/img/logo/philipi-bovo.png"
       />
       <img
-        *ngIf="scripts.madebyTheme === 'light'"
+        *ngIf="global.madebyTheme === 'light'"
         alt="Philipi Bovo"
         src="./assets/img/logo/philipi-bovo-negative.png"
       />
@@ -178,8 +188,4 @@
 </div>
 <!-- end #made-by -->
 
-<div
-  id="transition-page"
-  [class]="scripts.transitionPageTheme"
-  [class.show]="scripts.transitionPage"
-></div>
+<div id="transition-page" [class.show]="global.transitionPage"></div>

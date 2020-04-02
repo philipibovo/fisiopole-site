@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 
 //Scripts
+import { Global } from '../../scripts/global';
 import { ScriptsGeneral } from '../../scripts/scripts-general';
 
 @Component({
@@ -11,16 +12,22 @@ import { ScriptsGeneral } from '../../scripts/scripts-general';
 })
 export class StudioComponent implements OnInit {
   public displayStart;
-  constructor(private _title: Title, public scripts: ScriptsGeneral) {}
+  public textFxFlexOffsetSM: string;
+
+  constructor(
+    private _title: Title,
+    public global: Global,
+    public scripts: ScriptsGeneral
+  ) {}
 
   ngOnInit(): void {
     this._title.setTitle('O Estúdio - Fisio Pole');
 
-    this.onResized();
+    this.onResizedStudio();
 
     this.scripts.activeMenuItem('estudio');
 
-    if (this.scripts.transitionPage) {
+    if (this.global.transitionPage) {
       this.scripts.startTransitionPageIn();
     }
 
@@ -29,11 +36,27 @@ export class StudioComponent implements OnInit {
     }, 300);
   }
 
-  onResized() {
-    this.scripts.transitionPageTheme = 'dark';
-    this.scripts.logoTheme = 'dark';
-    this.scripts.menuTheme = 'light';
-    this.scripts.socialTheme = 'light';
-    this.scripts.madebyTheme = 'light';
+  onResizedStudio() {
+    this.global.logoTheme = 'light';
+    this.global.menuTheme = 'light';
+    this.global.socialTheme = 'light';
+    this.global.madebyTheme = 'light';
+
+    if (this.global.isSmartphone) {
+      this.global.socialTheme = 'dark';
+      this.global.iconMenuTheme = 'light';
+    }
+    //end if (this.global.isSmartphone)
+
+    if (this.global.isTablet) {
+      this.global.iconMenuTheme = 'light';
+
+      if (this.global.isLandscape) {
+        this.textFxFlexOffsetSM = '60px';
+      } else {
+        this.textFxFlexOffsetSM = '0px';
+      }
+    }
+    // end if (this.global.isTablet)
   }
 }

@@ -1,6 +1,11 @@
 <app-template></app-template>
 
-<div id="main">
+<div
+  id="main"
+  [class.portrait]="global.isPortrait"
+  [class.landscape]="global.isLandscape"
+  (window:resize)="onResizedApp()"
+>
   <router-outlet></router-outlet>
 </div>
 <!-- #content -->
