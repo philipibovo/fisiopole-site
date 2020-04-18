@@ -20,8 +20,6 @@ export class ModalitiesComponent implements OnInit {
   ngOnInit(): void {
     this._title.setTitle('Modalidades - Fisio Pole');
 
-    if (this.global.transitionPage) {
-      this.scripts.startTransitionPageIn();
-    }
+    this.scripts.activeMenuItem('modalidades');
   }
 }

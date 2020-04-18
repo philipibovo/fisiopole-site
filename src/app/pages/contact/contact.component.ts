@@ -11,6 +11,9 @@ import { ScriptsGeneral } from '../../scripts/scripts-general';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
+  public order0FxLayoutXS: string;
+  public order0FxLayoutSM: string;
+
   constructor(
     private _title: Title,
     public global: Global,
@@ -20,8 +23,31 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
     this._title.setTitle('Contato - Fisio Pole');
 
-    if (this.global.transitionPage) {
-      this.scripts.startTransitionPageIn();
+    this.onResizedContact();
+
+    this.scripts.activeMenuItem('contato');
+  }
+
+  onResizedContact() {
+    this.global.logoTheme = 'dark';
+    this.global.menuTheme = 'dark';
+    this.global.socialTheme = 'dark';
+    this.global.madebyTheme = 'dark';
+
+    if (this.global.isSmartphone) {
+      if (this.global.isPortrait) {
+        this.order0FxLayoutXS = 'column';
+      } else {
+        this.order0FxLayoutXS = 'row';
+      }
+    }
+
+    if (this.global.isTablet) {
+      if (this.global.isPortrait) {
+        this.order0FxLayoutSM = 'column';
+      } else {
+        this.order0FxLayoutSM = 'row';
+      }
     }
   }
 }

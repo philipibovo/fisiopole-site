@@ -27,12 +27,8 @@ export class StudioComponent implements OnInit {
 
     this.scripts.activeMenuItem('estudio');
 
-    if (this.global.transitionPage) {
-      this.scripts.startTransitionPageIn();
-    }
-
     setTimeout(() => {
-      this.displayStart = 'true';
+      this.displayStart = 'show';
     }, 300);
   }
 
@@ -43,8 +39,13 @@ export class StudioComponent implements OnInit {
     this.global.madebyTheme = 'light';
 
     if (this.global.isSmartphone) {
-      this.global.socialTheme = 'dark';
       this.global.iconMenuTheme = 'light';
+
+      if (this.global.isLandscape) {
+        this.global.socialTheme = 'light';
+      } else {
+        this.global.socialTheme = 'dark';
+      }
     }
     //end if (this.global.isSmartphone)
 

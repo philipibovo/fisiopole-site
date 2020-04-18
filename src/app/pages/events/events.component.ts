@@ -20,8 +20,6 @@ export class EventsComponent implements OnInit {
   ngOnInit(): void {
     this._title.setTitle('Eventos - Fisio Pole');
 
-    if (this.global.transitionPage) {
-      this.scripts.startTransitionPageIn();
-    }
+    this.scripts.activeMenuItem('eventos');
   }
 }

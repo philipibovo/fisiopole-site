@@ -23,9 +23,7 @@ export class HomeComponent implements OnInit {
     this._title.setTitle('Fisio Pole');
     this.onResized();
 
-    if (this.global.transitionPage) {
-      this.scripts.startTransitionPageIn();
-    }
+    this.scripts.activeMenuItem('');
   }
 
   onResized() {

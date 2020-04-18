@@ -1,0 +1,25 @@
+.content {
+  background: #f5cfff;
+}
+
+#socials .contact-socials-text {
+  text-align: center;
+}
+
+#socials .contact-socials-icon {
+  font-size: 2em;
+}
+
+#map .mapouter {
+  position: relative;
+  text-align: right;
+  height: 400px;
+  width: 100%;
+}
+
+#map .gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 400px;
+  width: 100%;
+}

@@ -36,7 +36,7 @@ export class TemplateComponent implements OnInit {
         this.menuFxLayoutAlignXS = 'space-evenly center';
 
         //social
-        this.socialFxLayoutXS = 'column';
+        this.socialFxLayoutXS = 'row';
         this.socialFxLayoutAlignXS = 'start center';
       } else {
         //menu

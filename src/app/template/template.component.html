@@ -3,7 +3,7 @@
   [class]="global.logoTheme"
   [class.portrait]="global.isPortrait"
   [class.landscape]="global.isLandscape"
-  (click)="scripts.actionMenu('logo')"
+  routerLink="/"
   (window:resize)="onResizedTemplate()"
 >
   <img
@@ -30,7 +30,7 @@
   fxHide.md
   fxHide.lg
   fxHide.xl
-  (click)="scripts.actionMenu('iconMenu')"
+  (click)="scripts.actionMenu()"
 >
   <i class="fas fa-bars"></i>
 </div>
@@ -52,7 +52,8 @@
 >
   <div
     id="menu-logo"
-    (click)="scripts.actionMenu('')"
+    routerLink="/"
+    (click)="scripts.actionMenu()"
     fxHide.md
     fxHide.lg
     fxHide.xl
@@ -64,35 +65,40 @@
       <li
         id="menu-item-estudio"
         class="menu-item"
-        (click)="scripts.actionMenu('estudio')"
+        routerLink="/estudio"
+        (click)="scripts.actionMenu()"
       >
         O Estúdio
       </li>
       <li
         id="menu-item-modalidades"
         class="menu-item"
-        (click)="scripts.actionMenu('modalidades')"
+        routerLink="/modalidades"
+        (click)="scripts.actionMenu()"
       >
         Modalidades
       </li>
       <li
         id="menu-item-equipe"
         class="menu-item"
-        (click)="scripts.actionMenu('equipe')"
+        routerLink="/equipe"
+        (click)="scripts.actionMenu()"
       >
         Equipe
       </li>
       <li
         id="menu-item-eventos"
         class="menu-item"
-        (click)="scripts.actionMenu('eventos')"
+        routerLink="/eventos"
+        (click)="scripts.actionMenu()"
       >
         Eventos
       </li>
       <li
         id="menu-item-contato"
         class="menu-item"
-        (click)="scripts.actionMenu('contato')"
+        routerLink="/contato"
+        (click)="scripts.actionMenu()"
       >
         Contato
       </li>

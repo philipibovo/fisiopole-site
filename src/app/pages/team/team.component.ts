@@ -20,8 +20,6 @@ export class TeamComponent implements OnInit {
   ngOnInit(): void {
     this._title.setTitle('Equipe - Fisio Pole');
 
-    if (this.global.transitionPage) {
-      this.scripts.startTransitionPageIn();
-    }
+    this.scripts.activeMenuItem('equipe');
   }
 }
