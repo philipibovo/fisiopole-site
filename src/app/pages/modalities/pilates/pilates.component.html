@@ -1,0 +1,12 @@
+<div
+  id="content"
+  class="content"
+  [class]="global.contentDisplay"
+  [class.portrait]="global.isPortrait"
+  [class.landscape]="global.isLandscape"
+  fxLayout="row"
+  fxLayoutAlign="center center"
+  (window:resize)="onResizedPilates()"
+>
+  <div><p>pilates works!</p></div>
+</div>

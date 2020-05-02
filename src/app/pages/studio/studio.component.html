@@ -1,6 +1,7 @@
 <div
   id="content"
   class="content"
+  [class]="global.contentDisplay"
   [class.portrait]="global.isPortrait"
   [class.landscape]="global.isLandscape"
   fxLayout="row"
@@ -11,7 +12,6 @@
 >
   <div
     id="text"
-    [class.show]="displayStart"
     fxFlex.xs="100%"
     fxFlex.md="40%"
     fxFlex.lg="40%"

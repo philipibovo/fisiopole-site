@@ -15,11 +15,16 @@ export class TeamComponent implements OnInit {
     private _title: Title,
     public global: Global,
     public scripts: ScriptsGeneral
-  ) {}
+  ) {
+    this.onResizedTeam();
+  }
 
   ngOnInit(): void {
     this._title.setTitle('Equipe - Fisio Pole');
 
     this.scripts.activeMenuItem('equipe');
+    this.scripts.pageIn();
   }
+
+  onResizedTeam() {}
 }

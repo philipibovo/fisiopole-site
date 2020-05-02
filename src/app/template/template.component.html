@@ -3,7 +3,7 @@
   [class]="global.logoTheme"
   [class.portrait]="global.isPortrait"
   [class.landscape]="global.isLandscape"
-  routerLink="/"
+  (click)="scripts.actionMenu('')"
   (window:resize)="onResizedTemplate()"
 >
   <img
@@ -30,7 +30,7 @@
   fxHide.md
   fxHide.lg
   fxHide.xl
-  (click)="scripts.actionMenu()"
+  (click)="scripts.showHideMenuMobile()"
 >
   <i class="fas fa-bars"></i>
 </div>
@@ -52,8 +52,7 @@
 >
   <div
     id="menu-logo"
-    routerLink="/"
-    (click)="scripts.actionMenu()"
+    (click)="scripts.actionMenu('')"
     fxHide.md
     fxHide.lg
     fxHide.xl
@@ -65,40 +64,35 @@
       <li
         id="menu-item-estudio"
         class="menu-item"
-        routerLink="/estudio"
-        (click)="scripts.actionMenu()"
+        (click)="scripts.actionMenu('estudio')"
       >
         O Estúdio
       </li>
       <li
         id="menu-item-modalidades"
         class="menu-item"
-        routerLink="/modalidades"
-        (click)="scripts.actionMenu()"
+        (click)="scripts.actionMenu('modalidades')"
       >
         Modalidades
       </li>
       <li
         id="menu-item-equipe"
         class="menu-item"
-        routerLink="/equipe"
-        (click)="scripts.actionMenu()"
+        (click)="scripts.actionMenu('equipe')"
       >
         Equipe
       </li>
       <li
         id="menu-item-eventos"
         class="menu-item"
-        routerLink="/eventos"
-        (click)="scripts.actionMenu()"
+        (click)="scripts.actionMenu('eventos')"
       >
         Eventos
       </li>
       <li
         id="menu-item-contato"
         class="menu-item"
-        routerLink="/contato"
-        (click)="scripts.actionMenu()"
+        (click)="scripts.actionMenu('contato')"
       >
         Contato
       </li>
@@ -193,5 +187,3 @@
   </div>
 </div>
 <!-- end #made-by -->
-
-<div id="transition-page" [class.show]="global.transitionPage"></div>

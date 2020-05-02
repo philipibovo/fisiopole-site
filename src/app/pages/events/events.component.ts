@@ -15,11 +15,16 @@ export class EventsComponent implements OnInit {
     private _title: Title,
     public global: Global,
     public scripts: ScriptsGeneral
-  ) {}
+  ) {
+    this.onResizedEvents();
+  }
 
   ngOnInit(): void {
     this._title.setTitle('Eventos - Fisio Pole');
 
     this.scripts.activeMenuItem('eventos');
+    this.scripts.pageIn();
   }
+
+  onResizedEvents() {}
 }

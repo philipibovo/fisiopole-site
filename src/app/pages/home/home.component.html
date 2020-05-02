@@ -1,13 +1,14 @@
 <div
   id="content"
   class="content"
+  [class]="global.contentDisplay"
   [class.portrait]="global.isPortrait"
   [class.landscape]="global.isLandscape"
   fxLayout.xs="row"
   [fxLayoutAlign.xs]="textFxLayoutAlignXS"
   fxLayout.sm="row"
   fxLayoutAlign.sm="center center"
-  (window:resize)="onResized()"
+  (window:resize)="onResizedHome()"
 >
   <div id="text" fxFlex.xs="75%" fxFlex.sm="75%">
     <p>

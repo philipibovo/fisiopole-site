@@ -1,0 +1,29 @@
+.content {
+  background: #fcf1ff;
+  overflow: auto;
+}
+
+.content > div:first-child {
+  height: calc(100vh - 29px);
+}
+
+.content > div > div > .card > .title {
+  font-size: 1.3em;
+}
+
+.content.portrait > div > div > .card > .title {
+  margin: 15px;
+}
+
+.content.landscape > div > div > .card > .title {
+  margin: 5px;
+}
+
+/*.content.portrait > div:first-child {
+  padding: 100px 20px 85px 20px;
+}
+
+.content.landscape > div:first-child {
+  padding: 40px 20px 85px 20px;
+}
+*/

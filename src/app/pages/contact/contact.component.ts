@@ -18,14 +18,15 @@ export class ContactComponent implements OnInit {
     private _title: Title,
     public global: Global,
     public scripts: ScriptsGeneral
-  ) {}
+  ) {
+    this.onResizedContact();
+  }
 
   ngOnInit(): void {
     this._title.setTitle('Contato - Fisio Pole');
 
-    this.onResizedContact();
-
     this.scripts.activeMenuItem('contato');
+    this.scripts.pageIn();
   }
 
   onResizedContact() {

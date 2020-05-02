@@ -1,0 +1,60 @@
+.content {
+  background: #fcf1ff;
+}
+
+.content > div:first-child {
+  padding: 20px 10px 20px 0;
+}
+
+.content > div > div > .card {
+  position: relative;
+  width: 160px;
+  height: 200px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.content > div > div > .card > .title {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  line-height: 44px;
+  padding: 5px 0;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+  font-size: 1.1em;
+  border-radius: 0 0 8px 8px;
+  text-align: center;
+}
+
+.content > div > div > .card > .title.double {
+  line-height: 21px;
+}
+
+.content > div > div > #pilates {
+  background: url('../../img/modalities/card/pilates.png');
+}
+
+.content > div > div > #pole-dance {
+  background: url('../../img/modalities/card/pole-dance.png');
+}
+
+.content > div > div > #pole-choreographic {
+  background: url('../../img/modalities/card/pole-choreographic.png');
+}
+
+.content > div > div > #stiletto {
+  background: url('../../img/modalities/card/stiletto.png');
+}
+
+.content > div > div > #power-woman {
+  background: url('../../img/modalities/card/power-woman.png');
+}
+
+.content > div > div > #circus {
+  background: url('../../img/modalities/card/circus.png');
+}
+
+.content > div > div > #functional-training {
+  background: url('../../img/modalities/card/functional-training.png');
+}

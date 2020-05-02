@@ -17,16 +17,18 @@ export class HomeComponent implements OnInit {
     private _title: Title,
     public global: Global,
     public scripts: ScriptsGeneral
-  ) {}
+  ) {
+    this.onResizedHome();
+  }
 
   ngOnInit(): void {
     this._title.setTitle('Fisio Pole');
-    this.onResized();
 
     this.scripts.activeMenuItem('');
+    this.scripts.pageIn();
   }
 
-  onResized() {
+  onResizedHome() {
     this.global.logoTheme = 'dark';
     this.global.menuTheme = 'dark';
     this.global.socialTheme = 'light';

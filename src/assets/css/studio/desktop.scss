@@ -1,21 +1,11 @@
 .content {
-  background: #22002b;
-  background-image: url('../../../assets/img/bg-studio-desktop.jpg');
+  background: #fcf1ff;
+  background-image: url('../../../assets/img/studio/bg-studio-desktop.jpg');
   background-repeat: no-repeat;
   background-position: right;
   background-size: auto;
-  color: #f7f7f7;
 }
 
 .content > #text {
   line-height: 1.8em;
-  margin-bottom: -250px;
-  opacity: 0;
-  transition: all 500ms;
-}
-
-.content > #text.show {
-  margin-bottom: 0px;
-  opacity: 1;
-  transition: all 500ms;
 }

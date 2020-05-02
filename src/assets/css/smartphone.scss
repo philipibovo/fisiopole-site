@@ -32,12 +32,13 @@
   z-index: 9;
 }
 
-#icon-menu.light {
-  color: rgba(255, 255, 255, 0.6);
-}
-
 #icon-menu.dark {
   color: rgba(51, 51, 51, 0.6);
+}
+
+#icon-menu.light,
+#icon-menu.active {
+  color: rgba(255, 255, 255, 0.6);
 }
 
 #menu {

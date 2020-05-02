@@ -1,6 +1,7 @@
 <div
   id="content"
   class="content"
+  [class]="global.contentDisplay"
   [class.portrait]="global.isPortrait"
   [class.landscape]="global.isLandscape"
   fxLayout="row"
@@ -28,7 +29,7 @@
       fxFlexOrder="1"
       fxFlexOffset="2.5%"
       fxFlexOffset.xs="0px"
-      fxFlex="45%"
+      fxFlex="35%"
       fxFlex.xs
       fxLayout="column"
       fxLayout.xs="column"
@@ -156,7 +157,7 @@
       </div>
       <!-- end fxFlexOrder 2.2 -->
 
-      <div fxFlexOrder="2" ngClass="center icon" fxHide.md fxHide.ls fxHide.xl>
+      <div fxFlexOrder="2" ngClass="center icon" fxHide.md fxHide.lg fxHide.xl>
         <a
           href="https://maps.google.com/maps?q=Fisiopole%20Santos"
           target="_blank"

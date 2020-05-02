@@ -15,11 +15,26 @@ export class ModalitiesComponent implements OnInit {
     private _title: Title,
     public global: Global,
     public scripts: ScriptsGeneral
-  ) {}
+  ) {
+    this.onResizedModalities();
+  }
 
   ngOnInit(): void {
     this._title.setTitle('Modalidades - Fisio Pole');
 
     this.scripts.activeMenuItem('modalidades');
+    this.scripts.pageIn();
+  }
+
+  onResizedModalities() {
+    this.global.logoTheme = 'dark';
+    this.global.menuTheme = 'dark';
+    this.global.socialTheme = 'dark';
+    this.global.madebyTheme = 'dark';
+
+    if (this.global.isSmartphone) {
+      this.global.iconMenuTheme = 'dark';
+      this.global.madebyTheme = 'light';
+    }
   }
 }

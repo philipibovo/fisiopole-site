@@ -18,25 +18,22 @@ export class StudioComponent implements OnInit {
     private _title: Title,
     public global: Global,
     public scripts: ScriptsGeneral
-  ) {}
+  ) {
+    this.onResizedStudio();
+  }
 
   ngOnInit(): void {
     this._title.setTitle('O Estúdio - Fisio Pole');
 
-    this.onResizedStudio();
-
     this.scripts.activeMenuItem('estudio');
-
-    setTimeout(() => {
-      this.displayStart = 'show';
-    }, 300);
+    this.scripts.pageIn();
   }
 
   onResizedStudio() {
-    this.global.logoTheme = 'light';
-    this.global.menuTheme = 'light';
-    this.global.socialTheme = 'light';
-    this.global.madebyTheme = 'light';
+    this.global.logoTheme = 'dark';
+    this.global.menuTheme = 'dark';
+    this.global.socialTheme = 'dark';
+    this.global.madebyTheme = 'dark';
 
     if (this.global.isSmartphone) {
       this.global.iconMenuTheme = 'light';

@@ -1,1 +1,118 @@
-<p>modalities works!</p>
+<div
+  id="content"
+  class="content"
+  [class]="global.contentDisplay"
+  [class.portrait]="global.isPortrait"
+  [class.landscape]="global.isLandscape"
+  fxLayout="row"
+  fxLayoutAlign="start center"
+  fxLayoutAlign.xs="start start"
+  (window:resize)="onResizedModalities()"
+>
+  <div
+    fxFlexOrder="1"
+    fxFlexOffset="300px"
+    fxFlex
+    fxLayout="column"
+    fxLayoutAlign="center center"
+    fxLayoutGap="25px"
+    fxFlexOffset.xs="0"
+    fxFlex.xs="100%"
+    fxLayoutAlign.xs="center center"
+    fxLayoutGap.xs="0"
+  >
+    <div
+      fxFlexOrder="1"
+      fxLayout="row"
+      fxLayoutAlign="center center"
+      fxLayoutGap="25px"
+      fxLayout.xs="column"
+      fxLayoutGap.xs="0"
+    >
+      <div
+        fxFlexOrder="1"
+        id="pilates"
+        ngClass="card"
+        (click)="scripts.actionMenu('modalidades/pilates')"
+      >
+        <div ngClass="title">Pilates</div>
+      </div>
+      <!-- end fxFlexOrder="1.1.1" -->
+
+      <div
+        fxFlexOrder="2"
+        id="pole-dance"
+        ngClass="card"
+        (click)="scripts.actionMenu('modalidades/pole-dance')"
+      >
+        <div ngClass="title">Pole Dance</div>
+      </div>
+      <!-- end fxFlexOrder="1.1.2" -->
+
+      <div
+        fxFlexOrder="3"
+        id="pole-choreographic"
+        ngClass="card"
+        (click)="scripts.actionMenu('modalidades/pole-coreografico')"
+      >
+        <div ngClass="title double">
+          Pole Coreográfico
+        </div>
+      </div>
+      <!-- end fxFlexOrder="1.1.3" -->
+
+      <div
+        fxFlexOrder="4"
+        id="stiletto"
+        ngClass="card"
+        (click)="scripts.actionMenu('modalidades/stiletto')"
+      >
+        <div ngClass="title">Stiletto</div>
+      </div>
+      <!-- end fxFlexOrder="1.1.4" -->
+    </div>
+    <!-- end fxFlexOrder="1.1" -->
+
+    <div
+      fxFlexOrder="2"
+      fxLayout="row"
+      fxLayoutAlign="center center"
+      fxLayoutGap="25px"
+      fxLayout.xs="column"
+      fxLayoutGap.xs="0"
+    >
+      <div
+        fxFlexOrder="3"
+        id="power-woman"
+        ngClass="card"
+        (click)="scripts.actionMenu('modalidades/power-woman')"
+      >
+        <div ngClass="title">Power Woman</div>
+      </div>
+      <!-- end fxFlexOrder="1.2.3" -->
+
+      <div
+        fxFlexOrder="3"
+        id="circus"
+        ngClass="card"
+        (click)="scripts.actionMenu('modalidades/circo')"
+      >
+        <div ngClass="title">Circo</div>
+      </div>
+      <!-- end fxFlexOrder="1.2.2" -->
+
+      <div
+        fxFlexOrder="3"
+        id="functional-training"
+        ngClass="card"
+        (click)="scripts.actionMenu('modalidades/treinamento-funcional')"
+      >
+        <div ngClass="title double">
+          Treinamento Funcional
+        </div>
+      </div>
+      <!-- end fxFlexOrder="1.2.3" -->
+    </div>
+    <!-- fxFlexOrder="1.2" -->
+  </div>
+</div>
