@@ -5,8 +5,107 @@
   [class.portrait]="global.isPortrait"
   [class.landscape]="global.isLandscape"
   fxLayout="row"
-  fxLayoutAlign="center center"
+  fxLayoutAlign="start start"
   (window:resize)="onResizedStiletto()"
 >
-  <div><p>stiletto works!</p></div>
+  <div
+    fxFlexOrder="1"
+    fxFlexOffset="300px"
+    fxFlex
+    fxFlexOffset.xs="0"
+    fxFlexOffset.sm="0"
+    fxLayout="column"
+    fxLayoutAlign="start start"
+    [fxLayoutAlign.xs]="contentFxLayoutAlignXS"
+    [fxLayoutAlign.sm]="contentFxLayoutAlignSM"
+  >
+    <div
+      fxFlexOrder="1"
+      class="title"
+      fxLayout="row"
+      fxLayoutAlign.xs="center end"
+    >
+      <div>{{ pageTitle }}</div>
+    </div>
+    <!-- end fxFlexOrder="1.1" .title -->
+
+    <div
+      fxFlexOrder="2"
+      class="options"
+      fxLayout="row"
+      [fxLayoutAlign.xs]="optionsFxLayoutAlignXS"
+      fxLayoutAlign.sm="end start"
+    >
+      <div
+        fxFlexOrder="1"
+        class="opt-item"
+        id="opt-voltar"
+        (click)="scripts.redirectAnimatePageOut('modalidades')"
+      >
+        <i class="fas fa-long-arrow-alt-left"></i> Voltar
+      </div>
+      <div
+        fxFlexOrder="2"
+        id="opt-photos"
+        class="opt-item navona-go"
+        data-navona-target="gallery"
+      >
+        <i class="fas fa-images"></i> Fotos
+      </div>
+    </div>
+    <!-- end fxFlexOrder="1.2" .options -->
+
+    <div fxFlexOrder="3" class="text">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et cumque illo
+      maxime nesciunt dolore. Excepturi architecto aperiam dolor quos neque
+      veritatis provident, libero cumque nihil minus iusto itaque id doloribus.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos,
+      sunt? Natus laudantium itaque reprehenderit repellendus beatae numquam
+      dicta repudiandae corrupti unde dolorum, est inventore assumenda repellat
+      molestiae praesentium similique officiis! Lorem ipsum dolor sit amet
+      consectetur adipisicing elit. Aliquam impedit ipsa molestias, obcaecati
+      numquam odio provident itaque vero repudiandae modi eveniet fuga? Eius
+      quasi voluptates, ipsa dolorem error quaerat a?
+    </div>
+    <!-- end fxFlexOrder="1.3" .text -->
+  </div>
+</div>
+
+<div id="gallery" class="navona" data-navona-portrait="true">
+  <div>
+    <img
+      src="https://live.staticflickr.com/65535/49891482208_50f1508146_h.jpg"
+    />
+    <p>Santos - SP - Brasil</p>
+  </div>
+  <div>
+    <img
+      src="https://live.staticflickr.com/65535/49891482148_22aacda029_h.jpg"
+    />
+    <p>Pacu Prata</p>
+  </div>
+  <div>
+    <img
+      src="https://live.staticflickr.com/65535/49891996161_03fc1445ba_h.jpg"
+    />
+    <p>Faraglione - Capri - Itália</p>
+  </div>
+  <div>
+    <img
+      src="https://live.staticflickr.com/65535/49892308922_09c05dc337_b.jpg"
+    />
+    <p>Dancing Day</p>
+  </div>
+  <div>
+    <img
+      src="https://live.staticflickr.com/65535/49892308912_f064766e96_h.jpg"
+    />
+    <p>Pisa - Itália</p>
+  </div>
+  <div>
+    <img
+      src="https://live.staticflickr.com/65535/49891996046_e8d1c8b5af_h.jpg"
+    />
+    <p>Sargentinho Solitário</p>
+  </div>
 </div>

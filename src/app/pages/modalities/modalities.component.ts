@@ -11,6 +11,9 @@ import { ScriptsGeneral } from '../../scripts/scripts-general';
   styleUrls: ['./modalities.component.scss']
 })
 export class ModalitiesComponent implements OnInit {
+  public itemsFxLayoutSM: string;
+  public fxLayoutGapSM: string;
+
   constructor(
     private _title: Title,
     public global: Global,
@@ -35,6 +38,19 @@ export class ModalitiesComponent implements OnInit {
     if (this.global.isSmartphone) {
       this.global.iconMenuTheme = 'dark';
       this.global.madebyTheme = 'light';
+    }
+
+    if (this.global.isTablet) {
+      this.global.iconMenuTheme = 'dark';
+      this.global.madebyTheme = 'light';
+
+      if (this.global.isPortrait) {
+        this.itemsFxLayoutSM = 'row';
+        this.fxLayoutGapSM = '25px';
+      } else {
+        this.itemsFxLayoutSM = 'column';
+        this.fxLayoutGapSM = '0px';
+      }
     }
   }
 }

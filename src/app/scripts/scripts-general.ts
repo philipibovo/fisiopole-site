@@ -52,13 +52,19 @@ export class ScriptsGeneral {
       return;
     }
 
+    //Desktop
+    this.redirectAnimatePageOut(location);
+  }
+  // end public actionMenu(location)
+
+  public redirectAnimatePageOut(location: string) {
     this.pageOut();
 
     setTimeout(() => {
       this._router.navigate([`/${location}`]);
     }, 150);
   }
-  // end public actionMenu(location)
+  // end public redirectAnimatePageOut(location: string)
 
   public showHideMenuMobile() {
     document.getElementById('menu-shadow-2').classList.toggle('active');
@@ -77,7 +83,7 @@ export class ScriptsGeneral {
   }
   // end showHideMenuMobile()
 
-  public activeMenuItem(name) {
+  public activeMenuItem(name: string) {
     const items = document.getElementsByClassName('menu-item');
 
     for (let i = 0; i < items.length; i++) {
@@ -88,7 +94,7 @@ export class ScriptsGeneral {
       document.getElementById(`menu-item-${name}`).classList.add('active');
     }
   }
-  // end activeMenuItem(name)
+  // end activeMenuItem(name: string)
 
   public pageIn() {
     setTimeout(() => {

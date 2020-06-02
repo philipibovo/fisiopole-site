@@ -9,6 +9,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
+//Navona
+import { Navona } from './scripts/navona';
+
 //Script
 import { Global } from './scripts/global';
 import { ScriptsGeneral } from './scripts/scripts-general';
@@ -64,6 +67,7 @@ registerLocaleData(localePt, 'pt-BR');
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'pt-BR' },
+    Navona,
     Global,
     ScriptsGeneral
   ],

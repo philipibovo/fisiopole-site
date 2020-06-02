@@ -7,6 +7,7 @@
   fxLayout="row"
   fxLayoutAlign="start center"
   fxLayoutAlign.xs="start start"
+  fxLayoutAlign.sm="start center"
   (window:resize)="onResizedModalities()"
 >
   <div
@@ -16,10 +17,13 @@
     fxLayout="column"
     fxLayoutAlign="center center"
     fxLayoutGap="25px"
-    fxFlexOffset.xs="0"
     fxFlex.xs="100%"
+    fxFlexOffset.xs="0"
     fxLayoutAlign.xs="center center"
     fxLayoutGap.xs="0"
+    fxFlexOffset.sm="0"
+    fxFlex.sm
+    [fxLayoutGap.sm]="fxLayoutGapSM"
   >
     <div
       fxFlexOrder="1"
@@ -28,12 +32,14 @@
       fxLayoutGap="25px"
       fxLayout.xs="column"
       fxLayoutGap.xs="0"
+      [fxLayout.sm]="itemsFxLayoutSM"
+      [fxLayoutGap.sm]="fxLayoutGapSM"
     >
       <div
         fxFlexOrder="1"
         id="pilates"
         ngClass="card"
-        (click)="scripts.actionMenu('modalidades/pilates')"
+        (click)="scripts.redirectAnimatePageOut('modalidades/pilates')"
       >
         <div ngClass="title">Pilates</div>
       </div>
@@ -43,7 +49,7 @@
         fxFlexOrder="2"
         id="pole-dance"
         ngClass="card"
-        (click)="scripts.actionMenu('modalidades/pole-dance')"
+        (click)="scripts.redirectAnimatePageOut('modalidades/pole-dance')"
       >
         <div ngClass="title">Pole Dance</div>
       </div>
@@ -53,7 +59,9 @@
         fxFlexOrder="3"
         id="pole-choreographic"
         ngClass="card"
-        (click)="scripts.actionMenu('modalidades/pole-coreografico')"
+        (click)="
+          scripts.redirectAnimatePageOut('modalidades/pole-coreografico')
+        "
       >
         <div ngClass="title double">
           Pole Coreográfico
@@ -65,7 +73,7 @@
         fxFlexOrder="4"
         id="stiletto"
         ngClass="card"
-        (click)="scripts.actionMenu('modalidades/stiletto')"
+        (click)="scripts.redirectAnimatePageOut('modalidades/stiletto')"
       >
         <div ngClass="title">Stiletto</div>
       </div>
@@ -80,12 +88,14 @@
       fxLayoutGap="25px"
       fxLayout.xs="column"
       fxLayoutGap.xs="0"
+      [fxLayout.sm]="itemsFxLayoutSM"
+      [fxLayoutGap.sm]="fxLayoutGapSM"
     >
       <div
         fxFlexOrder="3"
         id="power-woman"
         ngClass="card"
-        (click)="scripts.actionMenu('modalidades/power-woman')"
+        (click)="scripts.redirectAnimatePageOut('modalidades/power-woman')"
       >
         <div ngClass="title">Power Woman</div>
       </div>
@@ -95,7 +105,7 @@
         fxFlexOrder="3"
         id="circus"
         ngClass="card"
-        (click)="scripts.actionMenu('modalidades/circo')"
+        (click)="scripts.redirectAnimatePageOut('modalidades/circo')"
       >
         <div ngClass="title">Circo</div>
       </div>
@@ -105,7 +115,9 @@
         fxFlexOrder="3"
         id="functional-training"
         ngClass="card"
-        (click)="scripts.actionMenu('modalidades/treinamento-funcional')"
+        (click)="
+          scripts.redirectAnimatePageOut('modalidades/treinamento-funcional')
+        "
       >
         <div ngClass="title double">
           Treinamento Funcional

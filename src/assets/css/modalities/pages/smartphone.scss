@@ -1,0 +1,52 @@
+.content.portrait > div > .title {
+  height: 80px;
+  width: 195px;
+  font-size: 1.8em;
+  color: #440055;
+  text-align: center;
+}
+
+.content.landscape > div > .title {
+  width: 195px;
+  margin-left: 120px;
+  padding-top: 20px;
+  font-size: 1.8em;
+  color: #440055;
+}
+
+.content.portrait > div > .options {
+  height: 58px;
+  padding: 20px 10px;
+  color: #440055;
+}
+
+.content.landscape > div > .options {
+  height: 50px;
+  width: 100%;
+  margin-top: -30px;
+  color: #440055;
+  padding: 10px 0 10px 5px;
+}
+
+.content > div > .options > .opt-item {
+  margin: 0 10px;
+  padding: 5px 10px;
+  color: #440055;
+  border: 1px solid #440055;
+  border-radius: 50px;
+}
+
+.content > div > .text {
+  text-align: center;
+  overflow: auto;
+}
+
+.content.portrait > div > .text {
+  height: calc(100vh - 167px);
+  padding: 0px 10px 50px 10px;
+}
+
+.content.content.landscape > div > .text {
+  height: calc(100vh - 134px);
+  padding: 0px 50px;
+}
