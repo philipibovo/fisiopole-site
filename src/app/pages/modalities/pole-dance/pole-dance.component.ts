@@ -14,7 +14,7 @@ import { ScriptsGeneral } from '../../../scripts/scripts-general';
   styleUrls: ['./pole-dance.component.scss']
 })
 export class PoleDanceComponent implements OnInit {
-  public pageTitle: string;
+  public pageTitleLocal: string;
   public contentFxLayoutAlignXS: string;
   public optionsFxLayoutAlignXS: string;
   public contentFxLayoutAlignSM: string;
@@ -29,8 +29,17 @@ export class PoleDanceComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.pageTitle = 'Pole Dance';
-    this._title.setTitle(`${this.pageTitle} - Fisio Pole`);
+    switch (this.global.lang) {
+      case 'en-us':
+        this.pageTitleLocal = 'Pole Dance';
+        break;
+      case 'pt-br':
+        this.pageTitleLocal = 'Pole Dance';
+        break;
+    }
+
+    this._title.setTitle(`${this.pageTitleLocal} - Fisio Pole`);
+    this.scripts.setPageTitle(this.pageTitleLocal);
 
     this.scripts.activeMenuItem('modalidades');
     this.scripts.pageIn();

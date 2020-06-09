@@ -14,7 +14,7 @@ import { ScriptsGeneral } from '../../../scripts/scripts-general';
   styleUrls: ['./stiletto.component.scss']
 })
 export class StilettoComponent implements OnInit {
-  public pageTitle: string;
+  public pageTitleLocal: string;
   public contentFxLayoutAlignXS: string;
   public optionsFxLayoutAlignXS: string;
   public contentFxLayoutAlignSM: string;
@@ -29,8 +29,17 @@ export class StilettoComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.pageTitle = 'Stiletto';
-    this._title.setTitle(`${this.pageTitle} - Fisio Pole`);
+    switch (this.global.lang) {
+      case 'en-us':
+        this.pageTitleLocal = 'Stiletto';
+        break;
+      case 'pt-br':
+        this.pageTitleLocal = 'Stiletto';
+        break;
+    }
+
+    this._title.setTitle(`${this.pageTitleLocal} - Fisio Pole`);
+    this.scripts.setPageTitle(this.pageTitleLocal);
 
     this.scripts.activeMenuItem('modalidades');
     this.scripts.pageIn();

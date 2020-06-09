@@ -10,7 +10,9 @@ import { ScriptsGeneral } from './scripts/scripts-general';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  constructor(public global: Global, public scripts: ScriptsGeneral) {}
+  constructor(public global: Global, public scripts: ScriptsGeneral) {
+    this.scripts.setLanguage();
+  }
 
   title = 'Fisio Pole';
 

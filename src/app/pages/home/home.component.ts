@@ -11,6 +11,7 @@ import { ScriptsGeneral } from '../../scripts/scripts-general';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  public pageTitleLocal: string;
   public textFxLayoutAlignXS: string;
 
   constructor(
@@ -22,7 +23,16 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    switch (this.global.lang) {
+      case 'en-us':
+        this.pageTitleLocal = '';
+        break;
+      case 'pt-br':
+        this.pageTitleLocal = '';
+        break;
+    }
     this._title.setTitle('Fisio Pole');
+    this.scripts.setPageTitle(this.pageTitleLocal);
 
     this.scripts.activeMenuItem('');
     this.scripts.pageIn();

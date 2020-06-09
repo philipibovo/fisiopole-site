@@ -23,24 +23,49 @@ import { ContactComponent } from './pages/contact/contact.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'estudio', component: StudioComponent },
-  { path: 'modalidades', component: ModalitiesComponent },
-  { path: 'modalidades/circo', component: CircusComponent },
-  { path: 'modalidades/pilates', component: PilatesComponent },
+  { path: 'en-us', component: HomeComponent },
+  { path: 'pt-br', component: HomeComponent },
+
+  { path: 'en-us/studio', component: StudioComponent },
+  { path: 'pt-br/studio', component: StudioComponent },
+
+  { path: 'en-us/modalities', component: ModalitiesComponent },
+  { path: 'pt-br/modalities', component: ModalitiesComponent },
+  { path: 'en-us/modalities/circus', component: CircusComponent },
+  { path: 'pt-br/modalities/circus', component: CircusComponent },
+  { path: 'en-us/modalities/pilates', component: PilatesComponent },
+  { path: 'pt-br/modalities/pilates', component: PilatesComponent },
   {
-    path: 'modalidades/pole-coreografico',
+    path: 'en-us/modalities/pole-choreographic',
     component: PoleChoreographicComponent
   },
-  { path: 'modalidades/pole-dance', component: PoleDanceComponent },
-  { path: 'modalidades/power-woman', component: PowerWomanComponent },
   {
-    path: 'modalidades/treinamento-funcional',
+    path: 'pt-br/modalities/pole-choreographic',
+    component: PoleChoreographicComponent
+  },
+  { path: 'en-us/modalities/pole-dance', component: PoleDanceComponent },
+  { path: 'pt-br/modalities/pole-dance', component: PoleDanceComponent },
+  { path: 'en-us/modalities/power-woman', component: PowerWomanComponent },
+  { path: 'pt-br/modalities/power-woman', component: PowerWomanComponent },
+  {
+    path: 'en-us/modalities/functional-training',
     component: FunctionalTrainingComponent
   },
-  { path: 'modalidades/stiletto', component: StilettoComponent },
-  { path: 'equipe', component: TeamComponent },
-  { path: 'eventos', component: EventsComponent },
-  { path: 'contato', component: ContactComponent }
+  {
+    path: 'pt-br/modalities/functional-training',
+    component: FunctionalTrainingComponent
+  },
+  { path: 'en-us/modalities/stiletto', component: StilettoComponent },
+  { path: 'pt-br/modalities/stiletto', component: StilettoComponent },
+
+  { path: 'en-us/team', component: TeamComponent },
+  { path: 'pt-br/team', component: TeamComponent },
+
+  { path: 'en-us/events', component: EventsComponent },
+  { path: 'pt-br/events', component: EventsComponent },
+
+  { path: 'en-us/contact', component: ContactComponent },
+  { path: 'pt-br/contact', component: ContactComponent }
 ];
 
 @NgModule({

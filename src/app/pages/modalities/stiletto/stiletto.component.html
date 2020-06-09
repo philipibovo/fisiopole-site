@@ -21,16 +21,6 @@
   >
     <div
       fxFlexOrder="1"
-      class="title"
-      fxLayout="row"
-      fxLayoutAlign.xs="center end"
-    >
-      <div>{{ pageTitle }}</div>
-    </div>
-    <!-- end fxFlexOrder="1.1" .title -->
-
-    <div
-      fxFlexOrder="2"
       class="options"
       fxLayout="row"
       [fxLayoutAlign.xs]="optionsFxLayoutAlignXS"
@@ -40,9 +30,14 @@
         fxFlexOrder="1"
         class="opt-item"
         id="opt-voltar"
-        (click)="scripts.redirectAnimatePageOut('modalidades')"
+        (click)="scripts.redirectAnimatePageOut('modalities')"
       >
-        <i class="fas fa-long-arrow-alt-left"></i> Voltar
+        <div *ngIf="global.lang === 'en-us'">
+          <i class="fas fa-long-arrow-alt-left"></i> Back
+        </div>
+        <div *ngIf="global.lang === 'pt-br'">
+          <i class="fas fa-long-arrow-alt-left"></i> Voltar
+        </div>
       </div>
       <div
         fxFlexOrder="2"
@@ -50,62 +45,52 @@
         class="opt-item navona-go"
         data-navona-target="gallery"
       >
-        <i class="fas fa-images"></i> Fotos
+        <div *ngIf="global.lang === 'en-us'">
+          <i class="fas fa-images"></i> Photos
+        </div>
+        <div *ngIf="global.lang === 'pt-br'">
+          <i class="fas fa-images"></i> Fotos
+        </div>
       </div>
     </div>
-    <!-- end fxFlexOrder="1.2" .options -->
+    <!-- end fxFlexOrder="1.1" .options -->
 
-    <div fxFlexOrder="3" class="text">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et cumque illo
-      maxime nesciunt dolore. Excepturi architecto aperiam dolor quos neque
-      veritatis provident, libero cumque nihil minus iusto itaque id doloribus.
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos,
-      sunt? Natus laudantium itaque reprehenderit repellendus beatae numquam
-      dicta repudiandae corrupti unde dolorum, est inventore assumenda repellat
-      molestiae praesentium similique officiis! Lorem ipsum dolor sit amet
-      consectetur adipisicing elit. Aliquam impedit ipsa molestias, obcaecati
-      numquam odio provident itaque vero repudiandae modi eveniet fuga? Eius
-      quasi voluptates, ipsa dolorem error quaerat a?
+    <div *ngIf="global.lang === 'en-us'" fxFlexOrder="2" class="text">
+      This modality is for those who want to rock dancing on top of the jump! On
+      here, we teach musicality, fluidity, sequence of movements and techniques
+      for dance in heels. It is an aerobic activity that works the whole body,
+      improves balance, posture, coordination and strengthens mainly the leg
+      muscles, glutes and core.
     </div>
-    <!-- end fxFlexOrder="1.3" .text -->
+    <!-- end fxFlexOrder="1.2" .text en-us -->
+
+    <div *ngIf="global.lang === 'pt-br'" fxFlexOrder="2" class="text">
+      Essa modalidade é para quem quer arrasar dançando em cima do salto! Aqui,
+      ensinamos musicalidade, fluidez, sequência de movimentos e técnicas para
+      dançar de salto. É uma atividade aeróbica que trabalha o corpo todo,
+      melhora equilíbrio, postura, coordenação e fortalece principalmente os
+      músculos da perna, glúteos e core.
+    </div>
+    <!-- end fxFlexOrder="1.2" .text pt-br -->
+
+    <div *ngIf="global.lang === 'en-us'" fxFlexOrder="3" class="text">
+      No experience with any activity is necessary, you learn everything during
+      the classes.
+    </div>
+    <!-- end fxFlexOrder="1.3" .text en-us -->
+
+    <div *ngIf="global.lang === 'pt-br'" fxFlexOrder="3" class="text">
+      Nenhuma experiência com qualquer atividade é necessária, você aprende tudo
+      durante as aulas.
+    </div>
+    <!-- end fxFlexOrder="1.3" .text pt-br -->
   </div>
 </div>
 
 <div id="gallery" class="navona" data-navona-portrait="true">
   <div>
     <img
-      src="https://live.staticflickr.com/65535/49891482208_50f1508146_h.jpg"
+      src="https://live.staticflickr.com/65535/49985845517_7ef9181471_z.jpg"
     />
-    <p>Santos - SP - Brasil</p>
-  </div>
-  <div>
-    <img
-      src="https://live.staticflickr.com/65535/49891482148_22aacda029_h.jpg"
-    />
-    <p>Pacu Prata</p>
-  </div>
-  <div>
-    <img
-      src="https://live.staticflickr.com/65535/49891996161_03fc1445ba_h.jpg"
-    />
-    <p>Faraglione - Capri - Itália</p>
-  </div>
-  <div>
-    <img
-      src="https://live.staticflickr.com/65535/49892308922_09c05dc337_b.jpg"
-    />
-    <p>Dancing Day</p>
-  </div>
-  <div>
-    <img
-      src="https://live.staticflickr.com/65535/49892308912_f064766e96_h.jpg"
-    />
-    <p>Pisa - Itália</p>
-  </div>
-  <div>
-    <img
-      src="https://live.staticflickr.com/65535/49891996046_e8d1c8b5af_h.jpg"
-    />
-    <p>Sargentinho Solitário</p>
   </div>
 </div>

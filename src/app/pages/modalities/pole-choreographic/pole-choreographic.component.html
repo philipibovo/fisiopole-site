@@ -21,16 +21,6 @@
   >
     <div
       fxFlexOrder="1"
-      class="title"
-      fxLayout="row"
-      fxLayoutAlign.xs="center end"
-    >
-      <div>{{ pageTitle }}</div>
-    </div>
-    <!-- end fxFlexOrder="1.1" .title -->
-
-    <div
-      fxFlexOrder="2"
       class="options"
       fxLayout="row"
       [fxLayoutAlign.xs]="optionsFxLayoutAlignXS"
@@ -40,9 +30,14 @@
         fxFlexOrder="1"
         class="opt-item"
         id="opt-voltar"
-        (click)="scripts.redirectAnimatePageOut('modalidades')"
+        (click)="scripts.redirectAnimatePageOut('modalities')"
       >
-        <i class="fas fa-long-arrow-alt-left"></i> Voltar
+        <div *ngIf="global.lang === 'en-us'">
+          <i class="fas fa-long-arrow-alt-left"></i> Back
+        </div>
+        <div *ngIf="global.lang === 'pt-br'">
+          <i class="fas fa-long-arrow-alt-left"></i> Voltar
+        </div>
       </div>
       <div
         fxFlexOrder="2"
@@ -50,62 +45,116 @@
         class="opt-item navona-go"
         data-navona-target="gallery"
       >
-        <i class="fas fa-images"></i> Fotos
+        <div *ngIf="global.lang === 'en-us'">
+          <i class="fas fa-images"></i> Photos
+        </div>
+        <div *ngIf="global.lang === 'pt-br'">
+          <i class="fas fa-images"></i> Fotos
+        </div>
       </div>
     </div>
-    <!-- end fxFlexOrder="1.2" .options -->
+    <!-- end fxFlexOrder="1.1" .options -->
 
-    <div fxFlexOrder="3" class="text">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et cumque illo
-      maxime nesciunt dolore. Excepturi architecto aperiam dolor quos neque
-      veritatis provident, libero cumque nihil minus iusto itaque id doloribus.
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos,
-      sunt? Natus laudantium itaque reprehenderit repellendus beatae numquam
-      dicta repudiandae corrupti unde dolorum, est inventore assumenda repellat
-      molestiae praesentium similique officiis! Lorem ipsum dolor sit amet
-      consectetur adipisicing elit. Aliquam impedit ipsa molestias, obcaecati
-      numquam odio provident itaque vero repudiandae modi eveniet fuga? Eius
-      quasi voluptates, ipsa dolorem error quaerat a?
+    <div *ngIf="global.lang === 'en-us'" fxFlexOrder="2" class="text">
+      The Choreographic Pole is an exclusive pole dance style that works
+      strength, mobility, fluidity, body awareness and musicality.
     </div>
-    <!-- end fxFlexOrder="1.3" .text -->
+    <!-- end fxFlexOrder="1.2" .text en-us -->
+
+    <div *ngIf="global.lang === 'pt-br'" fxFlexOrder="2" class="text">
+      O Pole Coreográfico é um estilo de pole exclusivo de dança que trabalha
+      força, mobilidade, fluidez, consciência corporal e musicalidade.
+    </div>
+    <!-- end fxFlexOrder="1.2" .text pt-br -->
+
+    <div *ngIf="global.lang === 'en-us'" fxFlexOrder="3" class="text">
+      We teach curves, transitions and movements through choreography mixing a
+      little bit of everything (Pole Classic, Flow, Floorwork, Sensual and
+      Exotic).
+    </div>
+    <!-- end fxFlexOrder="1.3" .text en-us -->
+
+    <div *ngIf="global.lang === 'pt-br'" fxFlexOrder="3" class="text">
+      Ensinamos giros, transições e movimentos através de coreografias
+      misturando um pouco de tudo (Pole Clássico, Flow, Floorwork, Sensual e
+      Exotic).
+    </div>
+    <!-- end fxFlexOrder="1.3" .text pt-br -->
+
+    <div *ngIf="global.lang === 'pt-br'" fxFlexOrder="4" class="text">
+      Escolhemos as músicas junto com as alunas para uma melhor experiência,
+      prezamos por uma aula gostosa e libertadora. Costumamos trabalhar uma
+      coreografia por mês. Recomendados o uso de meias e joelheiras, o uso de
+      salto apropriado para a prática é opcional.
+    </div>
+    <!-- end fxFlexOrder="1.4" .text pt-br -->
+
+    <div *ngIf="global.lang === 'en-us'" fxFlexOrder="4" class="text">
+      We choose the songs together with the students for a better experience, we
+      enjoyed a delicious and liberating class. We usually work a choreography
+      per month. The use of socks and knee pads, the use of appropriate jump for
+      practice is optional.
+    </div>
+    <!-- end fxFlexOrder="1.4" .text en-us -->
+
+    <div *ngIf="global.lang === 'en-us'" fxFlexOrder="5" class="text">
+      We usually work one choreography per month.
+    </div>
+    <!-- end fxFlexOrder="1.5" .text en-us -->
+
+    <div *ngIf="global.lang === 'pt-br'" fxFlexOrder="5" class="text">
+      Costumamos trabalhar uma coreografia por mês.
+    </div>
+    <!-- end fxFlexOrder="1.5" .text pt-br -->
+
+    <div *ngIf="global.lang === 'en-us'" fxFlexOrder="6" class="text">
+      We recommend the use of socks and knee pads, the use of suitable heels for
+      practice is optional.
+    </div>
+    <!-- end fxFlexOrder="1.6" .text en-us -->
+
+    <div *ngIf="global.lang === 'pt-br'" fxFlexOrder="6" class="text">
+      Recomendados o uso de meias e joelheiras, o uso de salto apropriado para a
+      prática é opcional.
+    </div>
+    <!-- end fxFlexOrder="1.6" .text pt-br -->
   </div>
 </div>
 
 <div id="gallery" class="navona" data-navona-portrait="true">
   <div>
     <img
-      src="https://live.staticflickr.com/65535/49891482208_50f1508146_h.jpg"
+      src="https://live.staticflickr.com/65535/49985626117_495a8df8f4_c.jpg"
     />
-    <p>Santos - SP - Brasil</p>
   </div>
   <div>
     <img
-      src="https://live.staticflickr.com/65535/49891482148_22aacda029_h.jpg"
+      src="https://live.staticflickr.com/65535/49984849133_4a0f2db637_b.jpg"
     />
-    <p>Pacu Prata</p>
   </div>
   <div>
     <img
-      src="https://live.staticflickr.com/65535/49891996161_03fc1445ba_h.jpg"
+      src="https://live.staticflickr.com/65535/49984846563_ddb6b1085f_k.jpg"
     />
-    <p>Faraglione - Capri - Itália</p>
   </div>
   <div>
     <img
-      src="https://live.staticflickr.com/65535/49892308922_09c05dc337_b.jpg"
+      src="https://live.staticflickr.com/65535/49985363786_f20a650ba5_h.jpg"
     />
-    <p>Dancing Day</p>
   </div>
   <div>
-    <img
-      src="https://live.staticflickr.com/65535/49892308912_f064766e96_h.jpg"
-    />
-    <p>Pisa - Itália</p>
+    <img src="https://live.staticflickr.com/65535/49984839963_a440fa243a.jpg" />
   </div>
   <div>
-    <img
-      src="https://live.staticflickr.com/65535/49891996046_e8d1c8b5af_h.jpg"
-    />
-    <p>Sargentinho Solitário</p>
+    <img src="https://live.staticflickr.com/65535/49985621967_124817ebed.jpg" />
+  </div>
+  <div>
+    <img src="https://live.staticflickr.com/65535/49985366216_c54604881f.jpg" />
+  </div>
+  <div>
+    <img src="https://live.staticflickr.com/65535/49984847758_d58cffd16c.jpg" />
+  </div>
+  <div>
+    <img src="https://live.staticflickr.com/65535/49985624947_b0ca43c456.jpg" />
   </div>
 </div>

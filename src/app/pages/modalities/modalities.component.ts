@@ -11,6 +11,7 @@ import { ScriptsGeneral } from '../../scripts/scripts-general';
   styleUrls: ['./modalities.component.scss']
 })
 export class ModalitiesComponent implements OnInit {
+  public pageTitleLocal: string;
   public itemsFxLayoutSM: string;
   public fxLayoutGapSM: string;
 
@@ -23,7 +24,17 @@ export class ModalitiesComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this._title.setTitle('Modalidades - Fisio Pole');
+    switch (this.global.lang) {
+      case 'en-us':
+        this.pageTitleLocal = 'Modalities';
+        break;
+      case 'pt-br':
+        this.pageTitleLocal = 'Modalidades';
+        break;
+    }
+
+    this._title.setTitle(`${this.pageTitleLocal} - Fisio Pole`);
+    this.scripts.setPageTitle(this.pageTitleLocal);
 
     this.scripts.activeMenuItem('modalidades');
     this.scripts.pageIn();

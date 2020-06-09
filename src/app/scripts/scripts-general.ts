@@ -8,6 +8,33 @@ import { Global } from './global';
 export class ScriptsGeneral {
   constructor(private _router: Router, public global: Global) {}
 
+  public setLanguage(lang?: string) {
+    let path = window.location.pathname;
+    let pathLang = window.location.pathname.substring(1, 6);
+
+    if (!lang && pathLang) {
+      lang = pathLang;
+    }
+
+    switch (lang) {
+      case 'en-us':
+        this.global.lang = lang;
+        path = path.replace('pt-br', lang);
+        break;
+      case 'pt-br':
+        this.global.lang = lang;
+        path = path.replace('en-us', lang);
+        break;
+      default:
+        lang = 'pt-br';
+        this.global.lang = lang;
+        path += lang;
+        break;
+    }
+
+    this._router.navigate([`${path}`]);
+  }
+
   public verifyDevice() {
     if (window.innerWidth <= 599) {
       this.global.isSmartphone = true;
@@ -47,7 +74,7 @@ export class ScriptsGeneral {
     if (this.global.isSmartphone || this.global.isTablet) {
       this.showHideMenuMobile();
 
-      this._router.navigate([`/${location}`]);
+      this._router.navigate([`${this.global.lang}/${location}`]);
 
       return;
     }
@@ -61,7 +88,7 @@ export class ScriptsGeneral {
     this.pageOut();
 
     setTimeout(() => {
-      this._router.navigate([`/${location}`]);
+      this._router.navigate([`${this.global.lang}/${location}`]);
     }, 150);
   }
   // end public redirectAnimatePageOut(location: string)
@@ -95,6 +122,14 @@ export class ScriptsGeneral {
     }
   }
   // end activeMenuItem(name: string)
+
+  public setPageTitle(title: string) {
+    document.getElementById('page-title').classList.remove('show');
+    setTimeout(() => {
+      this.global.pageTitle = title;
+      document.getElementById('page-title').classList.add('show');
+    }, 300);
+  }
 
   public pageIn() {
     setTimeout(() => {

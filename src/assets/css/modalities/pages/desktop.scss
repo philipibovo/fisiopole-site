@@ -1,12 +1,6 @@
 .content > div:first-child {
+  margin-top: 90px;
   padding-right: 65px;
-}
-
-.content > div > .title {
-  padding-top: 50px;
-  font-size: 2.5em;
-  color: #440055;
-  cursor: default;
 }
 
 .content > div > .options {
@@ -30,4 +24,5 @@
 
 .content > div > .text {
   padding-top: 20px;
+  line-height: 1.6em;
 }

@@ -14,7 +14,7 @@ import { ScriptsGeneral } from '../../../scripts/scripts-general';
   styleUrls: ['./functional-training.component.scss']
 })
 export class FunctionalTrainingComponent implements OnInit {
-  public pageTitle: string;
+  public pageTitleLocal: string;
   public contentFxLayoutAlignXS: string;
   public optionsFxLayoutAlignXS: string;
   public contentFxLayoutAlignSM: string;
@@ -29,8 +29,17 @@ export class FunctionalTrainingComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.pageTitle = 'Treinamento Funcional';
-    this._title.setTitle(`${this.pageTitle} - Fisio Pole`);
+    switch (this.global.lang) {
+      case 'en-us':
+        this.pageTitleLocal = 'Functional Training';
+        break;
+      case 'pt-br':
+        this.pageTitleLocal = 'Treinamento Funcional';
+        break;
+    }
+
+    this._title.setTitle(`${this.pageTitleLocal} - Fisio Pole`);
+    this.scripts.setPageTitle(this.pageTitleLocal);
 
     this.scripts.activeMenuItem('modalidades');
     this.scripts.pageIn();

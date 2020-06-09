@@ -52,6 +52,98 @@ a:hover {
   text-align: right;
 }
 
+/* CARD */
+.card {
+  position: relative;
+  height: 170px;
+  height: 225px;
+  width: 170px;
+  margin: 50px 10px 0 10px;
+  background: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  transition: 300ms ease-in-out;
+}
+
+.card:hover {
+  height: 250px;
+  transition: 300ms ease-in-out;
+}
+
+.card > .card-photo {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  top: 0px;
+  border-radius: 4px;
+  z-index: 1;
+  transition: 300ms ease-in-out;
+}
+
+.card:hover > .card-photo {
+  top: -40px;
+  box-shadow: 0px -10px 10px -8px rgba(0, 0, 0, 0.3);
+  transition: 300ms ease-in-out;
+}
+
+.card > .card-photo > img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.card > .card-title {
+  position: relative;
+  top: 10px;
+  background: #fff;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.2em;
+  z-index: 1;
+  transition: 300ms ease-in-out;
+}
+
+.card:hover > .card-title {
+  top: -30px;
+  transition: 300ms ease-in-out;
+}
+
+.card > .card-content {
+  position: relative;
+  text-align: center;
+  height: 125px;
+  top: -125px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 300ms ease-in-out;
+}
+
+.card:hover > .card-content {
+  top: -40px;
+  visibility: visible;
+  opacity: 1;
+}
+
+.card > .card-content > .card-content-social {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.card > .card-content > .card-content-social > div {
+  font-size: 1.2em;
+  margin: 0 5px;
+}
+
+.card > .card-content > .card-content-text {
+  margin-top: 15px;
+}
+/* END CARD */
+
 /* Transition's Page Classes */
 #content.hide {
   opacity: 0;
@@ -59,7 +151,7 @@ a:hover {
 }
 
 #content.show {
-  opacity: 100%;
+  opacity: 1;
   transition: all 300ms;
 }
 /* End Transition's Page Classes */

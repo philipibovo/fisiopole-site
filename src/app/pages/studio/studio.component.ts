@@ -13,6 +13,7 @@ import { ScriptsGeneral } from '../../scripts/scripts-general';
 export class StudioComponent implements OnInit {
   public displayStart;
   public textFxFlexOffsetSM: string;
+  public pageTitleLocal: string;
 
   constructor(
     private _title: Title,
@@ -23,7 +24,17 @@ export class StudioComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this._title.setTitle('O Estúdio - Fisio Pole');
+    switch (this.global.lang) {
+      case 'en-us':
+        this.pageTitleLocal = 'Studio';
+        break;
+      case 'pt-br':
+        this.pageTitleLocal = 'Estúdio';
+        break;
+    }
+
+    this._title.setTitle(`${this.pageTitleLocal} - Fisio Pole`);
+    this.scripts.setPageTitle(this.pageTitleLocal);
 
     this.scripts.activeMenuItem('estudio');
     this.scripts.pageIn();

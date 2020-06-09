@@ -11,6 +11,7 @@ import { ScriptsGeneral } from '../../scripts/scripts-general';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
+  public pageTitleLocal: string;
   public order0FxLayoutXS: string;
   public order0FxLayoutSM: string;
 
@@ -23,7 +24,17 @@ export class ContactComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this._title.setTitle('Contato - Fisio Pole');
+    switch (this.global.lang) {
+      case 'en-us':
+        this.pageTitleLocal = 'Contact';
+        break;
+      case 'pt-br':
+        this.pageTitleLocal = 'Contato';
+        break;
+    }
+
+    this._title.setTitle(`${this.pageTitleLocal} - Fisio Pole`);
+    this.scripts.setPageTitle(this.pageTitleLocal);
 
     this.scripts.activeMenuItem('contato');
     this.scripts.pageIn();

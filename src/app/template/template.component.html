@@ -8,12 +8,12 @@
 >
   <img
     *ngIf="global.logoTheme === 'dark'"
-    alt="Fisio Pole"
+    alt="Fisio Pole Logo"
     src="./assets/img/logo/logo.svg"
   />
   <img
     *ngIf="global.logoTheme === 'light'"
-    alt="Fisio Pole"
+    alt="Fisio Pole Logo"
     src="./assets/img/logo/logo-negative.svg"
   />
 </div>
@@ -21,6 +21,7 @@
 
 <div
   id="icon-menu"
+  alt="Menu"
   [class]="global.iconMenuTheme"
   [class.portrait]="global.isPortrait"
   [class.landscape]="global.isLandscape"
@@ -64,42 +65,72 @@
       <li
         id="menu-item-estudio"
         class="menu-item"
-        (click)="scripts.actionMenu('estudio')"
+        (click)="scripts.actionMenu('studio')"
       >
-        O Estúdio
+        <div *ngIf="global.lang === 'en-us'" alt="Menu item: The Studio">
+          Studio
+        </div>
+        <div *ngIf="global.lang === 'pt-br'" alt="Menu iten: O Estúdio">
+          Estúdio
+        </div>
       </li>
       <li
         id="menu-item-modalidades"
         class="menu-item"
-        (click)="scripts.actionMenu('modalidades')"
+        (click)="scripts.actionMenu('modalities')"
       >
-        Modalidades
+        <div *ngIf="global.lang === 'en-us'" alt="Menu iten: Modalities">
+          Modalities
+        </div>
+        <div *ngIf="global.lang === 'pt-br'" alt="Menu iten: Modalidades">
+          Modalidades
+        </div>
       </li>
       <li
         id="menu-item-equipe"
         class="menu-item"
-        (click)="scripts.actionMenu('equipe')"
+        (click)="scripts.actionMenu('team')"
       >
-        Equipe
+        <div *ngIf="global.lang === 'en-us'" alt="Menu iten: Team">Team</div>
+        <div *ngIf="global.lang === 'pt-br'" alt="Menu iten: Equipe">
+          Equipe
+        </div>
       </li>
       <li
         id="menu-item-eventos"
         class="menu-item"
-        (click)="scripts.actionMenu('eventos')"
+        (click)="scripts.actionMenu('events')"
       >
-        Eventos
+        <div *ngIf="global.lang === 'en-us'" alt="Menu iten: Events">
+          Events
+        </div>
+        <div *ngIf="global.lang === 'pt-br'" alt="Menu iten: Eventos">
+          Eventos
+        </div>
       </li>
       <li
         id="menu-item-contato"
         class="menu-item"
-        (click)="scripts.actionMenu('contato')"
+        (click)="scripts.actionMenu('contact')"
       >
-        Contato
+        <div *ngIf="global.lang === 'en-us'" alt="Menu iten: Contact">
+          Contact
+        </div>
+        <div *ngIf="global.lang === 'pt-br'" alt="Menu iten: Contato">
+          Contato
+        </div>
       </li>
     </ul>
   </div>
 </div>
 <!-- end #menu -->
+
+<div *ngIf="global.lang === 'en-us'" id="page-title" alt="Page title">
+  {{ global.pageTitle }}
+</div>
+<div *ngIf="global.lang === 'pt-br'" id="page-title" alt="Título da página">
+  {{ global.pageTitle }}
+</div>
 
 <div
   id="social"
@@ -120,6 +151,7 @@
     <a
       class="hint--left"
       aria-label="Instagram"
+      alt="Instagram"
       href="https://www.instagram.com/fisio_pole"
       target="_blank"
     >
@@ -130,6 +162,7 @@
     <a
       class="hint--left"
       aria-label="Facebook"
+      alt="Facebook"
       href="https://pt-br.facebook.com/fisiopoleart/"
       target="_blank"
     >
@@ -140,6 +173,7 @@
     <a
       class="hint--left"
       aria-label="Whatsapp"
+      alt="Whatsapp"
       href="https://api.whatsapp.com/send?1=pt_BR&phone=5513997416202"
       target="_blank"
     >
@@ -148,6 +182,30 @@
   </div>
 </div>
 <!-- end #social -->
+
+<div id="language-choose">
+  <div
+    *ngIf="global.lang === 'en-us'"
+    class="hint--right"
+    aria-label="Mudar idioma para Português"
+    (click)="scripts.setLanguage('pt-br')"
+  >
+    <img
+      src="./assets/img/icon/br-flag.png"
+      alt="Mudar idioma para Português"
+    />
+  </div>
+
+  <div
+    *ngIf="global.lang === 'pt-br'"
+    class="hint--right"
+    aria-label="Change language to English"
+    (click)="scripts.setLanguage('en-us')"
+  >
+    <img src="./assets/img/icon/us-flag.png" alt="Change language to English" />
+  </div>
+</div>
+<!-- end #language-choose -->
 
 <div
   id="made-by"
@@ -161,26 +219,49 @@
   fxLayoutAlign.sm="center center"
   fxFill.sm
 >
-  <div>
+  <div *ngIf="global.lang === 'en-us'">
     <a
       class="hint--left"
-      aria-label="Desenvolvido por Philipi Bovo - philipi.bovo.me"
+      aria-label="Developed by Philipi Bovo - philipi.bovo.me"
+      alt="Developed by Philipi Bovo - philipi.bovo.me"
       href="https://philipi.bovo.me"
       target="_blank"
     >
       <img
         *ngIf="global.madebyTheme === 'dark'"
-        alt="Philipi Bovo"
         src="./assets/img/logo/philipi-bovo.png"
       />
       <img
         *ngIf="global.madebyTheme === 'light'"
-        alt="Philipi Bovo"
         src="./assets/img/logo/philipi-bovo-negative.png"
       />
     </a>
   </div>
-  <div fxHide.md fxHide.lg fxHide.xl>
+  <div *ngIf="global.lang === 'pt-br'">
+    <a
+      class="hint--left"
+      aria-label="Desenvolvido por Philipi Bovo - philipi.bovo.me"
+      alt="Desenvolvido por Philipi Bovo - philipi.bovo.me"
+      href="https://philipi.bovo.me"
+      target="_blank"
+    >
+      <img
+        *ngIf="global.madebyTheme === 'dark'"
+        src="./assets/img/logo/philipi-bovo.png"
+      />
+      <img
+        *ngIf="global.madebyTheme === 'light'"
+        src="./assets/img/logo/philipi-bovo-negative.png"
+      />
+    </a>
+  </div>
+
+  <div *ngIf="global.lang === 'en-us'" fxHide.md fxHide.lg fxHide.xl>
+    <a href="https://philipi.bovo.me" target="_blank">
+      &nbsp;- Developed by Philipi Bovo
+    </a>
+  </div>
+  <div *ngIf="global.lang === 'pt-br'" fxHide.md fxHide.lg fxHide.xl>
     <a href="https://philipi.bovo.me" target="_blank">
       &nbsp;- Desenvolvido por Philipi Bovo
     </a>
