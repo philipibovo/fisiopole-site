@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "idName": "studio",
+    "label": {
+      "en": "Studio",
+      "pt": "Estúdio"
+    }
+  },
+  {
+    "id": 2,
+    "idName": "modalities",
+    "label": {
+      "en": "Modalities",
+      "pt": "Modalidades"
+    }
+  },
+  {
+    "id": 3,
+    "idName": "team",
+    "label": {
+      "en": "Team",
+      "pt": "Equipe"
+    }
+  },
+  {
+    "id": 4,
+    "idName": "contact",
+    "label": {
+      "en": "Contact",
+      "pt": "Contato"
+    }
+  }
+]

@@ -1,0 +1,16 @@
+.content > div:first-child {
+  margin-top: 90px;
+  padding-right: 65px;
+}
+
+.content > div > .text {
+  line-height: 1.3em;
+}
+
+.content > div > .text > p {
+  margin: 15px 0;
+}
+
+.content > div > .text > p:first-child {
+  margin-top: 0;
+}

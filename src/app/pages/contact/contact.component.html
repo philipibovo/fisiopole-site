@@ -47,22 +47,22 @@
         fxLayoutGap.xs="10px"
       >
         <div
-          *ngIf="global.lang === 'en-us'"
+          *ngIf="global.lang === 'en'"
           fxFlexOrder="1"
           ngClass="subtitle center"
         >
           Social Networks
         </div>
-        <!-- end fxFlexOrder="1" en-us -->
+        <!-- end fxFlexOrder="1" en -->
 
         <div
-          *ngIf="global.lang === 'pt-br'"
+          *ngIf="global.lang === 'pt'"
           fxFlexOrder="1"
           ngClass="subtitle center"
         >
           Redes Sociais
         </div>
-        <!-- end fxFlexOrder="1" pt-br -->
+        <!-- end fxFlexOrder="1" pt -->
 
         <div
           fxFlexOrder="2"
@@ -73,9 +73,7 @@
         >
           <div
             *ngIf="
-              global.lang === 'en-us' &&
-              !global.isSmartphone &&
-              global.isPortrait
+              global.lang === 'en' && !global.isSmartphone && global.isPortrait
             "
             fxFlexOrder="1"
             ngClass="contact-socials-text"
@@ -83,13 +81,11 @@
             We are present in the main social networks. You can contact us
             through Whatsapp, Instagram and Facebook.
           </div>
-          <!-- end fxFlexOrder 1.1.2.1 en-us -->
+          <!-- end fxFlexOrder 1.1.2.1 en -->
 
           <div
             *ngIf="
-              global.lang === 'pt-br' &&
-              !global.isSmartphone &&
-              global.isPortrait
+              global.lang === 'pt' && !global.isSmartphone && global.isPortrait
             "
             fxFlexOrder="1"
             ngClass="contact-socials-text"
@@ -97,7 +93,7 @@
             Estamos presentes nas principais redes sociais. Você pode entrar em
             contato conosco através do Whatsapp, Instagram e Facebook.
           </div>
-          <!-- end fxFlexOrder 1.1.2.1 pt-br -->
+          <!-- end fxFlexOrder 1.1.2.1 pt -->
 
           <div
             fxFlexOrder="2"
@@ -136,7 +132,7 @@
                 class="hint--bottom"
                 aria-label="Facebook"
                 alt="Facebook"
-                href="https://pt-br.facebook.com/fisiopoleart/"
+                href="https://pt.facebook.com/fisiopoleart/"
                 target="_blank"
               >
                 <i class="fab fa-facebook"></i>
@@ -159,22 +155,22 @@
         fxLayoutGap.xs="10px"
       >
         <div
-          *ngIf="global.lang === 'en-us'"
+          *ngIf="global.lang === 'en'"
           fxFlexOrder="1"
           ngClass="subtitle center"
         >
           Phone
         </div>
-        <!-- end fxFlexOrder="1" en-us -->
+        <!-- end fxFlexOrder="1" en -->
 
         <div
-          *ngIf="global.lang === 'pt-br'"
+          *ngIf="global.lang === 'pt'"
           fxFlexOrder="1"
           ngClass="subtitle center"
         >
           Telefone
         </div>
-        <!-- end fxFlexOrder="1" pt-br -->
+        <!-- end fxFlexOrder="1" pt -->
 
         <div fxFlexOrder="2" ngClass="center">
           <a href="tel:+551333263859">+55 13 3326-3859</a>
@@ -197,22 +193,22 @@
       fxLayoutGap.xs="10px"
     >
       <div
-        *ngIf="global.lang === 'en-us'"
+        *ngIf="global.lang === 'en'"
         fxFlexOrder="1"
         ngClass="subtitle center"
       >
         Address
       </div>
-      <!-- end fxFlexOrder="1" en-us -->
+      <!-- end fxFlexOrder="1" en -->
 
       <div
-        *ngIf="global.lang === 'pt-br'"
+        *ngIf="global.lang === 'pt'"
         fxFlexOrder="1"
         ngClass="subtitle center"
       >
         Endereço
       </div>
-      <!-- end fxFlexOrder="1" pt-br -->
+      <!-- end fxFlexOrder="1" pt -->
 
       <div fxFlexOrder="2" ngClass="center">
         <a

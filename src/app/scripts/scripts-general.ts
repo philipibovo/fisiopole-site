@@ -8,31 +8,35 @@ import { Global } from './global';
 export class ScriptsGeneral {
   constructor(private _router: Router, public global: Global) {}
 
-  public setLanguage(lang?: string) {
+  public setLanguage(lang?: string, clickFlag?: boolean) {
     let path = window.location.pathname;
-    let pathLang = window.location.pathname.substring(1, 6);
+    let pathLang = window.location.pathname.substring(1, 3);
 
     if (!lang && pathLang) {
       lang = pathLang;
     }
 
     switch (lang) {
-      case 'en-us':
+      case 'en':
         this.global.lang = lang;
-        path = path.replace('pt-br', lang);
+        path = path.replace('pt', lang);
         break;
-      case 'pt-br':
+      case 'pt':
         this.global.lang = lang;
-        path = path.replace('en-us', lang);
+        path = path.replace('en', lang);
         break;
       default:
-        lang = 'pt-br';
+        lang = 'pt';
         this.global.lang = lang;
         path += lang;
         break;
     }
 
-    this._router.navigate([`${path}`]);
+    this._router.navigate([`${path}`]).finally(() => {
+      if (clickFlag) {
+        location.reload();
+      }
+    });
   }
 
   public verifyDevice() {
@@ -71,6 +75,10 @@ export class ScriptsGeneral {
   // end public verifyOrientation()
 
   public actionMenu(location: string) {
+    if (window.location.pathname === `/${this.global.lang}/${location}`) {
+      return;
+    }
+
     if (this.global.isSmartphone || this.global.isTablet) {
       this.showHideMenuMobile();
 

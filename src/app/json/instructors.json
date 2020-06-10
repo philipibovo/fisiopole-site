@@ -1,0 +1,263 @@
+[
+  {
+    "id": 1,
+    "idName": "marcia-martins",
+    "name": "Marcia",
+    "surname": "Martins",
+    "about": [
+      {
+        "paragraphNumber": 1,
+        "text": {
+          "en": "Vanessa Costa certified Pole Dance instructor, graduated in Gerontology and Physical Education, with a postgraduate degree in Clinical Gerontology and several workshops in the area of dance and pole dance.",
+          "pt": "Instrutora de Pole Dance com certificação da Vanessa Costa, formada em Gerontologia e Educação Fisica, com pós graduação em Gerontologia Clínica e vários workshops na área de dança e pole dance."
+        }
+      },
+      {
+        "paragraphNumber": 2,
+        "text": {
+          "en": "Teaches Pole Dance since 2013, when he founded FisioPole together with his sister.",
+          "pt": "Ensina Pole Dance desde 2013, quando fundou o FisioPole junto com sua irmã."
+        }
+      },
+      {
+        "paragraphNumber": 3,
+        "text": {
+          "en": "He loves to teach and monitor the evolution of his students, seeing the transformation in each person's life is gratifying.",
+          "pt": "Adora ensinar e acompanhar a evolução de seus alunos, ver a transformação na vida de cada um é gratificante."
+        }
+      },
+      {
+        "paragraphNumber": 4,
+        "text": {
+          "en": "Always ready to help and welcome everyone in the best possible way. And, guys, she is great at improvising, when she starts dancing on pole, she never stops (not even when the song ends)! Everyone loves this wonderful instructor.",
+          "pt": "Sempre pronta para ajudar e receber todos da melhor forma possível, E, gente, ela é ótima no improviso, quando começa a dançar no pole, não pára mais (nem quando a música acaba)! Todos amam essa instrutora maravilhosa."
+        }
+      }
+    ],
+    "modality": [{ "id": 2 }, { "id": 3 }],
+    "path": "team/marcia-martins",
+    "photo150pxUlr": "https://live.staticflickr.com/65535/49985709066_fd0236a783_q.jpg",
+    "social": [
+      {
+        "name": "Instagram",
+        "icon": "fab fa-instagram",
+        "url": ""
+      },
+      {
+        "name": "Facebook",
+        "icon": "fab fa-facebook",
+        "url": ""
+      },
+      {
+        "name": "Linkedin",
+        "icon": "fab fa-linkedin",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "idName": "mayra-martins",
+    "name": "Mayra",
+    "surname": "Martins",
+    "about": [
+      {
+        "paragraphNumber": 1,
+        "text": {
+          "en": "Physiotherapist, Pilates and Pole Dance instructor.",
+          "pt": "Fisioterapeuta, instrutora de Pilates e Pole Dance."
+        }
+      },
+      {
+        "paragraphNumber": 2,
+        "text": {
+          "en": "Vanessa Costa's Pole Dance certification.",
+          "pt": "Possui certificação de Pole Dance da Vanessa Costa."
+        }
+      },
+      {
+        "paragraphNumber": 3,
+        "text": {
+          "en": "He founded the studio in 2013 together with his sister.",
+          "pt": "Fundou o estúdio em 2013 junto com sua irmã."
+        }
+      }
+    ],
+    "modality": [{ "id": 1 }, { "id": 2 }, { "id": 7 }],
+    "path": "team/mayra-martins",
+    "photo150pxUlr": "https://lh4.googleusercontent.com/-iaiMkvbfpHE/AAAAAAAAAAI/AAAAAAAAAaE/mHEsNaFL9Ac/photo.jpg?sz=328",
+    "social": [
+      {
+        "name": "Instagram",
+        "icon": "fab fa-instagram",
+        "url": ""
+      },
+      {
+        "name": "Facebook",
+        "icon": "fab fa-facebook",
+        "url": ""
+      },
+      {
+        "name": "Linkedin",
+        "icon": "fab fa-linkedin",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "idName": "patricia-perez",
+    "name": "Patrícia",
+    "surname": "Pérez",
+    "about": [
+      {
+        "paragraphNumber": 1,
+        "text": {
+          "en": "Pole Dance instructor who loves to dance, rocks the art of flapping hair and is always up to date in all aspects of pole and dance, including pole funk and gypsy dance.",
+          "pt": "Instrutora de Pole Dance que adora dançar, arrasa na arte de bater cabelo e está sempre se atualizando em todas as vertentes de pole e de dança, incluindo pole funk e dança cigana."
+        }
+      },
+      {
+        "paragraphNumber": 2,
+        "text": {
+          "en": "Graduated in nutrition, studying Physical Education and with Pole Dance certification with Tati Favretto.",
+          "pt": "Formada em nutrição, cursando Educação Física e com certificação de Pole Dance com a Tati Favretto."
+        }
+      }
+    ],
+    "modality": [{ "id": 2 }, { "id": 3 }],
+    "path": "team/patricia-perez",
+    "photo150pxUlr": "https://live.staticflickr.com/65535/49985681393_d6b6a75f6f_q.jpg",
+    "social": [
+      {
+        "name": "Instagram",
+        "icon": "fab fa-instagram",
+        "url": ""
+      },
+      {
+        "name": "Facebook",
+        "icon": "fab fa-facebook",
+        "url": ""
+      },
+      {
+        "name": "Linkedin",
+        "icon": "fab fa-linkedin",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "idName": "fernanda-agria",
+    "name": "Fernanda",
+    "surname": "Agria",
+    "about": [
+      {
+        "paragraphNumber": 1,
+        "text": {
+          "en": "Physical educator, Pilates instructor.",
+          "pt": "Educadora física, instrutora de Pilates."
+        }
+      }
+    ],
+    "modality": [{ "id": 1 }],
+    "path": "team/fernanda-agria",
+    "photo150pxUlr": "https://lh4.googleusercontent.com/-iaiMkvbfpHE/AAAAAAAAAAI/AAAAAAAAAaE/mHEsNaFL9Ac/photo.jpg?sz=328",
+    "social": [
+      {
+        "name": "Instagram",
+        "icon": "fab fa-instagram",
+        "url": ""
+      },
+      {
+        "name": "Facebook",
+        "icon": "fab fa-facebook",
+        "url": ""
+      },
+      {
+        "name": "Linkedin",
+        "icon": "fab fa-linkedin",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "idName": "lucas-loreto",
+    "name": "Lucas",
+    "surname": "Loreto",
+    "about": [
+      {
+        "paragraphNumber": 1,
+        "text": {
+          "en": "Physical educator specialized in creating training programs to meet the particular needs of each student.",
+          "pt": "Educador físico especializado em criar programas de treinamento visando suprir as necessidades particulares de cada aluno."
+        }
+      },
+      {
+        "paragraphNumber": 2,
+        "text": {
+          "en": "It always seeks to encourage students to achieve their goals, with energy and determination.",
+          "pt": "Procura sempre incentivar os alunos a atingirem seus objetivos, com energia e determinação."
+        }
+      },
+      {
+        "paragraphNumber": 3,
+        "text": {
+          "en": "Specialist in calesthenia, pole dance instructor since 2014 and circus artist since 2006, he teaches Pole Dance, Circus and Functional Training.",
+          "pt": "Especialista em calistenia, instrutor de pole dance desde 2014 e artista circense desde 2006, dá aulas de Pole Dance, Circo e Treinamento Funcional."
+        }
+      }
+    ],
+    "modality": [{ "id": 2 }, { "id": 6 }],
+    "path": "team/lucas-loreto",
+    "photo150pxUlr": "https://live.staticflickr.com/65535/49985680898_4fdc194a4f_q.jpg",
+    "social": [
+      {
+        "name": "Instagram",
+        "icon": "fab fa-instagram",
+        "url": ""
+      },
+      {
+        "name": "Facebook",
+        "icon": "fab fa-facebook",
+        "url": ""
+      },
+      {
+        "name": "Linkedin",
+        "icon": "fab fa-linkedin",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "idName": "sergio-biller",
+    "name": "Sérgio",
+    "surname": "Biller",
+    "about": [
+      {
+        "paragraphNumber": 1,
+        "text": {
+          "en": "Dancer specialized in various aspects of dance. Stiletto and Power Woman instructor.",
+          "pt": "Dançarino especializado em diversas vertentes da dança. Instrutor de Stiletto e Power Woman."
+        }
+      }
+    ],
+    "modality": [{ "id": 5 }, { "id": 7 }],
+    "path": "team/sergio-biller",
+    "photo150pxUlr": "https://live.staticflickr.com/65535/49986106592_44092151a5_q.jpg",
+    "social": [
+      {
+        "name": "Instagram",
+        "icon": "fab fa-instagram",
+        "url": ""
+      },
+      {
+        "name": "Facebook",
+        "icon": "fab fa-facebook",
+        "url": ""
+      }
+    ]
+  }
+]

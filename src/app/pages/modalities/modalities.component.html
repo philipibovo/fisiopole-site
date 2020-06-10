@@ -24,165 +24,30 @@
     [fxLayoutGap.sm]="fxLayoutGapSM"
   >
     <div
-      fxFlexOrder="1"
-      id="pilates"
+      *ngFor="let modality of global.modalities; index as i"
+      fxFlexOrder="{{ i + 1 }}"
+      id="{{ modality.idName }}"
       class="modality-card"
-      (click)="scripts.redirectAnimatePageOut('modalities/pilates')"
+      (click)="scripts.redirectAnimatePageOut(modality.path)"
     >
       <div
-        *ngIf="global.lang === 'en-us'"
-        alt="Modality: Pilates"
+        *ngIf="global.lang === 'en'"
+        alt="Modality item"
         ngClass="title"
+        [class.double]="modality.doubleTitle"
       >
-        Pilates
+        {{ modality.name.en }}
       </div>
       <div
-        *ngIf="global.lang === 'pt-br'"
-        alt="Modalidade: Pilates"
+        *ngIf="global.lang === 'pt'"
+        alt="Modalidade item"
         ngClass="title"
+        [class.double]="modality.doubleTitle"
       >
-        Pilates
+        {{ modality.name.pt }}
       </div>
     </div>
-    <!-- end fxFlexOrder="1.1" -->
-
-    <div
-      fxFlexOrder="2"
-      id="pole-dance"
-      class="modality-card"
-      (click)="scripts.redirectAnimatePageOut('modalities/pole-dance')"
-    >
-      <div
-        *ngIf="global.lang === 'en-us'"
-        alt="Modality: Pole Dance"
-        ngClass="title"
-      >
-        Pole Dance
-      </div>
-      <div
-        *ngIf="global.lang === 'pt-br'"
-        alt="Modalidade: Pole Dance"
-        ngClass="title"
-      >
-        Pole Dance
-      </div>
-    </div>
-    <!-- end fxFlexOrder="1.2" -->
-
-    <div
-      fxFlexOrder="3"
-      id="pole-choreographic"
-      class="modality-card"
-      (click)="scripts.redirectAnimatePageOut('modalities/pole-choreographic')"
-    >
-      <div
-        *ngIf="global.lang === 'en-us'"
-        alt="Modality: Pole Choreographic"
-        ngClass="title double"
-      >
-        Pole Choreographic
-      </div>
-      <div
-        *ngIf="global.lang === 'pt-br'"
-        alt="Modalidade: Pole Coreográfico"
-        ngClass="title double"
-      >
-        Pole Coreográfico
-      </div>
-    </div>
-    <!-- end fxFlexOrder="1.3" -->
-
-    <div
-      fxFlexOrder="4"
-      id="stiletto"
-      class="modality-card"
-      (click)="scripts.redirectAnimatePageOut('modalities/stiletto')"
-    >
-      <div
-        *ngIf="global.lang === 'en-us'"
-        alt="Modality: Stiletto"
-        ngClass="title"
-      >
-        Stiletto
-      </div>
-      <div
-        *ngIf="global.lang === 'pt-br'"
-        alt="Modalidade: Stiletto"
-        ngClass="title"
-      >
-        Stiletto
-      </div>
-    </div>
-    <!-- end fxFlexOrder="1.4" -->
-
-    <div
-      fxFlexOrder="5"
-      id="power-woman"
-      class="modality-card"
-      (click)="scripts.redirectAnimatePageOut('modalities/power-woman')"
-    >
-      <div
-        *ngIf="global.lang === 'en-us'"
-        alt="Modality: Power Woman"
-        ngClass="title"
-      >
-        Power Woman
-      </div>
-      <div
-        *ngIf="global.lang === 'pt-br'"
-        alt="Modalidade: Power Woman"
-        ngClass="title"
-      >
-        Power Woman
-      </div>
-    </div>
-    <!-- end fxFlexOrder="1.5" -->
-
-    <div
-      fxFlexOrder="6"
-      id="circus"
-      class="modality-card"
-      (click)="scripts.redirectAnimatePageOut('modalities/circus')"
-    >
-      <div
-        *ngIf="global.lang === 'en-us'"
-        alt="Modality: Circus"
-        ngClass="title"
-      >
-        Circus
-      </div>
-      <div
-        *ngIf="global.lang === 'pt-br'"
-        alt="Modalidade: Circo"
-        ngClass="title"
-      >
-        Circo
-      </div>
-    </div>
-    <!-- end fxFlexOrder="1.6" -->
-
-    <div
-      fxFlexOrder="7"
-      id="functional-training"
-      class="modality-card"
-      (click)="scripts.redirectAnimatePageOut('modalities/functional-training')"
-    >
-      <div
-        *ngIf="global.lang === 'en-us'"
-        alt="Modality: Functional Training"
-        ngClass="title double"
-      >
-        Functional Training
-      </div>
-      <div
-        *ngIf="global.lang === 'pt-br'"
-        alt="Modalidade: Treinamento Funcional"
-        ngClass="title double"
-      >
-        Treinamento Funcional
-      </div>
-    </div>
-    <!-- end fxFlexOrder="1.7" -->
+    <!-- end fxFlexOrder="1.*" -->
   </div>
   <!-- end fxFlexOrder="1" -->
 </div>

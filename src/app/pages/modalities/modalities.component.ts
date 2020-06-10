@@ -25,10 +25,10 @@ export class ModalitiesComponent implements OnInit {
 
   ngOnInit(): void {
     switch (this.global.lang) {
-      case 'en-us':
+      case 'en':
         this.pageTitleLocal = 'Modalities';
         break;
-      case 'pt-br':
+      case 'pt':
         this.pageTitleLocal = 'Modalidades';
         break;
     }
@@ -36,7 +36,7 @@ export class ModalitiesComponent implements OnInit {
     this._title.setTitle(`${this.pageTitleLocal} - Fisio Pole`);
     this.scripts.setPageTitle(this.pageTitleLocal);
 
-    this.scripts.activeMenuItem('modalidades');
+    this.scripts.activeMenuItem('modalities');
     this.scripts.pageIn();
   }
 

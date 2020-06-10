@@ -1,0 +1,76 @@
+<div
+  id="content"
+  class="content"
+  [class]="global.contentDisplay"
+  [class.portrait]="global.isPortrait"
+  [class.landscape]="global.isLandscape"
+  fxLayout="row"
+  fxLayoutAlign="start start"
+>
+  <div
+    fxFlexOrder="1"
+    fxFlexOffset="300px"
+    fxFlex
+    fxFlexOffset.xs="0"
+    fxFlexOffset.sm="0"
+    fxLayout="column"
+    fxLayoutAlign="start start"
+  >
+    <div fxFlexOrder="1" class="page-options" fxLayout="row">
+      <div
+        fxFlexOrder="1"
+        class="opt-item"
+        id="opt-voltar"
+        (click)="scripts.redirectAnimatePageOut('modalities')"
+      >
+        <div *ngIf="global.lang === 'en'">
+          <i class="fas fa-long-arrow-alt-left"></i> Back
+        </div>
+        <div *ngIf="global.lang === 'pt'">
+          <i class="fas fa-long-arrow-alt-left"></i> Voltar
+        </div>
+      </div>
+      <div
+        fxFlexOrder="2"
+        id="opt-photos"
+        class="opt-item navona-go"
+        data-navona-target="gallery"
+        *ngIf="modality.photoGallery.length"
+      >
+        <div *ngIf="global.lang === 'en'">
+          <i class="fas fa-images"></i> Photos
+        </div>
+        <div *ngIf="global.lang === 'pt'">
+          <i class="fas fa-images"></i> Fotos
+        </div>
+      </div>
+    </div>
+    <!-- end fxFlexOrder="1.1" .options -->
+
+    <div *ngFor="let paragraph of modality.about" fxFlexOrder="2" class="text">
+      <p *ngIf="global.lang === 'en'">
+        {{ paragraph.text.en }}
+      </p>
+
+      <p *ngIf="global.lang === 'pt'">
+        {{ paragraph.text.pt }}
+      </p>
+    </div>
+    <!-- end fxFlexOrder="1.2" .text -->
+  </div>
+  <!-- end fxFlexOrder="1" -->
+</div>
+
+<div id="gallery" class="navona">
+  <div *ngFor="let item of modality.photoGallery">
+    <img src="{{ item.url }}" />
+
+    <p *ngIf="global.lang === 'en'">
+      {{ item.titleEN }}
+    </p>
+
+    <p *ngIf="global.lang === 'pt'">
+      {{ item.titlePT }}
+    </p>
+  </div>
+</div>

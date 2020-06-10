@@ -25,10 +25,10 @@ export class StudioComponent implements OnInit {
 
   ngOnInit(): void {
     switch (this.global.lang) {
-      case 'en-us':
+      case 'en':
         this.pageTitleLocal = 'Studio';
         break;
-      case 'pt-br':
+      case 'pt':
         this.pageTitleLocal = 'Estúdio';
         break;
     }
@@ -36,7 +36,7 @@ export class StudioComponent implements OnInit {
     this._title.setTitle(`${this.pageTitleLocal} - Fisio Pole`);
     this.scripts.setPageTitle(this.pageTitleLocal);
 
-    this.scripts.activeMenuItem('estudio');
+    this.scripts.activeMenuItem('studio');
     this.scripts.pageIn();
   }
 

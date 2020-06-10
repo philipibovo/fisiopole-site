@@ -24,21 +24,14 @@ import { HomeComponent } from './pages/home/home.component';
 import { StudioComponent } from './pages/studio/studio.component';
 //Pages > Modalities
 import { ModalitiesComponent } from './pages/modalities/modalities.component';
-import { CircusComponent } from './pages/modalities/circus/circus.component';
-import { FunctionalTrainingComponent } from './pages/modalities/functional-training/functional-training.component';
-import { PilatesComponent } from './pages/modalities/pilates/pilates.component';
-import { PoleChoreographicComponent } from './pages/modalities/pole-choreographic/pole-choreographic.component';
-import { PoleDanceComponent } from './pages/modalities/pole-dance/pole-dance.component';
-import { PowerWomanComponent } from './pages/modalities/power-woman/power-woman.component';
-import { StilettoComponent } from './pages/modalities/stiletto/stiletto.component';
+import { ModalityInfoComponent } from './pages/modalities/modality-info/modality-info.component';
 //Pages > Team
 import { TeamComponent } from './pages/team/team.component';
-//Pages > Events
-import { EventsComponent } from './pages/events/events.component';
+import { PersonalInfoComponent } from './pages/team/personal-info/personal-info.component';
 //Pages > Contact
 import { ContactComponent } from './pages/contact/contact.component';
 
-registerLocaleData(localePt, 'pt-BR');
+registerLocaleData(localePt, 'pt');
 
 @NgModule({
   declarations: [
@@ -47,16 +40,10 @@ registerLocaleData(localePt, 'pt-BR');
     HomeComponent,
     StudioComponent,
     ModalitiesComponent,
-    CircusComponent,
-    FunctionalTrainingComponent,
-    PilatesComponent,
-    PoleChoreographicComponent,
-    PoleDanceComponent,
-    PowerWomanComponent,
-    StilettoComponent,
-    EventsComponent,
+    ModalityInfoComponent,
     ContactComponent,
-    TeamComponent
+    TeamComponent,
+    PersonalInfoComponent
   ],
   imports: [
     BrowserModule,
@@ -66,7 +53,7 @@ registerLocaleData(localePt, 'pt-BR');
     FlexLayoutModule
   ],
   providers: [
-    { provide: LOCALE_ID, useValue: 'pt-BR' },
+    { provide: LOCALE_ID, useValue: 'pt' },
     Navona,
     Global,
     ScriptsGeneral

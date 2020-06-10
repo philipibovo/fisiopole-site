@@ -25,10 +25,10 @@ export class TeamComponent implements OnInit {
 
   ngOnInit(): void {
     switch (this.global.lang) {
-      case 'en-us':
+      case 'en':
         this.pageTitleLocal = 'Team';
         break;
-      case 'pt-br':
+      case 'pt':
         this.pageTitleLocal = 'Equipe';
         break;
     }
@@ -36,7 +36,7 @@ export class TeamComponent implements OnInit {
     this._title.setTitle(`${this.pageTitleLocal} - Fisio Pole`);
     this.scripts.setPageTitle(this.pageTitleLocal);
 
-    this.scripts.activeMenuItem('equipe');
+    this.scripts.activeMenuItem('team');
     this.scripts.pageIn();
   }
 

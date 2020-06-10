@@ -143,9 +143,7 @@ export class Navona {
     if (navonaGO.length) {
       for (let i = 0; i < navonaGO.length; i++) {
         navonaGO[i].addEventListener('click', event => {
-          this.navonaSetSizes(
-            (event.target as Element).getAttribute('data-navona-target')
-          );
+          this.navonaSetSizes(navonaGO[i].getAttribute('data-navona-target'));
         });
       }
       // end for (let i = 0; i < navonaGO.length; i++)

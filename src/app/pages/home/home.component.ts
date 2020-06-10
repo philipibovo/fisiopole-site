@@ -24,10 +24,10 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     switch (this.global.lang) {
-      case 'en-us':
+      case 'en':
         this.pageTitleLocal = '';
         break;
-      case 'pt-br':
+      case 'pt':
         this.pageTitleLocal = '';
         break;
     }

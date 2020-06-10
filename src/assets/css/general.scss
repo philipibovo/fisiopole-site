@@ -93,6 +93,14 @@ a:hover {
 .card > .card-photo > img {
   width: 100%;
   border-radius: 4px;
+  cursor: pointer;
+  filter: grayscale(100%);
+  transition: 300ms ease-in-out;
+}
+
+.card:hover > .card-photo > img {
+  filter: grayscale(0%);
+  transition: 300ms ease-in-out;
 }
 
 .card > .card-title {
@@ -141,6 +149,11 @@ a:hover {
 
 .card > .card-content > .card-content-text {
   margin-top: 15px;
+  cursor: pointer;
+}
+
+.card > .card-content > .card-content-text:hover {
+  text-decoration: underline;
 }
 /* END CARD */
 

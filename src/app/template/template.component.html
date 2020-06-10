@@ -63,61 +63,16 @@
   <div>
     <ul>
       <li
-        id="menu-item-estudio"
+        *ngFor="let item of global.mainMenu"
+        id="menu-item-{{ item.idName }}"
         class="menu-item"
-        (click)="scripts.actionMenu('studio')"
+        (click)="scripts.actionMenu(item.idName)"
       >
-        <div *ngIf="global.lang === 'en-us'" alt="Menu item: The Studio">
-          Studio
+        <div *ngIf="global.lang === 'en'" alt="Menu item">
+          {{ item.label.en }}
         </div>
-        <div *ngIf="global.lang === 'pt-br'" alt="Menu iten: O Estúdio">
-          Estúdio
-        </div>
-      </li>
-      <li
-        id="menu-item-modalidades"
-        class="menu-item"
-        (click)="scripts.actionMenu('modalities')"
-      >
-        <div *ngIf="global.lang === 'en-us'" alt="Menu iten: Modalities">
-          Modalities
-        </div>
-        <div *ngIf="global.lang === 'pt-br'" alt="Menu iten: Modalidades">
-          Modalidades
-        </div>
-      </li>
-      <li
-        id="menu-item-equipe"
-        class="menu-item"
-        (click)="scripts.actionMenu('team')"
-      >
-        <div *ngIf="global.lang === 'en-us'" alt="Menu iten: Team">Team</div>
-        <div *ngIf="global.lang === 'pt-br'" alt="Menu iten: Equipe">
-          Equipe
-        </div>
-      </li>
-      <li
-        id="menu-item-eventos"
-        class="menu-item"
-        (click)="scripts.actionMenu('events')"
-      >
-        <div *ngIf="global.lang === 'en-us'" alt="Menu iten: Events">
-          Events
-        </div>
-        <div *ngIf="global.lang === 'pt-br'" alt="Menu iten: Eventos">
-          Eventos
-        </div>
-      </li>
-      <li
-        id="menu-item-contato"
-        class="menu-item"
-        (click)="scripts.actionMenu('contact')"
-      >
-        <div *ngIf="global.lang === 'en-us'" alt="Menu iten: Contact">
-          Contact
-        </div>
-        <div *ngIf="global.lang === 'pt-br'" alt="Menu iten: Contato">
-          Contato
+        <div *ngIf="global.lang === 'pt'" alt="Menu iten">
+          {{ item.label.pt }}
         </div>
       </li>
     </ul>
@@ -125,10 +80,10 @@
 </div>
 <!-- end #menu -->
 
-<div *ngIf="global.lang === 'en-us'" id="page-title" alt="Page title">
+<div *ngIf="global.lang === 'en'" id="page-title" alt="Page title">
   {{ global.pageTitle }}
 </div>
-<div *ngIf="global.lang === 'pt-br'" id="page-title" alt="Título da página">
+<div *ngIf="global.lang === 'pt'" id="page-title" alt="Título da página">
   {{ global.pageTitle }}
 </div>
 
@@ -163,7 +118,7 @@
       class="hint--left"
       aria-label="Facebook"
       alt="Facebook"
-      href="https://pt-br.facebook.com/fisiopoleart/"
+      href="https://pt.facebook.com/fisiopoleart/"
       target="_blank"
     >
       <i class="fab fa-facebook"></i>
@@ -185,10 +140,10 @@
 
 <div id="language-choose">
   <div
-    *ngIf="global.lang === 'en-us'"
+    *ngIf="global.lang === 'en'"
     class="hint--right"
     aria-label="Mudar idioma para Português"
-    (click)="scripts.setLanguage('pt-br')"
+    (click)="scripts.setLanguage('pt', true)"
   >
     <img
       src="./assets/img/icon/br-flag.png"
@@ -197,10 +152,10 @@
   </div>
 
   <div
-    *ngIf="global.lang === 'pt-br'"
+    *ngIf="global.lang === 'pt'"
     class="hint--right"
     aria-label="Change language to English"
-    (click)="scripts.setLanguage('en-us')"
+    (click)="scripts.setLanguage('en', true)"
   >
     <img src="./assets/img/icon/us-flag.png" alt="Change language to English" />
   </div>
@@ -219,7 +174,7 @@
   fxLayoutAlign.sm="center center"
   fxFill.sm
 >
-  <div *ngIf="global.lang === 'en-us'">
+  <div *ngIf="global.lang === 'en'">
     <a
       class="hint--left"
       aria-label="Developed by Philipi Bovo - philipi.bovo.me"
@@ -237,7 +192,7 @@
       />
     </a>
   </div>
-  <div *ngIf="global.lang === 'pt-br'">
+  <div *ngIf="global.lang === 'pt'">
     <a
       class="hint--left"
       aria-label="Desenvolvido por Philipi Bovo - philipi.bovo.me"
@@ -256,12 +211,12 @@
     </a>
   </div>
 
-  <div *ngIf="global.lang === 'en-us'" fxHide.md fxHide.lg fxHide.xl>
+  <div *ngIf="global.lang === 'en'" fxHide.md fxHide.lg fxHide.xl>
     <a href="https://philipi.bovo.me" target="_blank">
       &nbsp;- Developed by Philipi Bovo
     </a>
   </div>
-  <div *ngIf="global.lang === 'pt-br'" fxHide.md fxHide.lg fxHide.xl>
+  <div *ngIf="global.lang === 'pt'" fxHide.md fxHide.lg fxHide.xl>
     <a href="https://philipi.bovo.me" target="_blank">
       &nbsp;- Desenvolvido por Philipi Bovo
     </a>

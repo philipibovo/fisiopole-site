@@ -1,0 +1,66 @@
+<div
+  id="content"
+  class="content"
+  [class]="global.contentDisplay"
+  [class.portrait]="global.isPortrait"
+  [class.landscape]="global.isLandscape"
+  fxLayout="row"
+  fxLayoutAlign="start start"
+>
+  <div
+    fxFlexOrder="1"
+    fxFlexOffset="300px"
+    fxLayout="column"
+    fxLayoutAlign="start start"
+  >
+    <div fxFlexOrder="1" class="page-options" fxLayout="row">
+      <div
+        fxFlexOrder="1"
+        class="opt-item"
+        id="opt-voltar"
+        (click)="scripts.redirectAnimatePageOut('team')"
+      >
+        <div *ngIf="global.lang === 'en'">
+          <i class="fas fa-long-arrow-alt-left"></i> Back
+        </div>
+        <div *ngIf="global.lang === 'pt'">
+          <i class="fas fa-long-arrow-alt-left"></i> Voltar
+        </div>
+      </div>
+      <!-- end fxFlexOrder="1.1.1" -->
+    </div>
+    <!-- end fxFlexOrder="1.1" -->
+
+    <div
+      *ngFor="let paragraph of instructor.about"
+      fxFlexOrder="2"
+      class="text"
+    >
+      <p *ngIf="global.lang === 'en'">
+        {{ paragraph.text.en }}
+      </p>
+
+      <p *ngIf="global.lang === 'pt'">
+        {{ paragraph.text.pt }}
+      </p>
+    </div>
+    <!-- end fxFlexOrder="1.2" .text -->
+
+    <div fxFlexOrder="3">
+      <div *ngIf="global.lang === 'en'">
+        Modalities:
+        <span *ngFor="let modality of modalities">
+          {{ modality.name.en }}
+        </span>
+      </div>
+      <div *ngIf="global.lang === 'pt'">
+        Modaidades:
+        <span *ngFor="let modality of modalities">
+          {{ modality.name.pt }}
+        </span>
+      </div>
+    </div>
+    <!-- end fxFlexOrder="1.3" -->
+  </div>
+  <!-- end fxFlexOrder="1" -->
+</div>
