@@ -12,6 +12,7 @@ import { ScriptsGeneral } from '../../scripts/scripts-general';
 })
 export class ContactComponent implements OnInit {
   public pageTitleLocal: string;
+  public order0fxFlexOffsetXS: string;
   public order0FxLayoutXS: string;
   public order0FxLayoutSM: string;
 
@@ -45,21 +46,6 @@ export class ContactComponent implements OnInit {
     this.global.menuTheme = 'dark';
     this.global.socialTheme = 'dark';
     this.global.madebyTheme = 'dark';
-
-    if (this.global.isSmartphone) {
-      if (this.global.isPortrait) {
-        this.order0FxLayoutXS = 'column';
-      } else {
-        this.order0FxLayoutXS = 'row';
-      }
-    }
-
-    if (this.global.isTablet) {
-      if (this.global.isPortrait) {
-        this.order0FxLayoutSM = 'column';
-      } else {
-        this.order0FxLayoutSM = 'row';
-      }
-    }
+    this.global.iconMenuTheme = 'dark';
   }
 }

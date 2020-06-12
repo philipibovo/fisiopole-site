@@ -16,8 +16,6 @@ import { Navona } from './scripts/navona';
 import { Global } from './scripts/global';
 import { ScriptsGeneral } from './scripts/scripts-general';
 
-//Pages
-import { TemplateComponent } from './template/template.component';
 //Pages > Home
 import { HomeComponent } from './pages/home/home.component';
 //Pages > Studio
@@ -36,7 +34,6 @@ registerLocaleData(localePt, 'pt');
 @NgModule({
   declarations: [
     AppComponent,
-    TemplateComponent,
     HomeComponent,
     StudioComponent,
     ModalitiesComponent,

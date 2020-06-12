@@ -6,6 +6,7 @@
   [class.landscape]="global.isLandscape"
   fxLayout="row"
   fxLayoutAlign="start start"
+  (window:resize)="onResizedModalityInfo()"
 >
   <div
     fxFlexOrder="1"
@@ -16,7 +17,13 @@
     fxLayout="column"
     fxLayoutAlign="start start"
   >
-    <div fxFlexOrder="1" class="page-options" fxLayout="row">
+    <div
+      fxFlexOrder="1"
+      class="page-options"
+      fxLayout="row"
+      fxLayoutGap.xs="20px"
+      fxLayoutGap.sm="20px"
+    >
       <div
         fxFlexOrder="1"
         class="opt-item"

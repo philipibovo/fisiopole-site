@@ -6,12 +6,19 @@
   [class.landscape]="global.isLandscape"
   fxLayout="row"
   fxLayoutAlign="start start"
+  (window:resize)="onResizedPersonalInfo()"
 >
   <div
     fxFlexOrder="1"
+    fxFlex.xs="100%"
+    fxFlex.sm="100%"
     fxFlexOffset="300px"
+    fxFlexOffset.xs="0"
+    fxFlexOffset.sm="0"
     fxLayout="column"
     fxLayoutAlign="start start"
+    fxLayoutAlign.xs="start center"
+    fxLayoutAlign.sm="start center"
   >
     <div fxFlexOrder="1" class="page-options" fxLayout="row">
       <div
@@ -32,35 +39,83 @@
     <!-- end fxFlexOrder="1.1" -->
 
     <div
-      *ngFor="let paragraph of instructor.about"
       fxFlexOrder="2"
-      class="text"
+      fxLayout="row"
+      fxLayoutAlign="start start"
+      fxLayout.xs="column"
+      fxLayoutAlign.xs="start center"
+      fxLayoutGap="20px"
     >
-      <p *ngIf="global.lang === 'en'">
-        {{ paragraph.text.en }}
-      </p>
+      <div
+        fxFlexOrder="1"
+        fxFlex="250px"
+        fxFlex.xs="100%"
+        fxLayout="column"
+        fxLayoutAlign="start center"
+        fxLayoutGap="30px"
+      >
+        <div fxFlexOrder="1">
+          <div class="personal-card">
+            <img src="{{ instructor.photoPerfil }}" />
+          </div>
+        </div>
+        <!-- end fxFlexOrder="1.2.1.1" -->
+        <div fxFlexOrder="2" fxLayout="column" fxLayoutAlign="start center">
+          <div class="modalities-title">
+            <span *ngIf="global.lang === 'en'">Social Networks</span>
+            <span *ngIf="global.lang === 'pt'">Redes Sociais</span>
+          </div>
+          <div
+            fxLayout="row"
+            fxLayoutAlign="start center"
+            fxLayoutGap="10px"
+            [class.space-top-10]="!global.isDesktop"
+          >
+            <div *ngFor="let social of instructor.social" class="social-icon">
+              <a href="{{ social.url }}" target="_blank"
+                ><i class="{{ social.icon }}"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <!-- end fxFlexOrder="1.2.1.2" -->
 
-      <p *ngIf="global.lang === 'pt'">
-        {{ paragraph.text.pt }}
-      </p>
-    </div>
-    <!-- end fxFlexOrder="1.2" .text -->
+        <div fxFlexOrder="3" fxLayout="column" fxLayoutAlign="start center">
+          <div class="modalities-title">
+            <span *ngIf="global.lang === 'en'">Modalities</span>
+            <span *ngIf="global.lang === 'pt'">Modalidades</span>
+          </div>
+          <div
+            *ngFor="let modality of modalities"
+            [class.space-top-10]="!global.isDesktop"
+          >
+            <div *ngIf="global.lang === 'en'">
+              {{ modality.name.en }}
+            </div>
+            <div *ngIf="global.lang === 'pt'">
+              {{ modality.name.pt }}
+            </div>
+          </div>
+        </div>
+        <!-- end fxFlexOrder="1.2.1.3" -->
+      </div>
+      <!-- end fxFlexOrder="1.2.1" -->
 
-    <div fxFlexOrder="3">
-      <div *ngIf="global.lang === 'en'">
-        Modalities:
-        <span *ngFor="let modality of modalities">
-          {{ modality.name.en }}
-        </span>
+      <div fxFlexOrder="2" class="text">
+        <div *ngFor="let paragraph of instructor.about" class="paragraph">
+          <p *ngIf="global.lang === 'en'">
+            {{ paragraph.text.en }}
+          </p>
+
+          <p *ngIf="global.lang === 'pt'">
+            {{ paragraph.text.pt }}
+          </p>
+        </div>
+        <!-- end fxFlexOrder="1.2" .text -->
       </div>
-      <div *ngIf="global.lang === 'pt'">
-        Modaidades:
-        <span *ngFor="let modality of modalities">
-          {{ modality.name.pt }}
-        </span>
-      </div>
+      <!-- end fxFlexOrder="1.2.2" -->
     </div>
-    <!-- end fxFlexOrder="1.3" -->
+    <!-- end fxFlexOrder="1.2" -->
   </div>
   <!-- end fxFlexOrder="1" -->
 </div>

@@ -7,7 +7,7 @@
   fxLayout="row"
   fxLayoutAlign="start center"
   fxLayoutAlign.xs="start start"
-  fxLayoutAlign.sm="start center"
+  fxLayoutAlign.sm="start start"
   (window:resize)="onResizedModalities()"
 >
   <div
@@ -15,13 +15,12 @@
     fxFlexOffset="300px"
     fxLayout="row wrap"
     fxLayoutAlign="center center"
-    fxFlex.xs="100%"
     fxFlexOffset.xs="0"
-    fxLayoutAlign.xs="center center"
+    fxLayoutAlign.xs="center start"
     fxLayoutGap.xs="0"
     fxFlexOffset.sm="0"
-    fxFlex.sm
-    [fxLayoutGap.sm]="fxLayoutGapSM"
+    fxLayoutAlign.sm="center start"
+    fxLayoutGap.sm="0"
   >
     <div
       *ngFor="let modality of global.modalities; index as i"
@@ -33,7 +32,7 @@
       <div
         *ngIf="global.lang === 'en'"
         alt="Modality item"
-        ngClass="title"
+        ngClass="modality-card-title"
         [class.double]="modality.doubleTitle"
       >
         {{ modality.name.en }}
@@ -41,7 +40,7 @@
       <div
         *ngIf="global.lang === 'pt'"
         alt="Modalidade item"
-        ngClass="title"
+        ngClass="modality-card-title"
         [class.double]="modality.doubleTitle"
       >
         {{ modality.name.pt }}

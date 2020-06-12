@@ -1,59 +1,67 @@
-.content.portrait > div > .title {
-  height: 70px;
-  padding-top: 30px;
-  font-size: 2.2em;
-  color: #440055;
-  margin-left: 100px;
+::-webkit-scrollbar {
+  width: 0px;
+  border-left: 0px solid #e6ecf8;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #590072;
 }
 
-.content.landscape > div > .title {
-  height: 50px;
-  padding-top: 20px;
-  font-size: 1.7em;
-  color: #440055;
-  margin-left: 80px;
+.content {
+  /*background: #fcf1ff;*/
+  background-image: linear-gradient(
+    145deg,
+    #fcf1ff 25%,
+    #fbeefd 25%,
+    #fbeefd 50%,
+    #fcf1ff 50%,
+    #fcf1ff 75%,
+    #fbeefd 75%,
+    #fbeefd 100%
+  );
+  background-size: 69.74px 48.83px;
+  color: #22002b;
+  height: 100%;
 }
 
-.content.portrait > div > .options {
-  height: 65px;
-  width: 100%;
-  padding: 15px 10px;
-}
-
-.content.landscape > div > .options {
-  height: 40px;
-  width: 100%;
-  padding: 5px 10px;
-}
-
-.content.portrait > div > .options > .opt-item {
-  margin: 0 10px;
-  padding: 5px 10px;
-  color: #440055;
-  border: 1px solid #440055;
-  border-radius: 50px;
-  font-size: 1.2em;
-}
-
-.content.landscape > div > .options > .opt-item {
-  margin: 0 10px;
-  padding: 5px 10px;
-  color: #440055;
-  border: 1px solid #440055;
-  border-radius: 50px;
-}
-
-.content > div > .text {
-  padding: 20px;
-  text-align: center;
+.content > div {
   overflow: auto;
-  font-size: 1.2em;
 }
 
-.content.portrait > div > .text {
-  height: calc(100vh - 185px);
+.content.portrait > div {
+  margin-top: 120px;
+  padding: 10px 10px 80px 10px;
+  height: calc(100% - 100px);
 }
 
-.content.landscape > div > .text {
-  height: calc(100vh - 119px);
+.content.landscape > div {
+  margin-top: 90px;
+  width: 100%;
+  height: calc(100% - 100px);
+  padding: 20px;
+}
+
+.content.portrait > div > .page-options {
+  position: fixed;
+  top: 90px;
+  right: 20px;
+  background: red;
+}
+
+.content.landscape > div > .page-options {
+  position: fixed;
+  top: 60px;
+  right: 20px;
+}
+
+.content .text {
+  text-align: center;
+  line-height: 1.3em;
+}
+
+.content .text > p {
+  margin: 15px 0;
+}
+
+.content .text > p:first-child {
+  margin-top: 0;
 }

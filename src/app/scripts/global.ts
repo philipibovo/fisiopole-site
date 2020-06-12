@@ -25,6 +25,7 @@ export class Global {
   public madebyTheme: string = 'dark';
   public lang: string;
   public pageTitle: string;
+  public navonaActive: boolean = false;
 
   // Data Objects
   public mainMenu: MainMenuModel[] = dataMainMenu;

@@ -19,9 +19,7 @@ export class StudioComponent implements OnInit {
     private _title: Title,
     public global: Global,
     public scripts: ScriptsGeneral
-  ) {
-    this.onResizedStudio();
-  }
+  ) {}
 
   ngOnInit(): void {
     switch (this.global.lang) {
@@ -38,6 +36,8 @@ export class StudioComponent implements OnInit {
 
     this.scripts.activeMenuItem('studio');
     this.scripts.pageIn();
+
+    this.onResizedStudio();
   }
 
   onResizedStudio() {
@@ -47,24 +47,13 @@ export class StudioComponent implements OnInit {
     this.global.madebyTheme = 'dark';
 
     if (this.global.isSmartphone) {
-      this.global.iconMenuTheme = 'light';
-
-      if (this.global.isLandscape) {
-        this.global.socialTheme = 'light';
-      } else {
-        this.global.socialTheme = 'dark';
-      }
+      this.global.iconMenuTheme = 'dark';
+      this.global.madebyTheme = 'light';
     }
-    //end if (this.global.isSmartphone)
 
     if (this.global.isTablet) {
-      this.global.iconMenuTheme = 'light';
-
-      if (this.global.isLandscape) {
-        this.textFxFlexOffsetSM = '60px';
-      } else {
-        this.textFxFlexOffsetSM = '0px';
-      }
+      this.global.iconMenuTheme = 'dark';
+      this.global.madebyTheme = 'light';
     }
     // end if (this.global.isTablet)
   }

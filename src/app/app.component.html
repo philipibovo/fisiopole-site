@@ -1,13 +1,247 @@
-<app-template></app-template>
+<div
+  id="logo"
+  [class]="global.logoTheme"
+  [class.portrait]="global.isPortrait"
+  [class.landscape]="global.isLandscape"
+  [class.hide]="!global.isDesktop && global.navonaActive"
+  (click)="scripts.actionMenu('', false)"
+  (window:resize)="onResizedApp()"
+>
+  <img
+    *ngIf="global.logoTheme === 'dark'"
+    alt="Fisio Pole Logo"
+    src="./assets/img/logo/logo.svg"
+  />
+  <img
+    *ngIf="global.logoTheme === 'light'"
+    alt="Fisio Pole Logo"
+    src="./assets/img/logo/logo-negative.svg"
+  />
+</div>
+<!-- end #logo -->
+
+<div
+  id="page-title"
+  [class.portrait]="global.isPortrait"
+  [class.landscape]="global.isLandscape"
+  [class.hide]="!global.isDesktop && global.navonaActive"
+>
+  <span *ngIf="global.lang === 'en'" alt="Page title">
+    {{ global.pageTitle }}
+  </span>
+  <span *ngIf="global.lang === 'pt'" alt="Título da Página">
+    {{ global.pageTitle }}
+  </span>
+</div>
+<!-- end #page-title -->
+
+<div
+  id="icon-menu"
+  *ngIf="global.isSmartphone || global.isTablet"
+  alt="Menu"
+  [class]="global.iconMenuTheme"
+  [class.portrait]="global.isPortrait"
+  [class.landscape]="global.isLandscape"
+  [class.hide]="!global.isDesktop && global.navonaActive"
+  (click)="scripts.showHideMenuMobile()"
+>
+  <i class="fas fa-bars"></i>
+</div>
+<!-- end #icon-menu -->
+
+<div
+  id="menu-shadow-2"
+  *ngIf="!global.isDesktop"
+  [class.hide]="!global.isDesktop && global.navonaActive"
+></div>
+<div
+  id="menu-shadow-1"
+  *ngIf="!global.isDesktop"
+  [class.hide]="!global.isDesktop && global.navonaActive"
+></div>
+
+<div
+  id="menu"
+  [class]="global.menuTheme"
+  [class.portrait]="global.isPortrait"
+  [class.landscape]="global.isLandscape"
+>
+  <div
+    id="menu-logo"
+    (click)="scripts.actionMenu('', true)"
+    fxHide.md
+    fxHide.lg
+    fxHide.xl
+  >
+    <img alt="Fisio Pole" src="./assets/img/logo/logo-negative.svg" />
+  </div>
+
+  <div [class.space-top-30]="!global.isDesktop">
+    <ul>
+      <li
+        *ngFor="let item of global.mainMenu"
+        id="menu-item-{{ item.idName }}"
+        class="menu-item"
+        (click)="scripts.actionMenu(item.idName, true)"
+      >
+        <div *ngIf="global.lang === 'en'" alt="Menu item">
+          {{ item.label.en }}
+        </div>
+        <div *ngIf="global.lang === 'pt'" alt="Menu iten">
+          {{ item.label.pt }}
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- end #menu -->
+
+<div
+  id="social"
+  [class]="global.socialTheme"
+  [class.portrait]="global.isPortrait"
+  [class.landscape]="global.isLandscape"
+  [class.hide]="!global.isDesktop && global.navonaActive"
+>
+  <div>
+    <a
+      class="hint--left"
+      aria-label="Instagram"
+      alt="Instagram"
+      href="https://www.instagram.com/fisio_pole"
+      target="_blank"
+    >
+      <i class="fab fa-instagram"></i>
+    </a>
+  </div>
+
+  <div>
+    <a
+      class="hint--left"
+      aria-label="Facebook"
+      alt="Facebook"
+      href="https://www.facebook.com/fisiopoleart"
+      target="_blank"
+    >
+      <i class="fab fa-facebook"></i>
+    </a>
+  </div>
+
+  <div>
+    <a
+      class="hint--left"
+      aria-label="Whatsapp"
+      alt="Whatsapp"
+      href="https://api.whatsapp.com/send?1=pt_BR&phone=5513997416202"
+      target="_blank"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+</div>
+<!-- end #social -->
 
 <div
   id="main"
   [class.portrait]="global.isPortrait"
   [class.landscape]="global.isLandscape"
-  (window:resize)="onResizedApp()"
 >
   <router-outlet></router-outlet>
 </div>
-<!-- #content -->
+<!-- #main -->
 
-<!-- <ngx-navona></ngx-navona> -->
+<div
+  id="language-choose"
+  [class.hide]="
+    global.isSmartphone ||
+    global.isTablet ||
+    (!global.isDesktop && global.navonaActive)
+  "
+>
+  <div
+    *ngIf="global.lang === 'en'"
+    class="hint--right"
+    aria-label="Mudar idioma para Português"
+    (click)="scripts.setLanguage('pt', true)"
+  >
+    <img
+      src="./assets/img/icon/br-flag.png"
+      alt="Mudar idioma para Português"
+    />
+  </div>
+
+  <div
+    *ngIf="global.lang === 'pt'"
+    class="hint--right"
+    aria-label="Change language to English"
+    (click)="scripts.setLanguage('en', true)"
+  >
+    <img src="./assets/img/icon/us-flag.png" alt="Change language to English" />
+  </div>
+</div>
+<!-- end #language-choose -->
+
+<div
+  id="made-by"
+  class="global.madebyTheme"
+  [class.portrait]="global.isPortrait"
+  [class.landscape]="global.isLandscape"
+  [class.hide]="!global.isDesktop && global.navonaActive"
+>
+  <div>
+    <div
+      *ngIf="global.lang === 'en' && (global.isSmartphone || global.isTablet)"
+    >
+      <a href="https://philipi.bovo.me" target="_blank">
+        Developed by Philipi Bovo&nbsp;
+      </a>
+    </div>
+
+    <div
+      *ngIf="global.lang === 'pt' && (global.isSmartphone || global.isTablet)"
+    >
+      <a href="https://philipi.bovo.me" target="_blank">
+        Desenvolvido por Philipi Bovo&nbsp;
+      </a>
+    </div>
+
+    <div *ngIf="global.lang === 'en'">
+      <a
+        class="hint--left"
+        aria-label="Developed by Philipi Bovo - philipi.bovo.me"
+        alt="Developed by Philipi Bovo - philipi.bovo.me"
+        href="https://philipi.bovo.me"
+        target="_blank"
+      >
+        <img
+          *ngIf="global.madebyTheme === 'dark'"
+          src="./assets/img/logo/philipi-bovo.png"
+        />
+        <img
+          *ngIf="global.madebyTheme === 'light'"
+          src="./assets/img/logo/philipi-bovo-negative.png"
+        />
+      </a>
+    </div>
+
+    <div *ngIf="global.lang === 'pt'">
+      <a
+        class="hint--left"
+        aria-label="Desenvolvido por Philipi Bovo - philipi.bovo.me"
+        alt="Desenvolvido por Philipi Bovo - philipi.bovo.me"
+        href="https://philipi.bovo.me"
+        target="_blank"
+      >
+        <img
+          *ngIf="global.madebyTheme === 'dark'"
+          src="./assets/img/logo/philipi-bovo.png"
+        />
+        <img
+          *ngIf="global.madebyTheme === 'light'"
+          src="./assets/img/logo/philipi-bovo-negative.png"
+        />
+      </a>
+    </div>
+  </div>
+</div>
+<!-- end #made-by -->

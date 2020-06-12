@@ -54,14 +54,7 @@ export class ModalitiesComponent implements OnInit {
     if (this.global.isTablet) {
       this.global.iconMenuTheme = 'dark';
       this.global.madebyTheme = 'light';
-
-      if (this.global.isPortrait) {
-        this.itemsFxLayoutSM = 'row';
-        this.fxLayoutGapSM = '25px';
-      } else {
-        this.itemsFxLayoutSM = 'column';
-        this.fxLayoutGapSM = '0px';
-      }
     }
   }
+  // end onResizedModalities()
 }

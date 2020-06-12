@@ -1,28 +1,41 @@
+::-webkit-scrollbar {
+  width: 0px;
+  border-left: 0px solid #e6ecf8;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #590072;
+}
+
 .content {
+  /*background: #fcf1ff;*/
+  background-image: linear-gradient(
+    145deg,
+    #fcf1ff 25%,
+    #fbeefd 25%,
+    #fbeefd 50%,
+    #fcf1ff 50%,
+    #fcf1ff 75%,
+    #fbeefd 75%,
+    #fbeefd 100%
+  );
+  background-size: 69.74px 48.83px;
+  color: #22002b;
+  height: 100%;
+}
+
+.content > div {
   overflow: auto;
 }
 
-.content > div:first-child {
-  height: calc(100vh - 29px);
+.content.portrait > div {
+  margin-top: 100px;
+  padding: 10px 10px 80px 10px;
+  height: calc(100% - 100px);
 }
 
-.content > div > div > .card > .title {
-  font-size: 1.3em;
+.content.landscape > div {
+  margin-top: 70px;
+  width: 100%;
+  height: calc(100% - 100px);
+  padding: 0 20px 20px 100px;
 }
-
-.content.portrait > div > div > .card > .title {
-  margin: 15px;
-}
-
-.content.landscape > div > div > .card > .title {
-  margin: 5px;
-}
-
-/*.content.portrait > div:first-child {
-  padding: 100px 20px 85px 20px;
-}
-
-.content.landscape > div:first-child {
-  padding: 40px 20px 85px 20px;
-}
-*/

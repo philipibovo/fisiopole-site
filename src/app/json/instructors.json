@@ -36,22 +36,17 @@
     ],
     "modality": [{ "id": 2 }, { "id": 3 }],
     "path": "team/marcia-martins",
-    "photo150pxUlr": "https://live.staticflickr.com/65535/49985709066_fd0236a783_q.jpg",
+    "photoPerfil": "https://live.staticflickr.com/65535/49985709066_fd0236a783_q.jpg",
     "social": [
       {
         "name": "Instagram",
         "icon": "fab fa-instagram",
-        "url": ""
+        "url": "https://instagram.com/mama_fisiopole?igshid=too9buzcvkbh"
       },
       {
         "name": "Facebook",
         "icon": "fab fa-facebook",
-        "url": ""
-      },
-      {
-        "name": "Linkedin",
-        "icon": "fab fa-linkedin",
-        "url": ""
+        "url": "https://www.facebook.com/marciamartins0912"
       }
     ]
   },
@@ -83,24 +78,19 @@
         }
       }
     ],
-    "modality": [{ "id": 1 }, { "id": 2 }, { "id": 7 }],
+    "modality": [{ "id": 1 }, { "id": 2 }],
     "path": "team/mayra-martins",
-    "photo150pxUlr": "https://lh4.googleusercontent.com/-iaiMkvbfpHE/AAAAAAAAAAI/AAAAAAAAAaE/mHEsNaFL9Ac/photo.jpg?sz=328",
+    "photoPerfil": "https://lh4.googleusercontent.com/-iaiMkvbfpHE/AAAAAAAAAAI/AAAAAAAAAaE/mHEsNaFL9Ac/photo.jpg?sz=328",
     "social": [
       {
         "name": "Instagram",
         "icon": "fab fa-instagram",
-        "url": ""
+        "url": "https://instagram.com/ma_poleart?igshid=15l6mmww28heg"
       },
       {
         "name": "Facebook",
         "icon": "fab fa-facebook",
-        "url": ""
-      },
-      {
-        "name": "Linkedin",
-        "icon": "fab fa-linkedin",
-        "url": ""
+        "url": "https://www.facebook.com/fisiopole"
       }
     ]
   },
@@ -127,22 +117,17 @@
     ],
     "modality": [{ "id": 2 }, { "id": 3 }],
     "path": "team/patricia-perez",
-    "photo150pxUlr": "https://live.staticflickr.com/65535/49985681393_d6b6a75f6f_q.jpg",
+    "photoPerfil": "https://live.staticflickr.com/65535/49985681393_d6b6a75f6f_q.jpg",
     "social": [
       {
         "name": "Instagram",
         "icon": "fab fa-instagram",
-        "url": ""
+        "url": "https://instagram.com/patipolerina?igshid=nn507i58kr29"
       },
       {
         "name": "Facebook",
         "icon": "fab fa-facebook",
-        "url": ""
-      },
-      {
-        "name": "Linkedin",
-        "icon": "fab fa-linkedin",
-        "url": ""
+        "url": "https://www.facebook.com/profile.php?id=100013208204710"
       }
     ]
   },
@@ -162,22 +147,12 @@
     ],
     "modality": [{ "id": 1 }],
     "path": "team/fernanda-agria",
-    "photo150pxUlr": "https://lh4.googleusercontent.com/-iaiMkvbfpHE/AAAAAAAAAAI/AAAAAAAAAaE/mHEsNaFL9Ac/photo.jpg?sz=328",
+    "photoPerfil": "https://lh4.googleusercontent.com/-iaiMkvbfpHE/AAAAAAAAAAI/AAAAAAAAAaE/mHEsNaFL9Ac/photo.jpg?sz=328",
     "social": [
       {
         "name": "Instagram",
         "icon": "fab fa-instagram",
-        "url": ""
-      },
-      {
-        "name": "Facebook",
-        "icon": "fab fa-facebook",
-        "url": ""
-      },
-      {
-        "name": "Linkedin",
-        "icon": "fab fa-linkedin",
-        "url": ""
+        "url": "https://instagram.com/prof.feagria?igshid=1lairic0kfn6b"
       }
     ]
   },
@@ -209,24 +184,19 @@
         }
       }
     ],
-    "modality": [{ "id": 2 }, { "id": 6 }],
+    "modality": [{ "id": 2 }, { "id": 6 }, { "id": 7 }],
     "path": "team/lucas-loreto",
-    "photo150pxUlr": "https://live.staticflickr.com/65535/49985680898_4fdc194a4f_q.jpg",
+    "photoPerfil": "https://live.staticflickr.com/65535/49985680898_4fdc194a4f_q.jpg",
     "social": [
       {
         "name": "Instagram",
         "icon": "fab fa-instagram",
-        "url": ""
+        "url": "https://instagram.com/lucasloreto2?igshid=tha0v09nt1pu"
       },
       {
         "name": "Facebook",
         "icon": "fab fa-facebook",
-        "url": ""
-      },
-      {
-        "name": "Linkedin",
-        "icon": "fab fa-linkedin",
-        "url": ""
+        "url": "https://www.facebook.com/lucas.loreto.33"
       }
     ]
   },
@@ -244,19 +214,14 @@
         }
       }
     ],
-    "modality": [{ "id": 5 }, { "id": 7 }],
+    "modality": [{ "id": 4 }, { "id": 5 }],
     "path": "team/sergio-biller",
-    "photo150pxUlr": "https://live.staticflickr.com/65535/49986106592_44092151a5_q.jpg",
+    "photoPerfil": "https://live.staticflickr.com/65535/49986106592_44092151a5_q.jpg",
     "social": [
       {
         "name": "Instagram",
         "icon": "fab fa-instagram",
-        "url": ""
-      },
-      {
-        "name": "Facebook",
-        "icon": "fab fa-facebook",
-        "url": ""
+        "url": "https://instagram.com/sergiobiller?igshid=nh2qo9axl3o4"
       }
     ]
   }

@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-//Scripts
-import { Global } from './scripts/global';
+import { AppComponent } from './app.component';
 
 //Pages > Home
 import { HomeComponent } from './pages/home/home.component';

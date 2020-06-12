@@ -24,24 +24,18 @@ export class PersonalInfoComponent implements OnInit {
     public global: Global,
     public scripts: ScriptsGeneral
   ) {
+    this.onResizedPersonalInfo();
+
     const pathSplit = window.location.pathname.split('/');
 
     this.instructor = this.global.instructors.filter(
       c => c.idName === pathSplit[pathSplit.length - 1]
     )[0];
 
-    const totalModalities = this.instructor.modality.length;
     this.instructor.modality.forEach((element, i) => {
-      let modality: ModalityModel = {};
-
-      modality = this.global.modalities.filter(c => c.id === element.id)[0];
-
-      if (i + 1 !== totalModalities) {
-        modality.name.en += ',';
-        modality.name.pt += ',';
-      }
-
-      this.modalities.push(modality);
+      this.modalities.push(
+        this.global.modalities.filter(c => c.id === element.id)[0]
+      );
     });
   }
 
@@ -54,4 +48,23 @@ export class PersonalInfoComponent implements OnInit {
     this.scripts.activeMenuItem('team');
     this.scripts.pageIn();
   }
+  // end ngOnInit()
+
+  onResizedPersonalInfo() {
+    this.global.logoTheme = 'dark';
+    this.global.menuTheme = 'dark';
+    this.global.socialTheme = 'dark';
+    this.global.madebyTheme = 'dark';
+
+    if (this.global.isSmartphone) {
+      this.global.iconMenuTheme = 'dark';
+      this.global.madebyTheme = 'light';
+    }
+
+    if (this.global.isTablet) {
+      this.global.iconMenuTheme = 'dark';
+      this.global.madebyTheme = 'light';
+    }
+  }
+  // end onResizedPersonalInfo()
 }

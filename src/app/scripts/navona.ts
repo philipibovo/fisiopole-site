@@ -1,12 +1,16 @@
 import { Injectable } from '@angular/core';
 import { fromEvent, Observable, Subscription } from 'rxjs';
 
+import { ScriptsGeneral } from './scripts-general';
+
 @Injectable()
 export class Navona {
   private _speedNavona: number;
   private _FX: any;
   private _resizeObservable: Observable<Event>;
   private _resizeSubscription: Subscription;
+
+  constructor(public scripts: ScriptsGeneral) {}
 
   start = () => {
     this.verifyIDs().then(result => {
@@ -144,6 +148,9 @@ export class Navona {
       for (let i = 0; i < navonaGO.length; i++) {
         navonaGO[i].addEventListener('click', event => {
           this.navonaSetSizes(navonaGO[i].getAttribute('data-navona-target'));
+          // this.navonaSetSizes(
+          //   (event.target as Element).getAttribute('data-navona-target')
+          // );
         });
       }
       // end for (let i = 0; i < navonaGO.length; i++)
@@ -181,7 +188,9 @@ export class Navona {
 
     this._resizeObservable = fromEvent(window, 'resize');
     this._resizeSubscription = this._resizeObservable.subscribe(event => {
-      if (document.querySelector('.navona.show').getAttribute('id')) {
+      // console.log(document.querySelector('.navona.show'));
+
+      if (document.querySelector('.navona.show')) {
         this.navonaSetSizes(
           document.querySelector('.navona.show').getAttribute('id')
         );
@@ -189,6 +198,12 @@ export class Navona {
     });
   };
   // end start
+
+  ngOnDestroy() {
+    if (this._resizeSubscription) {
+      this._resizeSubscription.unsubscribe();
+    }
+  }
 
   verifyIDs = () => {
     const galleries = document.querySelectorAll('.navona');
@@ -204,6 +219,8 @@ export class Navona {
   // end  verifyIDs()
 
   closeNavonaGallery = id => {
+    this.scripts.showHideTemplateMobileWhenNavona(false);
+
     this._FX.fadeOut(document.getElementById(id), {
       duration: this._speedNavona,
       complete: function() {
@@ -372,6 +389,8 @@ export class Navona {
       document.getElementById('navona-close-button').classList.add('show');
 
       document.querySelector('body').classList.add('navona-hidden-scroll');
+
+      this.scripts.showHideTemplateMobileWhenNavona(true);
 
       this._FX.fadeIn(document.getElementById(id), {
         duration: this._speedNavona,

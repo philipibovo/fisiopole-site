@@ -23,5 +23,17 @@ export class AppComponent implements OnInit {
   onResizedApp() {
     this.scripts.verifyDevice();
     this.scripts.verifyOrientation();
+
+    if (this.global.isSmartphone) {
+      document.getElementById('menu').style.height = `${window.innerHeight -
+        29}px`;
+    }
+    //end if (this.global.isSmartphone)
+
+    if (this.global.isTablet) {
+      document.getElementById('menu').style.height = `${window.innerHeight}px`;
+      return;
+    }
+    // end if (this.global.isTablet)
   }
 }

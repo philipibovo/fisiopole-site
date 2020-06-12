@@ -74,13 +74,15 @@ export class ScriptsGeneral {
   }
   // end public verifyOrientation()
 
-  public actionMenu(location: string) {
+  public actionMenu(location: string, showHideMenu: boolean) {
     if (window.location.pathname === `/${this.global.lang}/${location}`) {
       return;
     }
 
     if (this.global.isSmartphone || this.global.isTablet) {
-      this.showHideMenuMobile();
+      if (showHideMenu) {
+        this.showHideMenuMobile();
+      }
 
       this._router.navigate([`${this.global.lang}/${location}`]);
 
@@ -114,6 +116,8 @@ export class ScriptsGeneral {
       document
         .getElementById('icon-menu')
         .firstElementChild.classList.toggle('fa-times');
+
+      document.getElementById('language-choose').classList.toggle('hide');
     }, 150);
   }
   // end showHideMenuMobile()
@@ -150,4 +154,8 @@ export class ScriptsGeneral {
     this.global.contentDisplay = 'hide';
   }
   // end public pageOut()
+
+  public showHideTemplateMobileWhenNavona(navonaIsActive) {
+    this.global.navonaActive = navonaIsActive;
+  }
 }

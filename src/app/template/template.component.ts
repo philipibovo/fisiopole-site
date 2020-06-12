@@ -25,11 +25,16 @@ export class TemplateComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.onResizedTemplate();
+    setTimeout(() => {
+      this.onResizedTemplate();
+    }, 100);
   }
 
   onResizedTemplate() {
     if (this.global.isSmartphone) {
+      // document.getElementById('menu').style.height = `${window.innerHeight -
+      //   29}px`;
+
       if (this.global.isLandscape) {
         //menu
         this.menuFxLayoutXS = 'row';
@@ -53,6 +58,8 @@ export class TemplateComponent implements OnInit {
     //end if (this.global.isSmartphone)
 
     if (this.global.isTablet) {
+      // document.getElementById('menu').style.height = `${window.innerHeight}px`;
+
       if (this.global.isLandscape) {
         //menu
         this.menuFxLayoutSM = 'row';

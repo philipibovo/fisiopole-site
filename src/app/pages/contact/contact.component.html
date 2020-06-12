@@ -5,212 +5,131 @@
   [class.portrait]="global.isPortrait"
   [class.landscape]="global.isLandscape"
   fxLayout="row"
-  fxLayoutAlign="start center"
+  fxLayoutAlign="start start"
   fxLayoutAlign.xs="start start"
   (window:resize)="onResizedContact()"
 >
   <div
-    id="order0"
-    fxFlexOffset="300px"
-    fxFlexOffset.xs="5%"
-    fxFlexOffset.sm="5%"
+    fxFlexOrder="1"
     fxFlex
-    fxFlex.xs="90%"
-    fxFlex.sm="90%"
+    fxFlexOffset="300px"
+    fxFlexOffset.xs="0"
+    fxFlexOffset.sm="0"
     fxLayout="row"
-    [fxLayout.xs]="order0FxLayoutXS"
-    [fxLayout.sm]="order0FxLayoutSM"
-    fxLayoutAlign="start center"
-    fxLayoutAlign.xs="start stretch"
-    fxLayoutAlign.sm="start stretch"
+    fxLayoutAlign="start start"
+    fxLayoutGap="20px"
+    fxLayout.xs="column"
+    fxLayoutAlign.xs="start strech"
   >
     <div
-      id="order1"
       fxFlexOrder="1"
-      fxFlexOffset="2.5%"
-      fxFlexOffset.xs="0px"
       fxFlex="35%"
-      fxFlex.xs
       fxLayout="column"
-      fxLayout.xs="column"
-      fxLayoutAlign="center stretch"
-      fxLayoutAlign.xs="start stretch"
-      fxLayoutGap="40px"
-      fxLayoutGap.xs="0px"
+      fxLayoutAlign="start strech"
+      fxLayoutGap="20px"
     >
-      <div
-        id="socials"
-        fxFlexOrder="1"
-        fxLayout="column"
-        fxLayoutAlign="center stretch"
-        fxLayoutGap="20px"
-        fxLayoutGap.xs="10px"
-      >
-        <div
-          *ngIf="global.lang === 'en'"
-          fxFlexOrder="1"
-          ngClass="subtitle center"
-        >
+      <div fxFlexOrder="1" class="subtitle center">
+        <span *ngIf="global.lang === 'en'">
           Social Networks
-        </div>
-        <!-- end fxFlexOrder="1" en -->
-
-        <div
-          *ngIf="global.lang === 'pt'"
-          fxFlexOrder="1"
-          ngClass="subtitle center"
-        >
+        </span>
+        <span *ngIf="global.lang === 'pt'">
           Redes Sociais
-        </div>
-        <!-- end fxFlexOrder="1" pt -->
-
-        <div
-          fxFlexOrder="2"
-          fxLayout="column"
-          fxLayoutAlign="center stretch"
-          fxLayoutGap="20px"
-          fxLayoutGap.xs="10px"
-        >
-          <div
-            *ngIf="
-              global.lang === 'en' && !global.isSmartphone && global.isPortrait
-            "
-            fxFlexOrder="1"
-            ngClass="contact-socials-text"
-          >
-            We are present in the main social networks. You can contact us
-            through Whatsapp, Instagram and Facebook.
-          </div>
-          <!-- end fxFlexOrder 1.1.2.1 en -->
-
-          <div
-            *ngIf="
-              global.lang === 'pt' && !global.isSmartphone && global.isPortrait
-            "
-            fxFlexOrder="1"
-            ngClass="contact-socials-text"
-          >
-            Estamos presentes nas principais redes sociais. Você pode entrar em
-            contato conosco através do Whatsapp, Instagram e Facebook.
-          </div>
-          <!-- end fxFlexOrder 1.1.2.1 pt -->
-
-          <div
-            fxFlexOrder="2"
-            fxLayout="row"
-            fxLayoutAlign="center center"
-            fxLayoutGap="30px"
-          >
-            <div fxFlexOrder="1" ngClass="icon">
-              <a
-                class="hint--bottom"
-                aria-label="Whatsapp"
-                alt="Whatsapp"
-                href="https://api.whatsapp.com/send?1=pt_BR&phone=5513997416202"
-                target="_blank"
-              >
-                <i class="fab fa-whatsapp"></i>
-              </a>
-            </div>
-            <!-- end fxFlexOrder 1.1.2.2.1 -->
-
-            <div fxFlexOrder="2" ngClass="icon">
-              <a
-                class="hint--bottom"
-                aria-label="Instagram"
-                alt="Instagram"
-                href="https://www.instagram.com/fisio_pole"
-                target="_blank"
-              >
-                <i class="fab fa-instagram"></i>
-              </a>
-            </div>
-            <!-- end fxFlexOrder 1.1.2.2.2 -->
-
-            <div fxFlexOrder="3" ngClass="icon">
-              <a
-                class="hint--bottom"
-                aria-label="Facebook"
-                alt="Facebook"
-                href="https://pt.facebook.com/fisiopoleart/"
-                target="_blank"
-              >
-                <i class="fab fa-facebook"></i>
-              </a>
-            </div>
-            <!-- end fxFlexOrder 1.1.2.2.3 -->
-          </div>
-          <!-- end fxFlexOrder 1.1.2.2 -->
-        </div>
-        <!-- end fxFlexOrder 1.1.2 -->
+        </span>
       </div>
-      <!-- end #contact-socials fxFlexOrder 1.1 -->
+      <!-- end fxFlexOrder="1.1" -->
+
+      <div fxFlexOrder="2" class="center" fxHide.xs fxHide.sm>
+        <span *ngIf="global.lang === 'en'">
+          We are present in the main social networks. You can contact us through
+          Whatsapp, Instagram and Facebook.
+        </span>
+        <span *ngIf="global.lang === 'pt'">
+          Estamos presentes nas principais redes sociais. Você pode entrar em
+          contato conosco através do Whatsapp, Instagram e Facebook.
+        </span>
+      </div>
+      <!-- end fxFlexOrder 1.2 -->
 
       <div
-        id="contact-phone"
-        fxFlexOrder="2"
-        fxLayout="column"
-        fxLayoutAlign="center stretch"
-        fxLayoutGap="20px"
-        fxLayoutGap.xs="10px"
+        fxFlexOrder="3"
+        fxLayout="row"
+        fxLayoutAlign="center center"
+        fxLayoutGap="30px"
       >
-        <div
-          *ngIf="global.lang === 'en'"
-          fxFlexOrder="1"
-          ngClass="subtitle center"
-        >
-          Phone
+        <div fxFlexOrder="1" ngClass="social-icon">
+          <a
+            class="hint--bottom"
+            aria-label="Whatsapp"
+            alt="Whatsapp"
+            href="https://api.whatsapp.com/send?1=pt_BR&phone=5513997416202"
+            target="_blank"
+          >
+            <i class="fab fa-whatsapp"></i>
+          </a>
         </div>
-        <!-- end fxFlexOrder="1" en -->
+        <!-- end fxFlexOrder 1.3.1 -->
 
-        <div
-          *ngIf="global.lang === 'pt'"
-          fxFlexOrder="1"
-          ngClass="subtitle center"
-        >
-          Telefone
+        <div fxFlexOrder="2" ngClass="social-icon">
+          <a
+            class="hint--bottom"
+            aria-label="Instagram"
+            alt="Instagram"
+            href="https://www.instagram.com/fisio_pole"
+            target="_blank"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
         </div>
-        <!-- end fxFlexOrder="1" pt -->
+        <!-- end fxFlexOrder 1.3.2 -->
 
-        <div fxFlexOrder="2" ngClass="center">
-          <a href="tel:+551333263859">+55 13 3326-3859</a>
+        <div fxFlexOrder="3" ngClass="social-icon">
+          <a
+            class="hint--bottom"
+            aria-label="Facebook"
+            alt="Facebook"
+            href="https://pt.facebook.com/fisiopoleart/"
+            target="_blank"
+          >
+            <i class="fab fa-facebook"></i>
+          </a>
         </div>
+        <!-- end fxFlexOrder 1.3.3 -->
       </div>
-      <!-- end #contact-phone fxFlexOrder 1.1 -->
+      <!-- end fxFlexOrder 1.3 -->
+
+      <div
+        fxFlexOrder="4"
+        class="subtitle center"
+        [class.space-top-30]="global.isDesktop"
+        [class.space-top-10]="global.isSmartphone"
+        [class.space-top-10]="global.isTablet"
+      >
+        <span *ngIf="global.lang === 'en'">Phone</span>
+        <span *ngIf="global.lang === 'pt'">Telefone</span>
+      </div>
+      <!-- end fxFlexOrder="1.4" -->
+
+      <div fxFlexOrder="5" class="center">
+        <a href="tel:+551333263859">+55 13 3326-3859</a>
+      </div>
+      <!-- end fxFlexOrder="1.5" -->
     </div>
-    <!-- end fxFlexOrder 1 -->
+    <!-- end fxFlexOrder="1" -->
 
     <div
-      id="order2"
       fxFlexOrder="2"
-      fxFlexOffset="5%"
-      fxFlex="45%"
-      fxFlex.xs
+      fxFlex="65%"
       fxLayout="column"
-      fxLayoutAlign="center stretch"
-      fxLayoutAlign.xs="start stretch"
+      fxLayoutAlign="start strech"
       fxLayoutGap="20px"
-      fxLayoutGap.xs="10px"
     >
-      <div
-        *ngIf="global.lang === 'en'"
-        fxFlexOrder="1"
-        ngClass="subtitle center"
-      >
-        Address
+      <div fxFlexOrder="1" class="subtitle center">
+        <span *ngIf="global.lang === 'en'">Address</span>
+        <span *ngIf="global.lang === 'pt'">Endereço</span>
       </div>
-      <!-- end fxFlexOrder="1" en -->
+      <!-- end fxFlexOrder="2.1" en -->
 
-      <div
-        *ngIf="global.lang === 'pt'"
-        fxFlexOrder="1"
-        ngClass="subtitle center"
-      >
-        Endereço
-      </div>
-      <!-- end fxFlexOrder="1" pt -->
-
-      <div fxFlexOrder="2" ngClass="center">
+      <div fxFlexOrder="2" class="center">
         <a
           href="https://maps.google.com/maps?q=Fisiopole%20Santos"
           target="_blank"
@@ -218,9 +137,9 @@
           Av. Ana Costa, 521 - Salas 1 e 2, Gonzaga, Santos - SP, 11060-002
         </a>
       </div>
-      <!-- end fxFlexOrder 2.2 -->
+      <!-- end fxFlexOrder="2.2" en -->
 
-      <div fxFlexOrder="2" ngClass="center icon" fxHide.md fxHide.lg fxHide.xl>
+      <div fxFlexOrder="3" class="icon center" fxHide.md fxHide.lg fxHide.xl>
         <a
           href="https://maps.google.com/maps?q=Fisiopole%20Santos"
           target="_blank"
@@ -228,19 +147,14 @@
           <i class="fas fa-map-marked-alt"></i>
         </a>
       </div>
-      <!-- end fxFlexOrder 2.2 -->
+      <!-- end fxFlexOrder="2.3" en -->
 
-      <div
-        id="map"
-        fxFlexOrder="3"
-        fxHide.xs
-        *ngIf="!global.isTablet && global.isLandscape"
-      >
+      <div fxFlexOrder="4" fxFlex="100%" fxHide.xs fxHide.sm>
         <div class="mapouter">
           <div class="gmap_canvas">
             <iframe
               width="100%"
-              height="400px"
+              height="350px"
               id="gmap_canvas"
               src="https://maps.google.com/maps?q=Fisiopole%20Santos&t=&z=17&ie=UTF8&iwloc=&output=embed"
               frameborder="0"
@@ -253,8 +167,9 @@
         </div>
         <!-- end #mapouter -->
       </div>
-      <!-- end #map fxFlexOrder 2.3 -->
+      <!-- end fxFlexOrder="2.4" en -->
     </div>
-    <!-- end fxFlexOrder 2 -->
+    <!-- end fxFlexOrder="2" -->
   </div>
+  <!-- emd fx -->
 </div>

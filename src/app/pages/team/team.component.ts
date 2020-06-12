@@ -39,6 +39,7 @@ export class TeamComponent implements OnInit {
     this.scripts.activeMenuItem('team');
     this.scripts.pageIn();
   }
+  // end ngOnInit()
 
   onResizedTeam() {
     this.global.logoTheme = 'dark';
@@ -64,4 +65,5 @@ export class TeamComponent implements OnInit {
       }
     }
   }
+  // end onResizedTeam()
 }

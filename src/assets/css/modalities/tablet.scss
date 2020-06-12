@@ -1,68 +1,41 @@
-.content {
-  height: 100vh;
+::-webkit-scrollbar {
+  width: 0px;
+  border-left: 0px solid #e6ecf8;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #590072;
 }
 
-.content > div:first-child {
+.content {
+  /*background: #fcf1ff;*/
+  background-image: linear-gradient(
+    145deg,
+    #fcf1ff 25%,
+    #fbeefd 25%,
+    #fbeefd 50%,
+    #fcf1ff 50%,
+    #fcf1ff 75%,
+    #fbeefd 75%,
+    #fbeefd 100%
+  );
+  background-size: 69.74px 48.83px;
+  color: #22002b;
+  height: 100%;
+}
+
+.content > div {
   overflow: auto;
 }
 
-.content.portrait > div > div > .card {
-  position: relative;
-  width: 160px;
-  height: 200px;
-  border-radius: 8px;
-  cursor: pointer;
+.content.portrait > div {
+  margin-top: 100px;
+  padding: 10px 10px 80px 10px;
+  height: calc(100% - 100px);
 }
 
-.content.portrait > div > div > .card > .title {
-  position: absolute;
-  bottom: 0;
+.content.landscape > div {
+  margin-top: 70px;
   width: 100%;
-  line-height: 44px;
-  padding: 5px 0;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.4);
-  font-size: 1.1em;
-  border-radius: 0 0 8px 8px;
-  text-align: center;
-}
-
-.content.portrait > div > div > .card > .title.double {
-  line-height: 21px;
-}
-
-.content.portrait > div > div > #pilates {
-  background: url('../../img/modalities/card/pilates.png');
-}
-
-.content.portrait > div > div > #pole-dance {
-  background: url('../../img/modalities/card/pole-dance.png');
-}
-
-.content.portrait > div > div > #pole-choreographic {
-  background: url('../../img/modalities/card/pole-choreographic.png');
-}
-
-.content.portrait > div > div > #stiletto {
-  background: url('../../img/modalities/card/stiletto.png');
-}
-
-.content.portrait > div > div > #power-woman {
-  background: url('../../img/modalities/card/power-woman.png');
-}
-
-.content.portrait > div > div > #circus {
-  background: url('../../img/modalities/card/circus.png');
-}
-
-.content.portrait > div > div > #functional-training {
-  background: url('../../img/modalities/card/functional-training.png');
-}
-
-.content.landscape > div > div > .card > .title {
-  font-size: 1.3em;
-}
-
-.content.landscape > div > div > .card > .title {
-  margin: 5px;
+  height: calc(100% - 100px);
+  padding: 20px;
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 
 //Navona
@@ -17,7 +17,7 @@ import { ScriptsGeneral } from '../../../scripts/scripts-general';
   templateUrl: './modality-info.component.html',
   styleUrls: ['./modality-info.component.scss']
 })
-export class ModalityInfoComponent implements OnInit {
+export class ModalityInfoComponent implements OnInit, AfterViewInit {
   public pageTitleLocal: string;
   public modality: ModalityModel = {};
   public instructors: InstructorModel[] = [];
@@ -28,6 +28,8 @@ export class ModalityInfoComponent implements OnInit {
     public global: Global,
     public scripts: ScriptsGeneral
   ) {
+    this.onResizedModalityInfo();
+
     const pathSplit = window.location.pathname.split('/');
 
     this.modality = this.global.modalities.filter(
@@ -58,8 +60,27 @@ export class ModalityInfoComponent implements OnInit {
 
     this.scripts.activeMenuItem('modalities');
     this.scripts.pageIn();
-
-    this._navona.start();
   }
   // end ngOnInit()
+
+  ngAfterViewInit(): void {
+    this._navona.start();
+  }
+
+  onResizedModalityInfo() {
+    this.global.logoTheme = 'dark';
+    this.global.menuTheme = 'dark';
+    this.global.socialTheme = 'dark';
+    this.global.madebyTheme = 'dark';
+
+    if (this.global.isSmartphone) {
+      this.global.iconMenuTheme = 'dark';
+      this.global.madebyTheme = 'light';
+    }
+
+    if (this.global.isTablet) {
+      this.global.iconMenuTheme = 'dark';
+      this.global.madebyTheme = 'light';
+    }
+  }
 }

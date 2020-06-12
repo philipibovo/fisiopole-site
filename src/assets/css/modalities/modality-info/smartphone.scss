@@ -1,52 +1,67 @@
-.content.portrait > div > .title {
-  height: 80px;
-  width: 195px;
-  font-size: 1.8em;
-  color: #440055;
-  text-align: center;
+::-webkit-scrollbar {
+  width: 0px;
+  border-left: 0px solid #e6ecf8;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #590072;
 }
 
-.content.landscape > div > .title {
-  width: 195px;
-  margin-left: 120px;
-  padding-top: 20px;
-  font-size: 1.8em;
-  color: #440055;
+.content {
+  /*background: #fcf1ff;*/
+  background-image: linear-gradient(
+    145deg,
+    #fcf1ff 25%,
+    #fbeefd 25%,
+    #fbeefd 50%,
+    #fcf1ff 50%,
+    #fcf1ff 75%,
+    #fbeefd 75%,
+    #fbeefd 100%
+  );
+  background-size: 69.74px 48.83px;
+  color: #22002b;
+  height: 100%;
 }
 
-.content.portrait > div > .options {
-  height: 58px;
-  padding: 20px 10px;
-  color: #440055;
-}
-
-.content.landscape > div > .options {
-  height: 50px;
-  width: 100%;
-  margin-top: -30px;
-  color: #440055;
-  padding: 10px 0 10px 5px;
-}
-
-.content > div > .options > .opt-item {
-  margin: 0 10px;
-  padding: 5px 10px;
-  color: #440055;
-  border: 1px solid #440055;
-  border-radius: 50px;
-}
-
-.content > div > .text {
-  text-align: center;
+.content > div {
   overflow: auto;
 }
 
-.content.portrait > div > .text {
-  height: calc(100vh - 167px);
-  padding: 0px 10px 50px 10px;
+.content.portrait > div {
+  margin-top: 100px;
+  padding: 10px 10px 80px 10px;
+  height: calc(100% - 100px);
 }
 
-.content.content.landscape > div > .text {
-  height: calc(100vh - 134px);
-  padding: 0px 50px;
+.content.landscape > div {
+  margin-top: 100px;
+  width: 100%;
+  height: calc(100% - 100px);
+  padding: 0 20px 20px 100px;
+}
+
+.content.portrait > div > .page-options {
+  position: fixed;
+  top: 80px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.content.landscape > div > .page-options {
+  position: fixed;
+  top: 70px;
+  right: 20px;
+}
+
+.content .text {
+  text-align: center;
+  line-height: 1.3em;
+}
+
+.content .text > p {
+  margin: 15px 0;
+}
+
+.content .text > p:first-child {
+  margin-top: 0;
 }

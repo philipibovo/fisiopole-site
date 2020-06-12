@@ -25,7 +25,7 @@ export interface IInstructorModel {
   surname?: string;
   about?: IInstructorAboutModel[];
   pageUrl?: string;
-  photo150pxUlr?: string;
+  photoPerfil?: string;
   modality?: IInstructorModalityModel[];
   social?: IInstructorSocialModel[];
 }
@@ -38,7 +38,7 @@ export class InstructorModel implements IInstructorModel {
     public surname?: string,
     public about?: IInstructorAboutModel[],
     public pageUrl?: string,
-    public photo150pxUlr?: string,
+    public photoPerfil?: string,
     public modality?: IInstructorModalityModel[],
     public social?: IInstructorSocialModel[]
   ) {
@@ -48,7 +48,7 @@ export class InstructorModel implements IInstructorModel {
     this.surname = surname ? surname : null;
     this.about = about ? about : null;
     this.pageUrl = pageUrl ? pageUrl : null;
-    this.photo150pxUlr = photo150pxUlr ? photo150pxUlr : null;
+    this.photoPerfil = photoPerfil ? photoPerfil : null;
     this.modality = modality ? modality : null;
     this.social = social ? social : null;
   }

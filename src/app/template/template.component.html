@@ -3,7 +3,7 @@
   [class]="global.logoTheme"
   [class.portrait]="global.isPortrait"
   [class.landscape]="global.isLandscape"
-  (click)="scripts.actionMenu('')"
+  (click)="scripts.actionMenu('', false)"
   (window:resize)="onResizedTemplate()"
 >
   <img
@@ -53,7 +53,7 @@
 >
   <div
     id="menu-logo"
-    (click)="scripts.actionMenu('')"
+    (click)="scripts.actionMenu('', true)"
     fxHide.md
     fxHide.lg
     fxHide.xl
@@ -66,7 +66,7 @@
         *ngFor="let item of global.mainMenu"
         id="menu-item-{{ item.idName }}"
         class="menu-item"
-        (click)="scripts.actionMenu(item.idName)"
+        (click)="scripts.actionMenu(item.idName, true)"
       >
         <div *ngIf="global.lang === 'en'" alt="Menu item">
           {{ item.label.en }}
@@ -80,10 +80,22 @@
 </div>
 <!-- end #menu -->
 
-<div *ngIf="global.lang === 'en'" id="page-title" alt="Page title">
+<div
+  *ngIf="global.lang === 'en'"
+  id="page-title"
+  [class.portrait]="global.isPortrait"
+  [class.landscape]="global.isLandscape"
+  alt="Page title"
+>
   {{ global.pageTitle }}
 </div>
-<div *ngIf="global.lang === 'pt'" id="page-title" alt="Título da página">
+<div
+  *ngIf="global.lang === 'pt'"
+  id="page-title"
+  [class.portrait]="global.isPortrait"
+  [class.landscape]="global.isLandscape"
+  alt="Título da página"
+>
   {{ global.pageTitle }}
 </div>
 
@@ -118,10 +130,10 @@
       class="hint--left"
       aria-label="Facebook"
       alt="Facebook"
-      href="https://pt.facebook.com/fisiopoleart/"
+      href="https://www.facebook.com/fisiopoleart"
       target="_blank"
     >
-      <i class="fab fa-facebook"></i>
+      <i class="fab fa-facebook2"></i>
     </a>
   </div>
   <div fxFlexOrder="3">
@@ -138,7 +150,7 @@
 </div>
 <!-- end #social -->
 
-<div id="language-choose">
+<div id="language-choose" [class.hide]="global.isSmartphone || global.isTablet">
   <div
     *ngIf="global.lang === 'en'"
     class="hint--right"

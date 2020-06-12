@@ -12,7 +12,6 @@ import { ScriptsGeneral } from '../../scripts/scripts-general';
 })
 export class HomeComponent implements OnInit {
   public pageTitleLocal: string;
-  public textFxLayoutAlignXS: string;
 
   constructor(
     private _title: Title,
@@ -46,23 +45,11 @@ export class HomeComponent implements OnInit {
 
     if (this.global.isSmartphone) {
       this.global.iconMenuTheme = 'light';
-
-      if (this.global.isLandscape) {
-        this.textFxLayoutAlignXS = 'center end';
-        this.global.socialTheme = 'light';
-      } else {
-        this.textFxLayoutAlignXS = 'center center';
-        this.global.socialTheme = 'dark';
-      }
-
-      return;
     }
     // end if (this.global.isSmartphone)
 
     if (this.global.isTablet) {
       this.global.iconMenuTheme = 'light';
-
-      return;
     }
   }
 }

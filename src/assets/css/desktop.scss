@@ -1,6 +1,6 @@
 .subtitle {
   cursor: default;
-  margin: 30px 0 10px 0;
+  margin: 0 0 10px 0;
   font-size: 1.5em;
   text-decoration: underline;
 }
@@ -89,6 +89,10 @@
   z-index: 9;
 }
 
+#social > div {
+  margin: 5px 0;
+}
+
 #social.light a {
   color: rgba(255, 255, 255, 0.5);
 }
@@ -160,3 +164,181 @@
   transition: all 150ms;
 }
 /* END PAGE OPTIONS */
+
+/* MODALITY CARD */
+.modality-card {
+  position: relative;
+  width: 160px;
+  height: 200px;
+  border-radius: 5px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.modality-card > .modality-card-title {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  line-height: 44px;
+  padding: 5px 0;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+  font-size: 1.1em;
+  border-radius: 0 0 5px 5px;
+  text-align: center;
+}
+
+.modality-card > .modality-card-title.double {
+  line-height: 21px;
+}
+
+.modality-card#pilates {
+  background: url('../img/modalities/card/pilates.png');
+}
+
+.modality-card#pole-dance {
+  background: url('../img/modalities/card/pole-dance.png');
+}
+
+.modality-card#pole-choreographic {
+  background: url('../img/modalities/card/pole-choreographic.png');
+}
+
+.modality-card#stiletto {
+  background: url('../img/modalities/card/stiletto.png');
+}
+
+.modality-card#power-woman {
+  background: url('../img/modalities/card/power-woman.png');
+}
+
+.modality-card#circus {
+  background: url('../img/modalities/card/circus.png');
+}
+
+.modality-card#functional-training {
+  background: url('../img/modalities/card/functional-training.png');
+}
+/* MODALITY CARD */
+
+/* TEAM CARD */
+.team-card {
+  position: relative;
+  height: 225px;
+  width: 170px;
+  margin: 50px 10px 0 10px;
+  background: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  transition: 300ms ease-in-out;
+}
+
+.team-card:hover {
+  height: 250px;
+  transition: 300ms ease-in-out;
+}
+
+.team-card > .team-card-photo {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  top: 0px;
+  border-radius: 4px;
+  z-index: 1;
+  transition: 300ms ease-in-out;
+}
+
+.team-card:hover > .team-card-photo {
+  top: -40px;
+  box-shadow: 0px -10px 10px -8px rgba(0, 0, 0, 0.3);
+  transition: 300ms ease-in-out;
+}
+
+.team-card > .team-card-photo > img {
+  width: 100%;
+  border-radius: 4px;
+  cursor: pointer;
+  filter: grayscale(100%);
+  transition: 300ms ease-in-out;
+}
+
+.team-card:hover > .team-card-photo > img {
+  filter: grayscale(0%);
+  transition: 300ms ease-in-out;
+}
+
+.team-card > .team-card-title {
+  position: relative;
+  top: 10px;
+  background: #fff;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.2em;
+  z-index: 1;
+  transition: 300ms ease-in-out;
+}
+
+.team-card:hover > .team-card-title {
+  top: -30px;
+  transition: 300ms ease-in-out;
+}
+
+.team-card > .team-card-content {
+  position: relative;
+  text-align: center;
+  height: 125px;
+  top: -125px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 300ms ease-in-out;
+}
+
+.team-card:hover > .team-card-content {
+  top: -40px;
+  visibility: visible;
+  opacity: 1;
+}
+
+.team-card > .team-card-content > .team-card-content-social {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.team-card > .team-card-content > .team-card-content-social > div {
+  font-size: 1.2em;
+  margin: 0 5px;
+}
+
+.team-card > .team-card-content > .team-card-content-text {
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.team-card > .team-card-content > .team-card-content-text:hover {
+  text-decoration: underline;
+}
+/* END TEAM CARD */
+
+/* PERSONAL CARD */
+.personal-card {
+  position: relative;
+  transform: rotate(-6deg);
+  width: 170px;
+  height: 170px;
+  background: #fff;
+  padding: 10px;
+  border-radius: 2px;
+  box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.2);
+}
+
+.personal-card > img {
+  width: 150px;
+  height: 150px;
+}
+/* END PERSONAL CARD */

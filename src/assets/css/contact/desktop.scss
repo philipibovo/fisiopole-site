@@ -1,25 +1,23 @@
-.content {
-  background: #fcf1ff;
+.content > div:first-child {
+  margin-top: 130px;
+  padding-right: 65px;
 }
 
-#socials .contact-socials-text {
-  text-align: center;
-}
-
-#socials .icon {
-  font-size: 2em;
-}
-
-#map .mapouter {
+.mapouter {
   position: relative;
   text-align: right;
-  height: 400px;
+  height: 352px;
+  width: 100%;
+  border: 1px solid #22002b;
+}
+
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 352px;
   width: 100%;
 }
 
-#map .gmap_canvas {
-  overflow: hidden;
-  background: none !important;
-  height: 400px;
-  width: 100%;
+.social-icon {
+  font-size: 2em;
 }

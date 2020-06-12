@@ -3,14 +3,25 @@
   padding-right: 65px;
 }
 
-.content > div > .text {
+.content .social-icon {
+  font-size: 1.4em;
+}
+
+.content .modalities-title {
+  font-weight: bold;
+  font-size: 1.2em;
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+
+.content .text > .paragraph {
   line-height: 1.3em;
 }
 
-.content > div > .text > p {
+.content .text > .paragraph > p {
   margin: 15px 0;
 }
 
-.content > div > .text > p:first-child {
+.content .text > .paragraph > p:first-child {
   margin-top: 0;
 }
