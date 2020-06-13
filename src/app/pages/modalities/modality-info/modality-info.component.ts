@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 
 //Navona
@@ -17,7 +17,7 @@ import { ScriptsGeneral } from '../../../scripts/scripts-general';
   templateUrl: './modality-info.component.html',
   styleUrls: ['./modality-info.component.scss']
 })
-export class ModalityInfoComponent implements OnInit, AfterViewInit {
+export class ModalityInfoComponent implements OnInit {
   public pageTitleLocal: string;
   public modality: ModalityModel = {};
   public instructors: InstructorModel[] = [];
@@ -60,12 +60,12 @@ export class ModalityInfoComponent implements OnInit, AfterViewInit {
 
     this.scripts.activeMenuItem('modalities');
     this.scripts.pageIn();
+
+    setTimeout(() => {
+      this._navona.start();
+    }, 300);
   }
   // end ngOnInit()
-
-  ngAfterViewInit(): void {
-    this._navona.start();
-  }
 
   onResizedModalityInfo() {
     this.global.logoTheme = 'dark';

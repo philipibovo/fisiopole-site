@@ -43,18 +43,16 @@ export class StudioComponent implements OnInit {
   onResizedStudio() {
     this.global.logoTheme = 'dark';
     this.global.menuTheme = 'dark';
+    this.global.iconMenuTheme = 'dark';
     this.global.socialTheme = 'dark';
     this.global.madebyTheme = 'dark';
 
     if (this.global.isSmartphone) {
-      this.global.iconMenuTheme = 'dark';
       this.global.madebyTheme = 'light';
     }
 
     if (this.global.isTablet) {
-      this.global.iconMenuTheme = 'dark';
       this.global.madebyTheme = 'light';
     }
-    // end if (this.global.isTablet)
   }
 }
