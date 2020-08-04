@@ -3,15 +3,15 @@
     "id": 1,
     "idName": "studio",
     "label": {
-      "en": "Studio",
-      "pt": "Estúdio"
+      "en": "The Studio",
+      "pt": "O Estúdio"
     }
   },
   {
     "id": 2,
-    "idName": "modalities",
+    "idName": "classes",
     "label": {
-      "en": "Modalities",
+      "en": "Classes",
       "pt": "Modalidades"
     }
   },

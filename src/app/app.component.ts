@@ -11,10 +11,11 @@ import { ScriptsGeneral } from './scripts/scripts-general';
 })
 export class AppComponent implements OnInit {
   constructor(public global: Global, public scripts: ScriptsGeneral) {
-    this.scripts.setLanguage();
+    // this.scripts.setLanguage();
+    this.scripts.start();
   }
 
-  title = 'Fisio Pole';
+  title = 'Fisiopole Studio';
 
   ngOnInit() {
     this.onResizedApp();

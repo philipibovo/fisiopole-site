@@ -34,7 +34,7 @@ export class ContactComponent implements OnInit {
         break;
     }
 
-    this._title.setTitle(`${this.pageTitleLocal} - Fisio Pole`);
+    this._title.setTitle(`${this.pageTitleLocal} - Fisiopole Studio`);
     this.scripts.setPageTitle(this.pageTitleLocal);
 
     this.scripts.activeMenuItem('contact');

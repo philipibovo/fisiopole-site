@@ -41,5 +41,5 @@ To build the project for production
 Run
 
 ```
-firebase deploy`
+firebase deploy
 ```

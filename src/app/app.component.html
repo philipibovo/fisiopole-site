@@ -162,7 +162,7 @@
     *ngIf="global.lang === 'en'"
     class="hint--right"
     aria-label="Mudar idioma para Português"
-    (click)="scripts.setLanguage('pt', true)"
+    (click)="scripts.setLang('pt')"
   >
     <img
       src="./assets/img/icon/br-flag.png"
@@ -174,7 +174,7 @@
     *ngIf="global.lang === 'pt'"
     class="hint--right"
     aria-label="Change language to English"
-    (click)="scripts.setLanguage('en', true)"
+    (click)="scripts.setLang('en')"
   >
     <img src="./assets/img/icon/us-flag.png" alt="Change language to English" />
   </div>

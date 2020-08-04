@@ -26,17 +26,17 @@ export class ModalitiesComponent implements OnInit {
   ngOnInit(): void {
     switch (this.global.lang) {
       case 'en':
-        this.pageTitleLocal = 'Modalities';
+        this.pageTitleLocal = 'Classes';
         break;
       case 'pt':
         this.pageTitleLocal = 'Modalidades';
         break;
     }
 
-    this._title.setTitle(`${this.pageTitleLocal} - Fisio Pole`);
+    this._title.setTitle(`${this.pageTitleLocal} - Fisiopole Studio`);
     this.scripts.setPageTitle(this.pageTitleLocal);
 
-    this.scripts.activeMenuItem('modalities');
+    this.scripts.activeMenuItem('classes');
     this.scripts.pageIn();
   }
 

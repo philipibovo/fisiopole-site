@@ -44,7 +44,6 @@
   position: fixed;
   top: 90px;
   right: 20px;
-  background: red;
 }
 
 .content.landscape > div > .page-options {
@@ -55,11 +54,12 @@
 
 .content .text {
   text-align: center;
-  line-height: 1.3em;
+  line-height: 1.7em;
 }
 
 .content .text > p {
   margin: 15px 0;
+  line-height: 1.7em;
 }
 
 .content .text > p:first-child {

@@ -24,14 +24,14 @@ export class StudioComponent implements OnInit {
   ngOnInit(): void {
     switch (this.global.lang) {
       case 'en':
-        this.pageTitleLocal = 'Studio';
+        this.pageTitleLocal = 'The Studio';
         break;
       case 'pt':
-        this.pageTitleLocal = 'Estúdio';
+        this.pageTitleLocal = 'O Estúdio';
         break;
     }
 
-    this._title.setTitle(`${this.pageTitleLocal} - Fisio Pole`);
+    this._title.setTitle(`${this.pageTitleLocal} - Fisiopole Studio`);
     this.scripts.setPageTitle(this.pageTitleLocal);
 
     this.scripts.activeMenuItem('studio');

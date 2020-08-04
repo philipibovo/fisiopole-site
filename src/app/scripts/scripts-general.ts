@@ -8,38 +8,24 @@ import { Global } from './global';
 export class ScriptsGeneral {
   constructor(private _router: Router, public global: Global) {}
 
-  public setLanguage(lang?: string, clickFlag?: boolean) {
-    let path = window.location.pathname;
-    let pathLang = window.location.pathname.substring(1, 3);
-
-    if (!lang && pathLang) {
-      lang = pathLang;
+  start = () => {
+    // Verify and set language
+    if (window.localStorage.getItem('lang')) {
+      this.setLang(window.localStorage.getItem('lang'));
+    } else {
+      this.setLang('pt');
     }
+    // end else -> if (window.localStorage.getItem('theme'))
+  };
+  // end start = ()
 
-    switch (lang) {
-      case 'en':
-        this.global.lang = lang;
-        path = path.replace('pt', lang);
-        break;
-      case 'pt':
-        this.global.lang = lang;
-        path = path.replace('en', lang);
-        break;
-      default:
-        lang = 'pt';
-        this.global.lang = lang;
-        path += lang;
-        break;
-    }
+  setLang = (lang: string) => {
+    this.global.lang = lang;
+    window.localStorage.setItem('lang', lang);
+  };
+  // end setLang = (lang: string)
 
-    this._router.navigate([`${path}`]).finally(() => {
-      if (clickFlag) {
-        location.reload();
-      }
-    });
-  }
-
-  public verifyDevice() {
+  verifyDevice = () => {
     if (window.innerWidth <= 599) {
       this.global.isSmartphone = true;
       this.global.isTablet = false;
@@ -60,10 +46,10 @@ export class ScriptsGeneral {
       this.global.isDesktop = true;
       return;
     }
-  }
-  // end public verifyDevice()
+  };
+  // end verifyDevice = ()
 
-  public verifyOrientation() {
+  verifyOrientation = () => {
     if (window.innerWidth > window.innerHeight) {
       this.global.isLandscape = true;
       this.global.isPortrait = false;
@@ -71,11 +57,11 @@ export class ScriptsGeneral {
       this.global.isLandscape = false;
       this.global.isPortrait = true;
     }
-  }
-  // end public verifyOrientation()
+  };
+  // end verifyOrientation = ()
 
-  public actionMenu(location: string, showHideMenu: boolean) {
-    if (window.location.pathname === `/${this.global.lang}/${location}`) {
+  actionMenu = (location: string, showHideMenu: boolean) => {
+    if (window.location.pathname === `${location}`) {
       return;
     }
 
@@ -84,26 +70,26 @@ export class ScriptsGeneral {
         this.showHideMenuMobile();
       }
 
-      this._router.navigate([`${this.global.lang}/${location}`]);
+      this._router.navigate([`${location}`]);
 
       return;
     }
 
     //Desktop
     this.redirectAnimatePageOut(location);
-  }
-  // end public actionMenu(location)
+  };
+  // end actionMenu = (location: string, showHideMenu: boolean)
 
-  public redirectAnimatePageOut(location: string) {
+  redirectAnimatePageOut = (location: string) => {
     this.pageOut();
 
     setTimeout(() => {
-      this._router.navigate([`${this.global.lang}/${location}`]);
+      this._router.navigate([`${location}`]);
     }, 150);
-  }
-  // end public redirectAnimatePageOut(location: string)
+  };
+  // end redirectAnimatePageOut = (location: string)
 
-  public showHideMenuMobile() {
+  showHideMenuMobile = () => {
     document.getElementById('menu-shadow-2').classList.toggle('active');
     document.getElementById('menu-shadow-1').classList.toggle('active');
     document.getElementById('menu').classList.toggle('active');
@@ -119,10 +105,10 @@ export class ScriptsGeneral {
 
       document.getElementById('language-choose').classList.toggle('hide');
     }, 150);
-  }
-  // end showHideMenuMobile()
+  };
+  // end showHideMenuMobile = ()
 
-  public activeMenuItem(name: string) {
+  activeMenuItem = (name: string) => {
     const items = document.getElementsByClassName('menu-item');
 
     for (let i = 0; i < items.length; i++) {
@@ -132,30 +118,32 @@ export class ScriptsGeneral {
     if (name) {
       document.getElementById(`menu-item-${name}`).classList.add('active');
     }
-  }
-  // end activeMenuItem(name: string)
+  };
+  // end activeMenuItem = (name: string)
 
-  public setPageTitle(title: string) {
+  setPageTitle = (title: string) => {
     document.getElementById('page-title').classList.remove('show');
     setTimeout(() => {
       this.global.pageTitle = title;
       document.getElementById('page-title').classList.add('show');
     }, 300);
-  }
+  };
+  // end setPageTitle = (title: string)
 
-  public pageIn() {
+  pageIn = () => {
     setTimeout(() => {
       this.global.contentDisplay = 'show';
     }, 150);
-  }
-  // end public showContent()
+  };
+  // end pageIn = ()
 
-  public pageOut() {
+  pageOut = () => {
     this.global.contentDisplay = 'hide';
-  }
-  // end public pageOut()
+  };
+  // end pageOut = ()
 
-  public showHideTemplateMobileWhenNavona(navonaIsActive) {
+  showHideTemplateMobileWhenNavona = navonaIsActive => {
     this.global.navonaActive = navonaIsActive;
-  }
+  };
+  // end showHideTemplateMobileWhenNavona = (navonaIsActive)
 }

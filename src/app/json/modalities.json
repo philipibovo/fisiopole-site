@@ -11,33 +11,26 @@
       {
         "paragraphNumber": 1,
         "text": {
-          "en": "\"Develops a uniform body, corrects postures, restores physical vitality, restores the mind and uplifts the spirit\" - There is no better description of this modality that we love so much and that improves strength, balance, flexibility, body awareness and still soothes the soul.",
-          "pt": "\"Desenvolve um corpo uniforme, corrige posturas, restaura a vitalidade física, vigora a mente e eleva o espírito\" - Não tem descrição melhor dessa modalidade que tanto amamos e que melhora força, equilíbrio, flexibilidade, consciência corporal e ainda acalma a alma."
+          "en": "‘Through the Pilates Method of Body Conditioning this unique trinity of a balanced body, mind and spirit can ever be attained.’ - Joseph H. Pilates.  There is no better way to describe this class that we love so much and that improves strength, balance, flexibility, body awareness and soothes the soul.",
+          "pt": "\"Desenvolve um corpo uniforme, corrige posturas, restaura a vitalidade física, vigora a mente e eleva o espírito\" - Joseph H. Pilates. Não tem descrição melhor dessa modalidade que tanto amamos e que melhora força, equilíbrio, flexibilidade, consciência corporal e ainda acalma a alma."
         }
       },
       {
         "paragraphNumber": 2,
         "text": {
-          "en": "In our pilates, we work with a mixture of pilates, aerial (with columpyo) and ground to better serve the student.",
-          "pt": "No nosso pilates, trabalhamos com uma mistura de pilates de aparelhos, aéreo (com o columpyo) e de solo para melhor atender o aluno."
+          "en": "Here in the Studio, we work with different Pilates practices, using machines, mats and aerial apparatus (Columpyo) to better cater for the needs and objectives of each and every student.",
+          "pt": "Aqui no estúdio, trabalhamos com uma mistura de pilates de aparelhos, aéreo (com o Columpio) e de solo para melhor atender as necessidades e objetivos de cada aluno."
         }
       },
       {
         "paragraphNumber": 3,
         "text": {
-          "en": "We try to maintain a class that is interesting and helps the student in his goal, making a pleasant moment of body care.",
-          "pt": "Procuramos manter uma aula que seja interessante e ajude o aluno no seu objetivo, tornando um momento prazeroso de cuidado com o corpo."
-        }
-      },
-      {
-        "paragraphNumber": 4,
-        "text": {
-          "en": "Calms the soul and is the best meeting of life, which is the one with yourself.",
-          "pt": "Acalma a alma e é o melhor encontro da vida, que é o com você mesmo."
+          "en": "We seek to provide enjoyable moments of body care, promoting the best encounter of your life, which is with yourself.",
+          "pt": "Procuramos em toda aula proporcionar um momento prazeroso de cuidado com o corpo, promovendo assim o melhor encontro da vida, que é o encontro consigo mesmo."
         }
       }
     ],
-    "path": "modalities/pilates",
+    "path": "classes/pilates",
     "photoGallery": [
       {
         "sequence": 1,
@@ -91,50 +84,36 @@
   },
   {
     "id": 2,
-    "idName": "pole-dance",
+    "idName": "pole-fitness-dance",
     "name": {
-      "en": "Pole Dance",
-      "pt": "Pole Dance"
+      "en": "Pole Fitness & Dance",
+      "pt": "Pole Fitness & Dance"
     },
-    "doubleTitle": false,
+    "doubleTitle": true,
     "about": [
       {
         "paragraphNumber": 1,
         "text": {
-          "en": "We work with physical conditioning, spins, locks, figures, transitions and combos in static and rotating bars according to the level of each student.",
-          "pt": "Trabalhamos condicionamento físico, giros, travas, figuras, transições e combos em barra estática e giratória de acordo com o nível de cada aluno."
+          "en": "In these classes we use poles to develop full body strength as well as resistance, body awareness, balance and flexibility.",
+          "pt": "Nessas aulas utilizamos barras de pole dance para desenvolver a força do corpo inteiro, bem como resistência, consciência corporal, equilíbrio e flexibilidade."
         }
       },
       {
         "paragraphNumber": 2,
         "text": {
-          "en": "The activities are carried out using the pole dance bar and we work on both the pole sport and the dance part, focusing on the student's preference, but always looking for evolution in Pole Dance in general.",
-          "pt": "As atividades são realizadas utilizando a barra de pole dance e trabalhamos tanto o pole sport quanto a parte dança, focando na preferência do aluno, mas procurando sempre a evolução no Pole Dance em geral."
+          "en": "We train physical conditioning, spins, grips, shapes, transitions and combos on static and spinning pole. We contemplate both pole sport and dance, depending on the student’s preference and level.",
+          "pt": "Trabalhamos condicionamento físico, giros, travas, figuras, transições e combos em barra estática e giratória. Contemplamos tanto o esporte quanto a dança, dependendo da preferência e respeitando o nível do aluno."
         }
       },
       {
         "paragraphNumber": 3,
         "text": {
-          "en": "Here, the strength of the entire body develops, as well as resistance, body awareness, balance and flexibility.",
-          "pt": "Aqui, se desenvolve muito a força do corpo inteiro, bem como resistência, consciência corporal, equilíbrio e flexibilidade."
-        }
-      },
-      {
-        "paragraphNumber": 4,
-        "text": {
-          "en": "For all levels, no experience is required. You don't need to have the strength or flexibility to start, this is gained during classes and the evolution is fast! Come and fall in love with this sport too, it works wonders for your body, soul and heart.",
-          "pt": "Para todos os níveis, nenhuma experiência é exigida. Você não precisa ter força ou flexibilidade para começar, isso se ganha durante as aulas e a evolução é rápida! Venha se apaixonar por essa modalidade você também, ela faz maravilhas para o corpo, a alma e o coração."
-        }
-      },
-      {
-        "paragraphNumber": 5,
-        "text": {
-          "en": "The activities are carried out using the pole dance bar and we work on both the pole sport and the dance part, focusing on the student's preference, but always looking for evolution in Pole Dance in general.",
-          "pt": "As atividades são realizadas utilizando a barra de pole dance e trabalhamos tanto o pole sport quanto a parte dança, focando na preferência do aluno, mas procurando sempre a evolução no Pole Dance em geral."
+          "en": "This class does wonders for our bodies, soul and heart, as they promote self-empowerment and self-confidence. There are no prerequisites to start this activity. Strength and flexibility are developed during practice and progress comes fast!",
+          "pt": "Essa modalidade faz maravilhas para o corpo, a alma e o coração, promove o empoderamento e a autoconfiança. Não há nenhum pré-requisito para iniciar essa atividade. A força e a flexibilidade são desenvolvidas durante as aulas e a evolução é rápida!"
         }
       }
     ],
-    "path": "modalities/pole-dance",
+    "path": "classes/pole-fitness-dance",
     "photoGallery": [
       {
         "sequence": 1,
@@ -194,9 +173,9 @@
   },
   {
     "id": 3,
-    "idName": "pole-choreographic",
+    "idName": "pole-choreography",
     "name": {
-      "en": "Pole Choreographic",
+      "en": "Pole Choreography",
       "pt": "Pole Coreográfico"
     },
     "doubleTitle": true,
@@ -204,33 +183,33 @@
       {
         "paragraphNumber": 1,
         "text": {
-          "en": "The Choreographic Pole is an exclusive pole dance style that works with strength, mobility, fluidity, body awareness and musicality.",
+          "en": "Pole choreography is a dance exclusive class which develops strength, mobility, fluidity, body awareness and musicality.",
           "pt": "O Pole Coreográfico é um estilo de pole exclusivo de dança que trabalha força, mobilidade, fluidez, consciência corporal e musicalidade."
         }
       },
       {
         "paragraphNumber": 2,
         "text": {
-          "en": "We teach spins, transitions and movements through choreography mixing a little of everything (Pole Classic, Flow, Floorwork, Sensual and Exotic).",
-          "pt": "Ensinamos giros, transições e movimentos através de coreografias misturando um pouco de tudo (Pole Clássico, Flow, Floorwork, Sensual e Exotic)."
+          "en": "We teach spins, transitions and movements through choreographies by mixing a little bit of each pole branch (Classic, Flow, Floorwork, Sexy and Exotic).",
+          "pt": "Ensinamos giros, transições e movimentos através de coreografias misturando um pouco de cada vertente do pole (Clássico, Flow, Floorwork, Sensual e Exotic)."
         }
       },
       {
         "paragraphNumber": 3,
         "text": {
-          "en": "We chose the songs together with the students for a better experience, we cherish a delicious and liberating class.",
-          "pt": "Escolhemos as músicas junto com as alunas para uma melhor experiência, prezamos por uma aula gostosa e libertadora."
+          "en": "We choose the songs with our students for a better experience, focusing on promoting enjoyable and liberating classes.",
+          "pt": "Escolhemos as músicas junto com os alunos para uma melhor experiência, prezando sempre promover aulas gostosas e libertadoras."
         }
       },
       {
         "paragraphNumber": 4,
         "text": {
-          "en": "We usually work one choreography per month. We recommend the use of socks and knee pads, the use of appropriate heels for practice is optional.",
-          "pt": "Costumamos trabalhar uma coreografia por mês. Recomendados o uso de meias e joelheiras, o uso de salto apropriado para a prática é opcional."
+          "en": "We usually work with one choreography per month. Recommended the use of socks and knee pads. The use of appropriate heels for this practice is optional.",
+          "pt": "Costumamos trabalhar uma coreografia por mês. Recomenda-se o uso de meias e joelheiras. O uso de salto apropriado para a prática é opcional."
         }
       }
     ],
-    "path": "modalities/pole-choreographic",
+    "path": "classes/pole-choreography",
     "photoGallery": [
       {
         "sequence": 1,
@@ -301,26 +280,26 @@
       {
         "paragraphNumber": 1,
         "text": {
-          "en": "This modality is for those who want to rock dancing on top of the jump! Here, we teach musicality, fluidity, sequence of movements and techniques for jumping.",
-          "pt": "Essa modalidade é para quem quer arrasar dançando em cima do salto! Aqui, ensinamos musicalidade, fluidez, sequência de movimentos e técnicas para dançar de salto."
+          "en": "This class is for whoever wants to rock dancing on heels! We teach musicality, fluidity, movements sequence and techniques for dancing on heels.",
+          "pt": "Essa modalidade é para quem quer arrasar dançando em cima do salto! Aqui ensinamos musicalidade, fluidez, sequência de movimentos e técnicas para dançar de salto."
         }
       },
       {
         "paragraphNumber": 2,
         "text": {
-          "en": "It is an aerobic activity that works the whole body, improves balance, posture, coordination and strengthens mainly the leg, gluteus and core muscles.",
+          "en": "It is an aerobic practice that works all the body, improves balance, posture, coordination and strengthens especially the leg muscles, glutes and core.",
           "pt": "É uma atividade aeróbica que trabalha o corpo todo, melhora equilíbrio, postura, coordenação e fortalece principalmente os músculos da perna, glúteos e core."
         }
       },
       {
         "paragraphNumber": 3,
         "text": {
-          "en": "No experience with any activity is necessary, you learn everything during classes.",
-          "pt": "Nenhuma experiência com qualquer atividade é necessária, você aprende tudo durante as aulas."
+          "en": "No previous experience necessary. Bring your high heels and empower yourself with this class!",
+          "pt": "Nenhuma experiência prévia é necessária. Traga seu salto e empodere-se com essa atividade!"
         }
       }
     ],
-    "path": "modalities/stiletto",
+    "path": "classes/stiletto",
     "photoGallery": [
       {
         "sequence": 1,
@@ -342,19 +321,19 @@
       {
         "paragraphNumber": 1,
         "text": {
-          "en": "Power Woman invests in the discovery of feminine movements, empowerment of its own body combined with techniques of various dances and pole dance.",
-          "pt": "O Power Woman investe na descoberta dos movimentos femininos, empoderamento do seu próprio corpo aliados a técnicas de diversas danças e o pole dance."
+          "en": "Power Woman invests in the discovery of the feminine movements and self-empowerment, combined with techniques from different dances, including pole dance.",
+          "pt": "O Power Woman investe na descoberta dos movimentos femininos, empoderamento do seu próprio corpo aliados a técnicas de diversas danças, incluindo o pole dance."
         }
       },
       {
         "paragraphNumber": 2,
         "text": {
           "en": "No experience with any activity is necessary, you learn everything during classes.",
-          "pt": "Nenhuma experiência com qualquer atividade é necessária, você aprende tudo durante as aulas."
+          "pt": "Nenhuma experiência prévia é necessária para se (re)descobrir nessa modalidade. Recomenda-se o uso de meias e joelheiras."
         }
       }
     ],
-    "path": "modalities/power-woman",
+    "path": "classes/power-woman",
     "photoGallery": [
       {
         "sequence": 1,
@@ -376,19 +355,26 @@
       {
         "paragraphNumber": 1,
         "text": {
-          "en": "In this class, you will learn specific warm-up, strengthening and stretching techniques to perform various activities related to the circus, such as acrobatics in fabric, lyra and on the floor.",
-          "pt": "Nesta aula, você aprenderá técnicas de aquecimento, fortalecimento e alongamento específicas para a realização de diversas atividades relacionadas ao circo, como acrobacias em tecido, em lyra e no chão."
+          "en": "In this class you will learn warm up, strengthening and stretching techniques that are specific for a range of activities related to circus arts, like acrobatics on aerial silk, aerial hoop and floor.",
+          "pt": "Nesta aula você aprenderá técnicas de aquecimento, fortalecimento e alongamento específicas para a realização de diversas atividades relacionadas ao circo, como acrobacias em tecido, em lira e no chão."
         }
       },
       {
         "paragraphNumber": 2,
         "text": {
-          "en": "Activity open to all levels and ages.",
-          "pt": "Atividade aberta para todos os níveis e idades."
+          "en": "Through the different movements, we practice body awareness, laterality, balance, strength and flexibility.",
+          "pt": "Através dos diversos movimentos, trabalhamos consciência corporal, lateralidade, equilíbrio, força e flexibilidade."
+        }
+      },
+      {
+        "paragraphNumber": 3,
+        "text": {
+          "en": "Class open to all levels and ages.",
+          "pt": "Modalidade aberta para todos os níveis e idades."
         }
       }
     ],
-    "path": "modalities/circus",
+    "path": "classes/circus",
     "photoGallery": [
       {
         "sequence": 1,
@@ -422,26 +408,26 @@
       {
         "paragraphNumber": 1,
         "text": {
-          "en": "Physical training focused on developing the body's ability and capacity needed on a daily basis, strengthening the body and burning calories.",
-          "pt": "Treinamento físico focado em desenvolver habilidade e capacidade corpórea necessária no dia a dia, fortalecendo o corpo e queimando calorias."
+          "en": "It is a physical training focused on developing the physical ability needed for everyday activities, strengthening body and burning calories.",
+          "pt": "Treinamento físico focado em desenvolver habilidade e capacidade corpórea necessária no dia-a-dia, fortalecendo o corpo e queimando calorias."
         }
       },
       {
         "paragraphNumber": 2,
         "text": {
-          "en": "Using both body weight and specific equipment in high intensity dynamic movements.",
-          "pt": "Utilizando tanto o peso corporal quanto equipamentos especificos em movimentos dinâmicos de alta intensidade."
+          "en": "There are no prerequisites for this practice.",
+          "pt": "Utilizamos tanto o peso corporal quanto equipamentos específicos em movimentos dinâmicos de alta intensidade."
         }
       },
       {
         "paragraphNumber": 3,
         "text": {
           "en": "No experience with any activity is necessary, you learn everything during classes.",
-          "pt": "Nenhuma experiência com qualquer atividade é necessária, você aprende tudo durante as aulas."
+          "pt": "Não há nenhum pré-requisito para praticar essa modalidade."
         }
       }
     ],
-    "path": "modalities/functional-training",
+    "path": "classes/functional-training",
     "photoGallery": []
   }
 ]

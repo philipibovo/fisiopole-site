@@ -42,7 +42,7 @@ export class PersonalInfoComponent implements OnInit {
   ngOnInit(): void {
     this.pageTitleLocal = `${this.instructor.name} ${this.instructor.surname}`;
 
-    this._title.setTitle(`${this.pageTitleLocal} - Fisio Pole`);
+    this._title.setTitle(`${this.pageTitleLocal} - Fisiopole Studio`);
     this.scripts.setPageTitle(this.pageTitleLocal);
 
     this.scripts.activeMenuItem('team');

@@ -16,58 +16,33 @@ import { ContactComponent } from './pages/contact/contact.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'en', component: HomeComponent },
-  { path: 'pt', component: HomeComponent },
 
-  { path: 'en/studio', component: StudioComponent },
-  { path: 'pt/studio', component: StudioComponent },
+  { path: 'studio', component: StudioComponent },
 
-  { path: 'en/modalities', component: ModalitiesComponent },
-  { path: 'pt/modalities', component: ModalitiesComponent },
-  { path: 'en/modalities/circus', component: ModalityInfoComponent },
-  { path: 'pt/modalities/circus', component: ModalityInfoComponent },
-  { path: 'en/modalities/pilates', component: ModalityInfoComponent },
-  { path: 'pt/modalities/pilates', component: ModalityInfoComponent },
+  { path: 'classes', component: ModalitiesComponent },
+  { path: 'classes/circus', component: ModalityInfoComponent },
+  { path: 'classes/pilates', component: ModalityInfoComponent },
   {
-    path: 'en/modalities/pole-choreographic',
+    path: 'classes/pole-choreography',
     component: ModalityInfoComponent
   },
+  { path: 'classes/pole-fitness-dance', component: ModalityInfoComponent },
+  { path: 'classes/power-woman', component: ModalityInfoComponent },
   {
-    path: 'pt/modalities/pole-choreographic',
+    path: 'classes/functional-training',
     component: ModalityInfoComponent
   },
-  { path: 'en/modalities/pole-dance', component: ModalityInfoComponent },
-  { path: 'pt/modalities/pole-dance', component: ModalityInfoComponent },
-  { path: 'en/modalities/power-woman', component: ModalityInfoComponent },
-  { path: 'pt/modalities/power-woman', component: ModalityInfoComponent },
-  {
-    path: 'en/modalities/functional-training',
-    component: ModalityInfoComponent
-  },
-  {
-    path: 'pt/modalities/functional-training',
-    component: ModalityInfoComponent
-  },
-  { path: 'en/modalities/stiletto', component: ModalityInfoComponent },
-  { path: 'pt/modalities/stiletto', component: ModalityInfoComponent },
+  { path: 'classes/stiletto', component: ModalityInfoComponent },
 
-  { path: 'en/team', component: TeamComponent },
-  { path: 'pt/team', component: TeamComponent },
-  { path: 'en/team/marcia-martins', component: PersonalInfoComponent },
-  { path: 'pt/team/marcia-martins', component: PersonalInfoComponent },
-  { path: 'en/team/mayra-martins', component: PersonalInfoComponent },
-  { path: 'pt/team/mayra-martins', component: PersonalInfoComponent },
-  { path: 'en/team/patricia-perez', component: PersonalInfoComponent },
-  { path: 'pt/team/patricia-perez', component: PersonalInfoComponent },
-  { path: 'en/team/fernanda-agria', component: PersonalInfoComponent },
-  { path: 'pt/team/fernanda-agria', component: PersonalInfoComponent },
-  { path: 'en/team/lucas-loreto', component: PersonalInfoComponent },
-  { path: 'pt/team/lucas-loreto', component: PersonalInfoComponent },
-  { path: 'en/team/sergio-biller', component: PersonalInfoComponent },
-  { path: 'pt/team/sergio-biller', component: PersonalInfoComponent },
+  { path: 'team', component: TeamComponent },
+  { path: 'team/marcia-martins', component: PersonalInfoComponent },
+  { path: 'team/mayra-martins', component: PersonalInfoComponent },
+  { path: 'team/patricia-perez', component: PersonalInfoComponent },
+  { path: 'team/fernanda-agria', component: PersonalInfoComponent },
+  { path: 'team/lucas-loreto', component: PersonalInfoComponent },
+  { path: 'team/sergio-biller', component: PersonalInfoComponent },
 
-  { path: 'en/contact', component: ContactComponent },
-  { path: 'pt/contact', component: ContactComponent }
+  { path: 'contact', component: ContactComponent }
 ];
 
 @NgModule({
