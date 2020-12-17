@@ -24,6 +24,8 @@ export class TeamComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.global.instructors.sort((a, b) => a.sequence - b.sequence);
+
     switch (this.global.lang) {
       case 'en':
         this.pageTitleLocal = 'Team';

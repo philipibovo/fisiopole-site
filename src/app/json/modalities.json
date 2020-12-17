@@ -80,7 +80,9 @@
         "titlePT": "",
         "url": "https://live.staticflickr.com/65535/49985315366_071fa9f127_c.jpg"
       }
-    ]
+    ],
+    "active": true,
+    "sequence": 1
   },
   {
     "id": 2,
@@ -169,7 +171,9 @@
         "titlePT": "",
         "url": "https://live.staticflickr.com/65535/49985421846_320a49c613.jpg"
       }
-    ]
+    ],
+    "active": true,
+    "sequence": 2
   },
   {
     "id": 3,
@@ -265,7 +269,9 @@
         "titlePT": "",
         "url": "https://live.staticflickr.com/65535/49985624947_b0ca43c456.jpg"
       }
-    ]
+    ],
+    "active": true,
+    "sequence": 3
   },
   {
     "id": 4,
@@ -307,7 +313,9 @@
         "titlePT": "",
         "url": "https://live.staticflickr.com/65535/49985845517_7ef9181471_z.jpg"
       }
-    ]
+    ],
+    "active": false,
+    "sequence": 99
   },
   {
     "id": 5,
@@ -341,7 +349,9 @@
         "titlePT": "",
         "url": "https://live.staticflickr.com/65535/49985065688_172b1a26ca_b.jpg"
       }
-    ]
+    ],
+    "active": true,
+    "sequence": 5
   },
   {
     "id": 6,
@@ -394,7 +404,9 @@
         "titlePT": "",
         "url": "https://live.staticflickr.com/65535/49985537787_d12bd67090.jpg"
       }
-    ]
+    ],
+    "active": true,
+    "sequence": 6
   },
   {
     "id": 7,
@@ -428,6 +440,55 @@
       }
     ],
     "path": "classes/functional-training",
-    "photoGallery": []
+    "photoGallery": [],
+    "active": true,
+    "sequence": 7
+  },
+  {
+    "id": 8,
+    "idName": "flex",
+    "name": {
+      "en": "Flex",
+      "pt": "Flex"
+    },
+    "doubleTitle": false,
+    "about": [
+      {
+        "paragraphNumber": 1,
+        "text": {
+          "en": "",
+          "pt": "Aula que trabalha amplamente a mobilidade e flexibilidade. Melhorando o alongamento e desempenho em outras atividades, além de diminuir dores musculares infringidas por treinos físicos."
+        }
+      }
+    ],
+    "path": "classes/flex",
+    "photoGallery": [
+      {
+        "sequence": 1,
+        "titleEN": "",
+        "titlePT": "",
+        "url": "https://live.staticflickr.com/65535/50729760042_e36169a94f_k.jpg"
+      },
+      {
+        "sequence": 2,
+        "titleEN": "",
+        "titlePT": "",
+        "url": "https://live.staticflickr.com/65535/50729663411_c0738d7074_b.jpg"
+      },
+      {
+        "sequence": 3,
+        "titleEN": "",
+        "titlePT": "",
+        "url": "https://live.staticflickr.com/65535/50728932953_31edec1ca7_k.jpg"
+      },
+      {
+        "sequence": 4,
+        "titleEN": "",
+        "titlePT": "",
+        "url": "https://live.staticflickr.com/65535/50729760102_60031ca3b5_k.jpg"
+      }
+    ],
+    "active": false,
+    "sequence": 4
   }
 ]

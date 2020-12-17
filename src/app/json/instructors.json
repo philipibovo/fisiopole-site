@@ -48,7 +48,9 @@
         "icon": "fab fa-facebook",
         "url": "https://www.facebook.com/marciamartins0912"
       }
-    ]
+    ],
+    "active": true,
+    "sequence": 1
   },
   {
     "id": 2,
@@ -92,7 +94,9 @@
         "icon": "fab fa-facebook",
         "url": "https://www.facebook.com/fisiopole"
       }
-    ]
+    ],
+    "active": true,
+    "sequence": 2
   },
   {
     "id": 3,
@@ -129,7 +133,9 @@
         "icon": "fab fa-facebook",
         "url": "https://www.facebook.com/profile.php?id=100013208204710"
       }
-    ]
+    ],
+    "active": false,
+    "sequence": 99
   },
   {
     "id": 4,
@@ -154,7 +160,9 @@
         "icon": "fab fa-instagram",
         "url": "https://instagram.com/prof.feagria?igshid=1lairic0kfn6b"
       }
-    ]
+    ],
+    "active": false,
+    "sequence": 99
   },
   {
     "id": 5,
@@ -184,7 +192,7 @@
         }
       }
     ],
-    "modality": [{ "id": 2 }, { "id": 6 }, { "id": 7 }],
+    "modality": [{ "id": 2 }, { "id": 6 }, { "id": 7 }, { "id": 8 }],
     "path": "team/lucas-loreto",
     "photoPerfil": "https://live.staticflickr.com/65535/49985680898_4fdc194a4f_q.jpg",
     "social": [
@@ -198,7 +206,9 @@
         "icon": "fab fa-facebook",
         "url": "https://www.facebook.com/lucas.loreto.33"
       }
-    ]
+    ],
+    "active": true,
+    "sequence": 4
   },
   {
     "id": 6,
@@ -223,6 +233,54 @@
         "icon": "fab fa-instagram",
         "url": "https://instagram.com/sergiobiller?igshid=nh2qo9axl3o4"
       }
-    ]
+    ],
+    "active": true,
+    "sequence": 5
+  },
+  {
+    "id": 7,
+    "idName": "raissa-venuto",
+    "name": "Raíssa",
+    "surname": "Venuto",
+    "about": [
+      {
+        "paragraphNumber": 1,
+        "text": {
+          "en": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus amet qui possimus doloremque magni natus molestiae non iure, velit debitis reiciendis perspiciatis, consequatur, error impedit veniam quae ullam inventore a.",
+          "pt": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus amet qui possimus doloremque magni natus molestiae non iure, velit debitis reiciendis perspiciatis, consequatur, error impedit veniam quae ullam inventore a."
+        }
+      },
+      {
+        "paragraphNumber": 2,
+        "text": {
+          "en": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus amet qui possimus doloremque magni natus molestiae non iure, velit debitis reiciendis perspiciatis, consequatur, error impedit veniam quae ullam inventore a.",
+          "pt": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus amet qui possimus doloremque magni natus molestiae non iure, velit debitis reiciendis perspiciatis, consequatur, error impedit veniam quae ullam inventore a."
+        }
+      },
+      {
+        "paragraphNumber": 3,
+        "text": {
+          "en": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus amet qui possimus doloremque magni natus molestiae non iure, velit debitis reiciendis perspiciatis, consequatur, error impedit veniam quae ullam inventore a.",
+          "pt": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus amet qui possimus doloremque magni natus molestiae non iure, velit debitis reiciendis perspiciatis, consequatur, error impedit veniam quae ullam inventore a."
+        }
+      }
+    ],
+    "modality": [{ "id": 2 }, { "id": 3 }],
+    "path": "team/raissa-venuto",
+    "photoPerfil": "https://lh4.googleusercontent.com/-iaiMkvbfpHE/AAAAAAAAAAI/AAAAAAAAAaE/mHEsNaFL9Ac/photo.jpg?sz=328",
+    "social": [
+      {
+        "name": "Instagram",
+        "icon": "fab fa-instagram",
+        "url": "https://instagram.com/ma_fisiopole/?igshid=10qiv3fyb0xjq"
+      },
+      {
+        "name": "Facebook",
+        "icon": "fab fa-facebook",
+        "url": "https://www.facebook.com/fisiopole"
+      }
+    ],
+    "active": false,
+    "sequence": 3
   }
 ]

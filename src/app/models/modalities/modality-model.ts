@@ -28,6 +28,8 @@ export interface IModalityModel {
   about?: IModalityAboutModel[];
   path?: string;
   photoGallery?: IModalityPhotoGalleryModel[];
+  active?: boolean;
+  sequence?: number;
 }
 
 export class ModalityModel {
@@ -38,7 +40,9 @@ export class ModalityModel {
     public doubleTitle?: boolean,
     public about?: IModalityAboutModel[],
     public path?: string,
-    public photoGallery?: IModalityPhotoGalleryModel[]
+    public photoGallery?: IModalityPhotoGalleryModel[],
+    public active?: boolean,
+    public sequence?: number
   ) {
     this.id = id ? id : null;
     this.idName = idName ? idName : null;
@@ -47,5 +51,7 @@ export class ModalityModel {
     this.about = about ? about : null;
     this.path = path ? path : null;
     this.photoGallery = photoGallery ? photoGallery : null;
+    this.active = active ? active : null;
+    this.sequence = sequence ? sequence : null;
   }
 }

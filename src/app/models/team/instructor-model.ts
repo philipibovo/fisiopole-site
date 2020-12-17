@@ -24,10 +24,12 @@ export interface IInstructorModel {
   name?: string;
   surname?: string;
   about?: IInstructorAboutModel[];
-  pageUrl?: string;
+  path?: string;
   photoPerfil?: string;
   modality?: IInstructorModalityModel[];
   social?: IInstructorSocialModel[];
+  active?: boolean;
+  sequence?: number;
 }
 
 export class InstructorModel implements IInstructorModel {
@@ -37,19 +39,23 @@ export class InstructorModel implements IInstructorModel {
     public name?: string,
     public surname?: string,
     public about?: IInstructorAboutModel[],
-    public pageUrl?: string,
+    public path?: string,
     public photoPerfil?: string,
     public modality?: IInstructorModalityModel[],
-    public social?: IInstructorSocialModel[]
+    public social?: IInstructorSocialModel[],
+    public active?: boolean,
+    public sequence?: number
   ) {
     this.id = id ? id : null;
     this.idName = idName ? idName : null;
     this.name = name ? name : null;
     this.surname = surname ? surname : null;
     this.about = about ? about : null;
-    this.pageUrl = pageUrl ? pageUrl : null;
+    this.path = path ? path : null;
     this.photoPerfil = photoPerfil ? photoPerfil : null;
     this.modality = modality ? modality : null;
     this.social = social ? social : null;
+    this.active = active ? active : null;
+    this.sequence = sequence ? sequence : null;
   }
 }

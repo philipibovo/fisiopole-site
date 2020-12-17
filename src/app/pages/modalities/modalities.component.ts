@@ -24,6 +24,8 @@ export class ModalitiesComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.global.modalities.sort((a, b) => a.sequence - b.sequence);
+
     switch (this.global.lang) {
       case 'en':
         this.pageTitleLocal = 'Classes';

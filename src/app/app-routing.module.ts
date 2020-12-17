@@ -33,6 +33,7 @@ const routes: Routes = [
     component: ModalityInfoComponent
   },
   { path: 'classes/stiletto', component: ModalityInfoComponent },
+  { path: 'classes/flex', component: ModalityInfoComponent },
 
   { path: 'team', component: TeamComponent },
   { path: 'team/marcia-martins', component: PersonalInfoComponent },
@@ -41,6 +42,7 @@ const routes: Routes = [
   { path: 'team/fernanda-agria', component: PersonalInfoComponent },
   { path: 'team/lucas-loreto', component: PersonalInfoComponent },
   { path: 'team/sergio-biller', component: PersonalInfoComponent },
+  { path: 'team/raissa-venuto', component: PersonalInfoComponent },
 
   { path: 'contact', component: ContactComponent }
 ];

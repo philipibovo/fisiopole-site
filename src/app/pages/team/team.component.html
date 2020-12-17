@@ -22,38 +22,40 @@
     fxLayoutAlign.sm="center start"
     fxLayoutGap.sm="0"
   >
-    <div
-      *ngFor="let instructor of global.instructors; index as i"
-      fxFlexOrder="{{ i + 1 }}"
-      class="team-card"
-    >
+    <div *ngFor="let instructor of global.instructors; index as i">
       <div
-        class="team-card-photo"
-        (click)="scripts.redirectAnimatePageOut(instructor.path)"
+        *ngIf="instructor.active"
+        fxFlexOrder="{{ i + 1 }}"
+        class="team-card"
       >
-        <img src="{{ instructor.photoPerfil }}" />
-      </div>
-      <div class="team-card-title">
-        <div>{{ instructor.name }}</div>
-        <div>{{ instructor.surname }}</div>
-      </div>
-      <div class="team-card-content">
-        <div class="team-card-content-social">
-          <div *ngFor="let social of instructor.social">
-            <a href="{{ social.url }}" target="_blank"
-              ><i class="{{ social.icon }}"></i
-            ></a>
-          </div>
-        </div>
         <div
-          class="team-card-content-text"
+          class="team-card-photo"
           (click)="scripts.redirectAnimatePageOut(instructor.path)"
         >
-          Saiba mais
+          <img src="{{ instructor.photoPerfil }}" />
+        </div>
+        <div class="team-card-title">
+          <div>{{ instructor.name }}</div>
+          <div>{{ instructor.surname }}</div>
+        </div>
+        <div class="team-card-content">
+          <div class="team-card-content-social">
+            <div *ngFor="let social of instructor.social">
+              <a href="{{ social.url }}" target="_blank"
+                ><i class="{{ social.icon }}"></i
+              ></a>
+            </div>
+          </div>
+          <div
+            class="team-card-content-text"
+            (click)="scripts.redirectAnimatePageOut(instructor.path)"
+          >
+            Saiba mais
+          </div>
         </div>
       </div>
+      <!-- end fxFlexOrder="1.*" .card -->
     </div>
-    <!-- end fxFlexOrder="1.*" .card -->
   </div>
   <!-- end fxFlexOrder="1" -->
 </div>

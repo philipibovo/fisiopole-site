@@ -22,31 +22,32 @@
     fxLayoutAlign.sm="center start"
     fxLayoutGap.sm="0"
   >
-    <div
-      *ngFor="let modality of global.modalities; index as i"
-      fxFlexOrder="{{ i + 1 }}"
-      id="{{ modality.idName }}"
-      class="modality-card"
-      (click)="scripts.redirectAnimatePageOut(modality.path)"
-    >
+    <div *ngFor="let modality of global.modalities; index as i">
       <div
-        *ngIf="global.lang === 'en'"
-        alt="Modality item"
-        ngClass="modality-card-title"
-        [class.double]="modality.doubleTitle"
+        *ngIf="modality.active"
+        fxFlexOrder="{{ i + 1 }}"
+        id="{{ modality.idName }}"
+        class="modality-card"
+        (click)="scripts.redirectAnimatePageOut(modality.path)"
       >
-        {{ modality.name.en }}
-      </div>
-      <div
-        *ngIf="global.lang === 'pt'"
-        alt="Modalidade item"
-        ngClass="modality-card-title"
-        [class.double]="modality.doubleTitle"
-      >
-        {{ modality.name.pt }}
+        <div
+          *ngIf="global.lang === 'en'"
+          alt="Modality item"
+          ngClass="modality-card-title"
+          [class.double]="modality.doubleTitle"
+        >
+          {{ modality.name.en }}
+        </div>
+        <div
+          *ngIf="global.lang === 'pt'"
+          alt="Modalidade item"
+          ngClass="modality-card-title"
+          [class.double]="modality.doubleTitle"
+        >
+          {{ modality.name.pt }}
+        </div>
       </div>
     </div>
-    <!-- end fxFlexOrder="1.*" -->
   </div>
   <!-- end fxFlexOrder="1" -->
 </div>
