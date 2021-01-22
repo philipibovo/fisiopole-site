@@ -246,41 +246,43 @@
       {
         "paragraphNumber": 1,
         "text": {
-          "en": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus amet qui possimus doloremque magni natus molestiae non iure, velit debitis reiciendis perspiciatis, consequatur, error impedit veniam quae ullam inventore a.",
-          "pt": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus amet qui possimus doloremque magni natus molestiae non iure, velit debitis reiciendis perspiciatis, consequatur, error impedit veniam quae ullam inventore a."
+          "en": "An administrator that never endured the life at the office.",
+          "pt": "Uma administradora de empesas que nunca aguentou o dia a dia de escritório."
         }
       },
       {
         "paragraphNumber": 2,
         "text": {
-          "en": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus amet qui possimus doloremque magni natus molestiae non iure, velit debitis reiciendis perspiciatis, consequatur, error impedit veniam quae ullam inventore a.",
-          "pt": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus amet qui possimus doloremque magni natus molestiae non iure, velit debitis reiciendis perspiciatis, consequatur, error impedit veniam quae ullam inventore a."
+          "en": "Practitioner of surfing, yoga and other sports, physical activity is in her blood and with her active artistic side, she found herself in Pole Dance.",
+          "pt": "Praticante de surf, yoga e diversas outras modalidades, a atividade física está no seu sangue e com o lado artístico falando mais alto, ela se encontrou no Pole Dance."
         }
       },
       {
         "paragraphNumber": 3,
         "text": {
-          "en": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus amet qui possimus doloremque magni natus molestiae non iure, velit debitis reiciendis perspiciatis, consequatur, error impedit veniam quae ullam inventore a.",
-          "pt": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus amet qui possimus doloremque magni natus molestiae non iure, velit debitis reiciendis perspiciatis, consequatur, error impedit veniam quae ullam inventore a."
+          "en": "She started teaching and loved it.",
+          "pt": "Começou a dar aulas e já se apaixonou por ensinar."
+        }
+      },
+      {
+        "paragraphNumber": 4,
+        "text": {
+          "en": "Tries to bring physical and emotional well-being to her students. She believes that pole dance has the power to change lives, improve self-esteem, self-love and union and she brings all of these in her classes, always with a smile on her face and lots of good energy.",
+          "pt": "Busca trazer bem estar físico e principalmente emocional para seus alunos. Acredita no poder do pole dance de mudar vidas, melhorar a autoestima, o amor próprio e a união e leva isso em todas as suas aulas, sempre com um sorriso no rosto e muita energia boa."
         }
       }
     ],
     "modality": [{ "id": 2 }, { "id": 3 }],
     "path": "team/raissa-venuto",
-    "photoPerfil": "https://lh4.googleusercontent.com/-iaiMkvbfpHE/AAAAAAAAAAI/AAAAAAAAAaE/mHEsNaFL9Ac/photo.jpg?sz=328",
+    "photoPerfil": "https://live.staticflickr.com/65535/50772998562_322ec82365_q.jpg",
     "social": [
       {
         "name": "Instagram",
         "icon": "fab fa-instagram",
-        "url": "https://instagram.com/ma_fisiopole/?igshid=10qiv3fyb0xjq"
-      },
-      {
-        "name": "Facebook",
-        "icon": "fab fa-facebook",
-        "url": "https://www.facebook.com/fisiopole"
+        "url": "https://instagram.com/raissa.poledance?igshid=1rqu29q5k5cxs"
       }
     ],
     "active": false,
-    "sequence": 3
+    "sequence": 6
   }
 ]

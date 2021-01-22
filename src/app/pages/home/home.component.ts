@@ -30,7 +30,7 @@ export class HomeComponent implements OnInit {
         this.pageTitleLocal = '';
         break;
     }
-    this._title.setTitle('Fisiooole Studio');
+    this._title.setTitle('Fisiopole Studio');
     this.scripts.setPageTitle(this.pageTitleLocal);
 
     this.scripts.activeMenuItem('');

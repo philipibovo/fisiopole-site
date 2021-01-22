@@ -446,22 +446,22 @@
   },
   {
     "id": 8,
-    "idName": "flex",
+    "idName": "flexibility",
     "name": {
-      "en": "Flex",
-      "pt": "Flex"
+      "en": "Flexibility",
+      "pt": "Flexibilidade"
     },
     "doubleTitle": false,
     "about": [
       {
         "paragraphNumber": 1,
         "text": {
-          "en": "",
-          "pt": "Aula que trabalha amplamente a mobilidade e flexibilidade. Melhorando o alongamento e desempenho em outras atividades, além de diminuir dores musculares infringidas por treinos físicos."
+          "en": "Class that works extensively on mobility and flexibility, improving stretching and performance in other activities, in addition to reducing muscle pain caused by physical training.",
+          "pt": "Aula que trabalha amplamente a mobilidade e flexibilidade, melhorando o alongamento e desempenho em outras atividades, além de diminuir dores musculares infringidas por treinos físicos."
         }
       }
     ],
-    "path": "classes/flex",
+    "path": "classes/flexibility",
     "photoGallery": [
       {
         "sequence": 1,
@@ -488,7 +488,7 @@
         "url": "https://live.staticflickr.com/65535/50729760102_60031ca3b5_k.jpg"
       }
     ],
-    "active": false,
+    "active": true,
     "sequence": 4
   }
 ]
