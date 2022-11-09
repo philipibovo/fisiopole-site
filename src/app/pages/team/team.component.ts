@@ -24,6 +24,7 @@ export class TeamComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log(this.global.instructors);
     this.global.instructors.sort((a, b) => a.sequence - b.sequence);
 
     switch (this.global.lang) {

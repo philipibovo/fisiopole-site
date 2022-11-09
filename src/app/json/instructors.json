@@ -87,7 +87,7 @@
       {
         "name": "Instagram",
         "icon": "fab fa-instagram",
-        "url": "https://instagram.com/ma_fisiopole/?igshid=10qiv3fyb0xjq"
+        "url": "https://instagram.com/ma_martinsfp?igshid=YmMyMTA2M2Y="
       },
       {
         "name": "Facebook",
@@ -97,72 +97,6 @@
     ],
     "active": true,
     "sequence": 2
-  },
-  {
-    "id": 3,
-    "idName": "patricia-perez",
-    "name": "Patrícia",
-    "surname": "Pérez",
-    "about": [
-      {
-        "paragraphNumber": 1,
-        "text": {
-          "en": "Pole Dance instructor who loves to dance, has a killer hair whipping and is always updated in all pole styles and dance, including pole funk and gipsy dance.",
-          "pt": "Instrutora de Pole Dance que adora dançar, arrasa na arte de bater cabelo e está sempre se atualizando em todas as vertentes de pole e de dança, incluindo pole funk e dança cigana."
-        }
-      },
-      {
-        "paragraphNumber": 2,
-        "text": {
-          "en": "Graduated in nutrition, is currently taking a Physical Education degree and is certified in Pole Dance by Tati Favretto.",
-          "pt": "Formada em nutrição, cursando Educação Física e com certificação de Pole Dance com a Tati Favretto."
-        }
-      }
-    ],
-    "modality": [{ "id": 2 }, { "id": 3 }],
-    "path": "team/patricia-perez",
-    "photoPerfil": "https://live.staticflickr.com/65535/49985681393_d6b6a75f6f_q.jpg",
-    "social": [
-      {
-        "name": "Instagram",
-        "icon": "fab fa-instagram",
-        "url": "https://instagram.com/patipolerina?igshid=nn507i58kr29"
-      },
-      {
-        "name": "Facebook",
-        "icon": "fab fa-facebook",
-        "url": "https://www.facebook.com/profile.php?id=100013208204710"
-      }
-    ],
-    "active": false,
-    "sequence": 99
-  },
-  {
-    "id": 4,
-    "idName": "fernanda-agria",
-    "name": "Fernanda",
-    "surname": "Agria",
-    "about": [
-      {
-        "paragraphNumber": 1,
-        "text": {
-          "en": "Physical educator and pilates instructor.",
-          "pt": "Educadora física e instrutora de pilates."
-        }
-      }
-    ],
-    "modality": [{ "id": 1 }],
-    "path": "team/fernanda-agria",
-    "photoPerfil": "https://lh4.googleusercontent.com/-iaiMkvbfpHE/AAAAAAAAAAI/AAAAAAAAAaE/mHEsNaFL9Ac/photo.jpg?sz=328",
-    "social": [
-      {
-        "name": "Instagram",
-        "icon": "fab fa-instagram",
-        "url": "https://instagram.com/prof.feagria?igshid=1lairic0kfn6b"
-      }
-    ],
-    "active": false,
-    "sequence": 99
   },
   {
     "id": 5,
@@ -236,53 +170,5 @@
     ],
     "active": true,
     "sequence": 5
-  },
-  {
-    "id": 7,
-    "idName": "raissa-venuto",
-    "name": "Raíssa",
-    "surname": "Venuto",
-    "about": [
-      {
-        "paragraphNumber": 1,
-        "text": {
-          "en": "An administrator that never endured the life at the office.",
-          "pt": "Uma administradora de empesas que nunca aguentou o dia a dia de escritório."
-        }
-      },
-      {
-        "paragraphNumber": 2,
-        "text": {
-          "en": "Practitioner of surfing, yoga and other sports, physical activity is in her blood and with her active artistic side, she found herself in Pole Dance.",
-          "pt": "Praticante de surf, yoga e diversas outras modalidades, a atividade física está no seu sangue e com o lado artístico falando mais alto, ela se encontrou no Pole Dance."
-        }
-      },
-      {
-        "paragraphNumber": 3,
-        "text": {
-          "en": "She started teaching and loved it.",
-          "pt": "Começou a dar aulas e já se apaixonou por ensinar."
-        }
-      },
-      {
-        "paragraphNumber": 4,
-        "text": {
-          "en": "Tries to bring physical and emotional well-being to her students. She believes that pole dance has the power to change lives, improve self-esteem, self-love and union and she brings all of these in her classes, always with a smile on her face and lots of good energy.",
-          "pt": "Busca trazer bem estar físico e principalmente emocional para seus alunos. Acredita no poder do pole dance de mudar vidas, melhorar a autoestima, o amor próprio e a união e leva isso em todas as suas aulas, sempre com um sorriso no rosto e muita energia boa."
-        }
-      }
-    ],
-    "modality": [{ "id": 2 }, { "id": 3 }],
-    "path": "team/raissa-venuto",
-    "photoPerfil": "https://live.staticflickr.com/65535/50772998562_322ec82365_q.jpg",
-    "social": [
-      {
-        "name": "Instagram",
-        "icon": "fab fa-instagram",
-        "url": "https://instagram.com/raissa.poledance?igshid=1rqu29q5k5cxs"
-      }
-    ],
-    "active": false,
-    "sequence": 6
   }
 ]

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import pkgApp from '../../package.json';
+
 //Scripts
 import { Global } from './scripts/global';
 import { ScriptsGeneral } from './scripts/scripts-general';
