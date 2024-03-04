@@ -70,7 +70,10 @@
 
 <div id="gallery" class="navona">
   <div *ngFor="let item of modality.photoGallery">
-    <img src="{{ item.url }}" />
+    <img
+      src="{{ item.url }}"
+      [alt]="global.lang === 'en' ? item.titleEN : item.titlePT"
+    />
 
     <p *ngIf="global.lang === 'en'">
       {{ item.titleEN }}

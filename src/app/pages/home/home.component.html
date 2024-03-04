@@ -1,4 +1,4 @@
-<div
+<main
   id="content"
   class="content"
   [class]="global.contentDisplay"
@@ -10,33 +10,18 @@
   fxLayoutAlign.sm="center center"
   (window:resize)="onResizedHome()"
 >
-  <div
-    *ngIf="global.lang === 'en'"
-    fxFlexOrder="1"
-    id="text"
-    fxFlex.xs="75%"
-    fxFlex.sm="75%"
-  >
-    <p>
+  <content fxFlexOrder="1" id="text" fxFlex.xs="75%" fxFlex.sm="75%">
+    <p *ngIf="global.lang === 'en'">
       FisioPole is a Pilates and Pole Dance studio located in the heart of
       Gonzaga in Santos since 2013. Use the menu above to learn more about our
       studio and our different classes.
     </p>
-  </div>
-  <!-- fxFlexOrder="1" en -->
 
-  <div
-    *ngIf="global.lang === 'pt'"
-    fxFlexOrder="1"
-    id="text"
-    fxFlex.xs="75%"
-    fxFlex.sm="75%"
-  >
-    <p>
-      O FisioPole é um estúdio de Pilates e Pole Dance localizado no coração do
+    <p *ngIf="global.lang === 'pt'">
+      FisioPole é um estúdio de Pilates e Pole Dance localizado no coração do
       Gonzaga em Santos desde 2013. Utilize o menu acima para saber mais sobre
       nosso estúdio e nossas diversas modalidades.
     </p>
-  </div>
-  <!-- fxFlexOrder="1" pt -->
-</div>
+  </content>
+  <!-- fxFlexOrder="1" -->
+</main>

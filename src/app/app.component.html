@@ -1,4 +1,4 @@
-<div
+<header
   id="logo"
   [class]="global.logoTheme"
   [class.portrait]="global.isPortrait"
@@ -9,18 +9,18 @@
 >
   <img
     *ngIf="global.logoTheme === 'dark'"
-    alt="Fisio Pole Logo"
+    alt="Logotipo Fisiopole"
     src="./assets/img/logo/logo.svg"
   />
   <img
     *ngIf="global.logoTheme === 'light'"
-    alt="Fisio Pole Logo"
+    alt="Logotipo Fisiopole"
     src="./assets/img/logo/logo-negative.svg"
   />
-</div>
-<!-- end #logo -->
+</header>
+<!-- end header -->
 
-<div
+<h1
   id="page-title"
   [class.portrait]="global.isPortrait"
   [class.landscape]="global.isLandscape"
@@ -32,13 +32,13 @@
   <span *ngIf="global.lang === 'pt'" alt="Título da Página">
     {{ global.pageTitle }}
   </span>
-</div>
+</h1>
 <!-- end #page-title -->
 
 <div
-  id="icon-menu"
   *ngIf="global.isSmartphone || global.isTablet"
   alt="Menu"
+  id="icon-menu"
   [class]="global.iconMenuTheme"
   [class.portrait]="global.isPortrait"
   [class.landscape]="global.isLandscape"
@@ -50,10 +50,11 @@
 <!-- end #icon-menu -->
 
 <div
-  id="menu-shadow-2"
   *ngIf="!global.isDesktop"
+  id="menu-shadow-2"
   [class.hide]="!global.isDesktop && global.navonaActive"
 ></div>
+
 <div
   id="menu-shadow-1"
   *ngIf="!global.isDesktop"
@@ -73,7 +74,7 @@
     fxHide.lg
     fxHide.xl
   >
-    <img alt="Fisio Pole" src="./assets/img/logo/logo-negative.svg" />
+    <img alt="logotipo FisioPole" src="./assets/img/logo/logo-negative.svg" />
   </div>
 
   <div [class.space-top-30]="!global.isDesktop">
@@ -215,10 +216,12 @@
       >
         <img
           *ngIf="global.madebyTheme === 'dark'"
+          alt="Logotipo Philipi Bovo Developer"
           src="./assets/img/logo/philipi-bovo.png"
         />
         <img
           *ngIf="global.madebyTheme === 'light'"
+          alt="Logotipo Philipi Bovo Developer"
           src="./assets/img/logo/philipi-bovo-negative.png"
         />
       </a>
@@ -234,10 +237,12 @@
       >
         <img
           *ngIf="global.madebyTheme === 'dark'"
+          alt="Logotipo Philipi Bovo Developer"
           src="./assets/img/logo/philipi-bovo.png"
         />
         <img
           *ngIf="global.madebyTheme === 'light'"
+          alt="Logotipo Philipi Bovo Developer"
           src="./assets/img/logo/philipi-bovo-negative.png"
         />
       </a>

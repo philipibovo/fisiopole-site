@@ -1,4 +1,4 @@
-<div
+<main
   id="content"
   class="content"
   [class]="global.contentDisplay"
@@ -10,7 +10,7 @@
   fxLayoutAlign.sm="start start"
   (window:resize)="onResizedStudio()"
 >
-  <div
+  <content
     fxFlexOrder="1"
     id="text"
     fxFlex.xs="100%"
@@ -26,7 +26,7 @@
     fxLayoutAlign.xs="start center"
     fxLayoutAlign.sm="start center"
   >
-    <div *ngIf="global.lang === 'en'" fxFlexOrder="1">
+    <p *ngIf="global.lang === 'en'" fxFlexOrder="1">
       FisoPole Studio was created in 2013 by the sisters Mayra and Marcia
       Martins with the goal of promoting health, wellness and self-confidence.
       Our biggest concern is that our students feel comfortable and enjoy their
@@ -38,10 +38,10 @@
       training, and we have all necessary equipment for different Pilates
       practices - machines, mats, aerial apparatus, as well as other accessories
       like blocks, weights, grips, etc.
-    </div>
+    </p>
     <!-- end fxFlexOrder="1.2" en -->
 
-    <div *ngIf="global.lang === 'pt'" fxFlexOrder="1">
+    <p *ngIf="global.lang === 'pt'" fxFlexOrder="1">
       O FisioPole Studio foi criado em 2013 pelas irmãs Mayra e Marcia Martins
       com o objetivo de promover saúde, bem-estar e autoconfiança. Nossa maior
       preocupação é a de que o aluno se sinta confortável e desfrute do seu
@@ -53,8 +53,8 @@
       como estática ou giratória, e temos todos os equipamentos necessários para
       a prática de Pilates de aparelhos, solo e aéreo, além de acessórios como
       bloquinhos, pesos, grip, entre outros.
-    </div>
+    </p>
     <!-- end fxFlexOrder="1.2" pt -->
-  </div>
+  </content>
   <!-- end fxFlexOrder="1" -->
-</div>
+</main>

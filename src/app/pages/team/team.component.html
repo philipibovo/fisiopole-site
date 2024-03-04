@@ -1,4 +1,4 @@
-<div
+<main
   id="content"
   class="content"
   [class]="global.contentDisplay"
@@ -10,7 +10,7 @@
   fxLayoutAlign.sm="start start"
   (window:resize)="onResizedTeam()"
 >
-  <div
+  <nav
     fxFlexOrder="1"
     fxFlexOffset="300px"
     fxLayout="row wrap"
@@ -32,7 +32,10 @@
           class="team-card-photo"
           (click)="scripts.redirectAnimatePageOut(instructor.path)"
         >
-          <img src="{{ instructor.photoPerfil }}" />
+          <img
+            src="{{ instructor.photoPerfil }}"
+            alt="Foto perfil {{ instructor.name }} {{ instructor.surname }}"
+          />
         </div>
         <div class="team-card-title">
           <div>{{ instructor.name }}</div>
@@ -56,6 +59,6 @@
       </div>
       <!-- end fxFlexOrder="1.*" .card -->
     </div>
-  </div>
+  </nav>
   <!-- end fxFlexOrder="1" -->
-</div>
+</main>
